@@ -20,7 +20,7 @@ Die «feine Sprache» der Seite. Gilt für alle neuen Seiten.
 ## Menü
 - Vier Punkte in den vier Ecken: oben links Sessions & Kurse, oben rechts Über uns,
   unten links Events, unten rechts Gönnerin werden
-- Sprachen DE/FR/EN winzig (9 px) ganz unten rechts in der Ecke
+- Sprachen DE/FR/EN winzig (9 px) unten in der Mitte, auf Höhe der unteren Menüpunkte
 
 ## Details
 - Mauszeiger = Queenpin-Logo (schwarz, über Links pink)
