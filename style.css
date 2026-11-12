@@ -45,6 +45,6 @@ select{background:transparent;border:0;border-bottom:1px solid #141414;padding:1
 .soon a{margin-top:40px;font-size:12px;text-decoration:none}
 html,body{cursor:url(assets/cursor-schwarz.png) 9 23,auto}
 a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
-.home .blob h1{font-family:'IBM Plex Mono',monospace}
-.home .blob h1 b{font-weight:200}
-.home .blob h1 span{font-weight:200}
+.home .blob h1{font-family:'Fragment Mono',monospace;letter-spacing:.12em}
+.home .blob h1 b{font-weight:400}
+.home .blob h1 span{font-weight:400}
