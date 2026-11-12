@@ -13,7 +13,8 @@
 </head>
 <body>
 <main class="home">
-<div class="blob"><img src="assets/farbtupfer.png" alt=""><h1><b>queenpin velvet</b><br><span>skateboarding</span></h1></div>
+<video class="hero-video" src="assets/tropfen.mp4" poster="" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
+<h1 class="hero-title"><b>queenpin velvet</b><br><span>skateboarding</span></h1>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="bald.html">Sessions &amp; Kurse</a>
 <a class="corner tr" href="bald.html">Über uns</a>
@@ -22,5 +23,15 @@
 <span class="lang"><a href="index.html" aria-current="true">DE</a><a href="#">FR</a><a href="#">EN</a></span>
 </nav>
 </main>
+<script>
+(function(){
+  var v=document.querySelector('.hero-video'),t=document.querySelector('.hero-title');
+  function done(){t.classList.add('show');}
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.poster='assets/tropfen-ende.jpg';done();return;}
+  v.addEventListener('ended',done);
+  v.addEventListener('error',function(){v.poster='assets/tropfen-ende.jpg';done();});
+  setTimeout(done,6500);
+})();
+</script>
 </body>
 </html>
