@@ -11,7 +11,7 @@ a{color:inherit}a:hover{opacity:.7}
 .blob h1{position:absolute;left:15%;right:0;top:44%;transform:translateY(-50%);margin:0;text-align:center;font-family:'Space Mono',monospace;font-weight:400;letter-spacing:.14em;text-transform:lowercase;line-height:1.4}
 .home{position:relative;min-height:100vh;overflow:hidden}
 .home .blob{width:min(130vw,2070px)}
-.home .blob h1{font-size:clamp(13px,1.7vw,24px)}
+.home .blob h1{font-size:clamp(11px,1.35vw,19px)}
 .page{position:relative;overflow:hidden;min-height:100vh}
 .page-head{position:relative;height:640px}
 .page-head .blob{top:52%;width:min(120vw,1300px)}
@@ -46,5 +46,5 @@ select{background:transparent;border:0;border-bottom:1px solid #141414;padding:1
 html,body{cursor:url(assets/cursor-schwarz.png) 9 23,auto}
 a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .home .blob h1{font-family:'IBM Plex Mono',monospace}
-.home .blob h1 b{font-weight:700}
+.home .blob h1 b{font-weight:200}
 .home .blob h1 span{font-weight:200}
