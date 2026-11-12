@@ -49,7 +49,7 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .home .blob h1 b{font-weight:400}
 .home .blob h1 span{font-weight:400}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 43%}
-.hero-title{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);margin:0;text-align:center;font-family:'Fragment Mono',monospace;font-weight:400;font-size:clamp(11px,1.35vw,19px);letter-spacing:.12em;text-transform:lowercase;line-height:1.4;opacity:0;transition:opacity 1.2s ease;z-index:1;white-space:nowrap}
+.hero-title{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);margin:0;text-align:center;font-family:'Fragment Mono',monospace;font-weight:400;font-size:clamp(11px,1.35vw,19px);letter-spacing:.12em;text-transform:lowercase;line-height:1.4;opacity:1;z-index:1;white-space:nowrap}
 .hero-title b,.hero-title span{font-weight:400}
 .hero-title.show{opacity:1}
 .home{background:#FBF1EC}
