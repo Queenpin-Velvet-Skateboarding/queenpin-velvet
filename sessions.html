@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sessions &amp; Kurse – Queenpin Velvet</title>
+<meta name="description" content="Queenpin Velvet Skateboarding – Skate-Sessions, Kurse und Events für Frauen und Mädchen in Zürich.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+<nav aria-label="Hauptmenü">
+<a class="corner tl" href="sessions.html" aria-current="page">Sessions &amp; Kurse</a>
+<a class="corner tc" href="index.html">queenpin velvet</a>
+<a class="corner tr" href="#">Über uns</a>
+</nav>
+<div class="page-head"><div class="blob"><img src="assets/farbtupfer.png" alt=""><h1>sessions<br>&amp; kurse</h1></div></div>
+<div class="wrap">
+<nav class="index" aria-label="Inhalt">
+<a href="#sessions"><span>sessions</span><span>(2)</span></a>
+<a href="#kurse"><span>kurse</span><span>(1)</span></a>
+<a href="#events"><span>events</span><span>(1)</span></a>
+</nav>
+
+<section id="sessions">
+<div class="sec-head"><h2>sessions</h2><p class="lbl">jede Woche</p></div>
+<article><p class="lbl">Di · 18.30 – 20.00 · für alle · kostenlos</p><h3>queenpin session</h3><p>Freestyle Halle Zürich</p></article>
+<article><p class="lbl">Mo · 17.30 – 18.30 · Mädchen 6 – 14 Jahre · CHF 300 / 10er-Abo</p><h3>queenpin sprouts to asters</h3><p>Letty-Ramp, Zürich</p></article>
+</section>
+
+<section id="kurse">
+<div class="sec-head"><h2>kurse</h2><p class="lbl">mit Anmeldung</p></div>
+<article class="kurs">
+<div>
+<h3>skate workshop</h3>
+<dl>
+<dt>Ort</dt><dd>[Ort]</dd>
+<dt>Alter</dt><dd>[Alter]</dd>
+<dt>Was wir machen</dt><dd>Design your own Deck, Bricolage &amp; Skate</dd>
+<dt>Daten</dt><dd>7 Workshops 2027, jeweils Do – So</dd>
+<dt>Preis</dt><dd>[Preis]</dd>
+</dl>
+</div>
+<form id="anmeldung">
+<label>Alter
+<select name="alter"><option value="">bitte wählen</option><option value="6–9 Jahre">6 – 9 Jahre</option><option value="10–12 Jahre">10 – 12 Jahre</option><option value="13–15 Jahre">13 – 15 Jahre</option></select>
+</label>
+<label>Datum
+<select name="datum"><option value="">bitte wählen</option>
+<option value="Workshop 1: Do 18.2. – So 21.2.">Do 18.2. – So 21.2.</option>
+<option value="Workshop 2: Do 25.2. – So 28.2.">Do 25.2. – So 28.2.</option>
+<option value="Workshop 3: Do 25.3. – So 28.3. (Ostern)">Do 25.3. – So 28.3. (Ostern)</option>
+<option value="Workshop 4: Do 29.4. – So 2.5.">Do 29.4. – So 2.5.</option>
+<option value="Workshop 5: Do 6.5. (Auffahrt) – So 9.5.">Do 6.5. (Auffahrt) – So 9.5.</option>
+<option value="Workshop 6: Do 14.10. – So 17.10.">Do 14.10. – So 17.10.</option>
+<option value="Workshop 7: Do 21.10. – So 24.10.">Do 21.10. – So 24.10.</option>
+</select>
+</label>
+<a class="btn" id="anmelden" href="#">anmelden →</a>
+</form>
+</article>
+<article class="row"><h3>privatkurse</h3><a href="mailto:[E-MAIL]?subject=Privatkurs">auf anfrage →</a></article>
+</section>
+
+<section id="events">
+<div class="sec-head"><h2>events</h2><p class="lbl">Rückblick</p></div>
+<article><p class="lbl">Sa 24.10.2026 · Letty-Ramp · Contest</p><h3>queenpin open</h3><p>Mini-Ramp, Cash for Tricks, Live Drawing, Poesie, Konzert, DJs, Deck-Release</p></article>
+</section>
+</div>
+<nav aria-label="Weitere Seiten">
+<a class="corner bl" href="#events">Events</a>
+<a class="corner br" href="#">Gönnerin werden</a>
+<span class="lang"><a href="index.html" aria-current="true">DE</a><a href="#">FR</a><a href="#">EN</a></span>
+</nav>
+</main>
+<script>
+(function(){
+  var f=document.getElementById('anmeldung'),b=document.getElementById('anmelden');
+  function upd(){
+    var a=f.alter.value||'-',d=f.datum.value||'-';
+    var body='Kurs: Skate Workshop\nAlter: '+a+'\nDatum: '+d+'\nName: \nTelefon: ';
+    b.href='mailto:[E-MAIL]?subject='+encodeURIComponent('Anmeldung Skate Workshop')+'&body='+encodeURIComponent(body);
+  }
+  f.addEventListener('change',upd);upd();
+})();
+</script>
+</body>
+</html>
