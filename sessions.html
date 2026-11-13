@@ -14,18 +14,22 @@
 </head>
 <body>
 <main class="home">
-<article class="session">
-<h1 class="s-title">queenpin open session</h1>
-<div class="s-next" id="next">
-<p class="s-date" data-f="datum">17.11.2026</p>
-<p data-f="ort">Freestyle Halle</p>
-<p data-f="zeit">18.30–20.00</p>
+<article class="session s-session">
+<div class="s-next k-einzel" id="next">
+<p class="k-label">Queenpin Open Session</p>
+<p>&nbsp;</p>
+<h1 class="keep k-name" data-f="datum">Dienstag 17.11.2026</h1>
+<p class="k-tage" data-f="zeit">18.30 – 20.00</p>
 <p class="s-special" data-f="special" hidden></p>
+<p>&nbsp;</p>
+<p>Jede Queen mit ihrem ganz eigenen Level</p>
+<p>ist willkommen.</p>
+<p>Wir freuen uns auf dich.</p>
 <div class="s-mark"><video class="s-video" src="assets/ausbreiten.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span></div>
-<p class="s-addr" data-f="strasse">Allmendstrasse 10</p>
-<p class="s-addr" data-f="plz">8045 Zürich</p>
+<p data-f="ort">Freestyle Halle Zürich</p>
+<p class="s-addr" data-f="strasse">Bändlistrasse 76</p>
+<p class="s-addr" data-f="plz">8064 Zürich</p>
 </div>
-<p class="s-welcome">jede queen<br>mit ihrem ganz eigenen level<br>ist willkommen.<br>wir freuen uns auf dich.</p>
 </article>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html" aria-current="page">sessions</a>
@@ -51,7 +55,8 @@ var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändl
   function show(o){
     document.querySelectorAll('#next [data-f]').forEach(function(el){
       var k=el.getAttribute('data-f'),v=o[k]||'';
-      if(k==='datum'&&v)v='dienstag '+v;
+      if(k==='datum'&&v)v='Dienstag '+v;
+      if(k==='zeit'&&v)v=v.replace(/\s*[–-]\s*/,' – ');
       el.textContent=v; if(k==='special')el.hidden=!v;
     });
   }

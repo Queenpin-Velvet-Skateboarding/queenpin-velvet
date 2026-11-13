@@ -173,3 +173,8 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .k-zeile:empty{display:block}
 .k-zeile.k-klein{opacity:1;font-size:inherit;margin:0!important}
 @media (max-width:1100px){.session .k-cols3{grid-template-rows:none;row-gap:6em}.session form.k-spalte{display:flex;flex-direction:column;gap:1.8em;grid-row:auto}.k-zeile:empty{display:none}}
+/* Sessions im Stil der Kurse */
+.s-session .k-einzel{display:flex;flex-direction:column;align-items:center}
+.s-session .k-name{margin-bottom:.5em}
+.s-session .s-mark{height:4.5em}
+.session.s-session > .s-next{z-index:auto}
