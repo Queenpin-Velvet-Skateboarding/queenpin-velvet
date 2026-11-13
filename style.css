@@ -246,3 +246,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 }
 .k-cols .dd{width:min(25em,92%)}
 @media (max-width:1100px){.k-cols .dd{width:92%!important}.session .s-next,.s-info{letter-spacing:.04em}}
+@media (max-width:600px){.tc{top:24px}}
