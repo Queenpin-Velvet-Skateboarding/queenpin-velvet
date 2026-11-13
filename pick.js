@@ -20,25 +20,18 @@
         else if(b.indexOf('https://wa.me/')===0)a.href=b.split('?')[0]+'?text='+t;
       });
     }
-    /* Gruppen je nach Termin: nur buchbare Gruppen anzeigen */
-    var st=box.querySelector('select[name=termin]'),sg=box.querySelector('select[name=gruppe]');
-    var info=box.querySelector('.k-info');
-    if(st&&sg){
-      var alle=[].slice.call(sg.querySelectorAll('option[data-in]'));
-      var ph=sg.options[0];
+    /* Erst Kategorie, dann nur die passenden Kurse (mit Datum + Zeit) */
+    var sk=box.querySelector('select[name=kategorie]'),st=box.querySelector('select[name=termin]');
+    if(sk&&st){
+      var alle=[].slice.call(st.querySelectorAll('option[data-k]')),ph=st.options[0];
       function fill(){
-        var g=(st.selectedOptions[0]||{}).getAttribute?st.selectedOptions[0].getAttribute('data-g'):null;
+        var k=sk.value?sk.value.split(' ')[0]:'';
         alle.forEach(function(o){if(o.parentNode)o.parentNode.removeChild(o);});
-        if(g)alle.forEach(function(o){if(o.getAttribute('data-in').indexOf(g)>-1)sg.appendChild(o);});
-        sg.value='';ph.textContent=g?'gruppe wählen':'zuerst termin wählen';sg.disabled=!g;
+        if(k)alle.forEach(function(o){if(o.getAttribute('data-k')===k)st.appendChild(o);});
+        st.value='';ph.textContent=k?'kurs wählen':'zuerst kategorie wählen';st.disabled=!k;
       }
-      st.addEventListener('change',fill);fill();
-      sg.addEventListener('change',function(){});
+      sk.addEventListener('change',fill);fill();
     }
-    function showInfo(){
-      if(!info||!sg)return;var o=sg.selectedOptions[0],t=o&&o.getAttribute('data-info');
-      info.hidden=!t;info.textContent=t||'';
-    }
-    box.addEventListener('change',function(){showInfo();update();});update();
+    box.addEventListener('change',update);update();
   });
 })();
