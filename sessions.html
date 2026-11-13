@@ -38,8 +38,8 @@
 <script>
 /* Nächste Session: immer der nächste Dienstag (am Dienstag bis 20 Uhr: heute).
    Einträge im Google Sheet (Blatt «Sessions», als CSV veröffentlicht) überschreiben Ort/Zeit/Adresse/Special für dieses Datum. */
-var SHEET_CSV='';
-var STANDARD={ort:'Freestyle Halle',zeit:'18.30–20.00',strasse:'Allmendstrasse 10',plz:'8045 Zürich',special:''};
+var SHEET_CSV='https://docs.google.com/spreadsheets/d/1kYG4ogNdltVRIJexxZI1mbG_KoOXpFpBImUoy6ZhLSc/gviz/tq?tqx=out:csv&sheet=Sessions';
+var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändlistrasse 76',plz:'8064 Zürich',special:''};
 (function(){
   function nextTuesday(){
     var d=new Date(),day=d.getDay(),add=(2-day+7)%7;
