@@ -66,3 +66,5 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .s-dot{width:8px;height:8px;border-radius:50%;background:#F6C5C4}
 .s-welcome{text-transform:lowercase}
 .session ~ nav .corner, .session ~ nav .lang{position:fixed}
+.s-special{margin-top:1.2em!important}
+.s-special::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:#F6C5C4;margin-right:.7em;vertical-align:middle}

@@ -20,6 +20,7 @@
 <p class="s-date" data-f="datum">17.11.2026</p>
 <p data-f="ort">Freestyle Halle</p>
 <p data-f="zeit">18.30–20.00</p>
+<p class="s-special" data-f="special" hidden></p>
 <div class="s-media"><span class="s-dot" aria-hidden="true"></span></div>
 <p data-f="strasse">Allmendstrasse 10</p>
 <p data-f="plz">8045 Zürich</p>
@@ -47,7 +48,7 @@ var SHEET_CSV='';
       .filter(function(o){return !isNaN(o._d)&&o._d>=today;}).sort(function(a,b){return a._d-b._d;});
     if(!list.length)return;
     var n=list[0];
-    document.querySelectorAll('#next [data-f]').forEach(function(el){var k=el.getAttribute('data-f');if(n[k])el.textContent=n[k];});
+    document.querySelectorAll('#next [data-f]').forEach(function(el){var k=el.getAttribute('data-f');if(n[k]){el.textContent=n[k];el.hidden=false;}});
   }).catch(function(){});
 })();
 </script>
