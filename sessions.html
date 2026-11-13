@@ -80,7 +80,7 @@ var STANDARD={ort:'Freestyle Halle',zeit:'18.30–20.00',strasse:'Allmendstrasse
 (function(){
   var v=document.querySelector('.s-video'),dot=document.querySelector('.s-dot');if(!v)return;
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();setTimeout(function(){v.play().then(function(){dot.style.opacity=0;}).catch(function(){});},2500);}},{threshold:.6});
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();setTimeout(function(){v.play().then(function(){dot.style.opacity=0;}).catch(function(){});},1250);}},{threshold:.6});
   io.observe(dot);
 })();
 </script>
