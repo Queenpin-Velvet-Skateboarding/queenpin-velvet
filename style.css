@@ -184,3 +184,10 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 /* Motto unten mittig, grösser */
 .k-motto{top:auto;bottom:64px;font-size:13px;letter-spacing:.06em}
 @media (max-width:600px){.k-motto{top:auto;bottom:56px;font-size:11px}}
+/* 7 Zeilen: Zeitplan und Teilnehmende getrennt, damit alles auf einer Linie steht */
+.session .k-cols3{grid-template-rows:repeat(7,auto)}
+.session form.k-spalte{grid-row:span 7}
+.k-zeile .k-klein{margin:0!important}
+.k-zeile .k-plan + .k-klein{margin:0!important}
+@media (max-width:1100px){.session form.k-spalte{grid-row:auto}}
+.dd{padding-left:1.6em;padding-right:1.6em}
