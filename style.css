@@ -230,3 +230,19 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
   .session{padding-bottom:16vh}
 }
 @media (max-width:1100px){.k-motto{position:absolute!important;left:50%;transform:translateX(-50%)!important;top:auto;bottom:62px;margin:0!important}}
+/* Lesbarkeit: grössere Schrift, Dropdowns auf Rosa */
+.session .s-next,.s-info{font-size:clamp(11px,.82vw,12.5px)}
+.dd{background-color:#F6C5C4;border-radius:999px;opacity:1;color:#141414;padding-top:.55em;padding-bottom:.55em;margin:.3em 0}
+.dd:hover{color:#141414;font-weight:400}
+.dd:disabled{opacity:.45}
+.dd.gewaehlt{font-weight:400}
+.t-cap,.k-info,.k-klein{opacity:.75}
+@media (max-width:1100px){
+  .session .s-next,.s-info{font-size:13px}
+  .session .s-next p,.s-info p,.dd,.s-btn{font-weight:300}
+  .session .k-name,.s-info-titel,.dd.gewaehlt{font-weight:400}
+  .dd{width:100%!important;font-size:13px}
+  .corner{font-size:14px}
+}
+.k-cols .dd{width:min(25em,92%)}
+@media (max-width:1100px){.k-cols .dd{width:92%!important}.session .s-next,.s-info{letter-spacing:.04em}}
