@@ -138,3 +138,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .k-board{margin-top:.8em}
 .s-signup + .k-klein{margin-top:2.4em!important}
 .k-cols .dd{width:min(46em,100%)}
+.k-preis{white-space:pre-line}
