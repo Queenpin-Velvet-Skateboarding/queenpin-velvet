@@ -89,3 +89,5 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .corner:hover,.choice a:hover,.corner[aria-current]{font-weight:400;opacity:1}
 .corner,.choice a{transition:font-weight .15s}
 .session .s-title{margin-bottom:-6vh}
+.s-btn{display:inline-block;text-decoration:none;border:1px solid rgba(20,20,20,.35);border-radius:999px;padding:7px 16px;letter-spacing:.12em;position:relative;z-index:2}
+.s-btn:hover{font-weight:400;opacity:1}
