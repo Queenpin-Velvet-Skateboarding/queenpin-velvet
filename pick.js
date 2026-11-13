@@ -7,7 +7,10 @@
     links.forEach(function(a){a.setAttribute('data-base',a.getAttribute('href'));});
     function update(){
       var teile=[kurs];
-      box.querySelectorAll('input:checked').forEach(function(i){teile.push(i.value);});
+      box.querySelectorAll('input:checked, select').forEach(function(i){if(i.value)teile.push(i.value);});
+      box.querySelectorAll('select').forEach(function(x){x.classList.toggle('gewaehlt',!!x.value);});
+      var pr=box.querySelector('.k-preis'),alle=[].every.call(box.querySelectorAll('select'),function(x){return x.value;});
+      if(pr){pr.hidden=!alle;pr.textContent=box.getAttribute('data-preis')||'';}
       var text='Hallo Queenpin! Ich möchte mich anmelden: '+teile.join(', ')+'.\nName:\nAlter:';
       var t=encodeURIComponent(text);
       links.forEach(function(a){
