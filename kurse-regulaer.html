@@ -15,16 +15,19 @@
 <body>
 <main class="home">
 <article class="session">
+<header class="s-head">
 <h1 class="s-title keep">Sprouts to Aster</h1>
+<p class="s-sub">Skateboard-Kurse für Queens (bis 16)</p>
+</header>
 <div class="s-next" id="next">
-<p class="s-date" id="k-datum">montag</p>
-<p id="k-ort">Letty Ramp</p>
+<p>montag</p>
+<p class="s-date" id="k-datum">16.11.2026</p>
 <p>17.30–18.30</p>
 <div class="s-mark"><video class="s-video" src="assets/ausbreiten.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span></div>
+<p id="k-ort">Letty Ramp</p>
 <p class="s-addr" id="k-strasse">Wasserwerkstrasse 105</p>
 <p class="s-addr" id="k-plz">8037 Zürich</p>
 <p>&nbsp;</p>
-<p>Skateboard-Kurse für Queens bis 16.</p>
 <form class="pick" data-kurs="Sprouts to Aster" onsubmit="return false">
 <div class="t t2">
 <label><input type="radio" name="sta" value="10 Lektionen CHF 300.–"><span>10 Lektionen</span><span>CHF 300.–</span></label>
@@ -65,7 +68,7 @@
   var datum=p2(d.getDate())+'.'+p2(d.getMonth()+1)+'.'+d.getFullYear();
   var iso=d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());
   function show(o){
-    document.getElementById('k-datum').textContent='montag '+datum;
+    document.getElementById('k-datum').textContent=datum;
     document.getElementById('k-ort').textContent=o.ort;
     document.getElementById('k-strasse').textContent=o.strasse;
     document.getElementById('k-plz').textContent=o.plz;

@@ -96,7 +96,7 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .keep{text-transform:none!important}
 .k-dot{display:block;width:6px;height:6px;border-radius:50%;background:#F6C5C4;margin:5em auto}
 /* Kurs-Auswahl als Tabelle mit unsichtbaren Linien */
-.session .pick{display:flex;flex-direction:column;align-items:center;gap:0}
+.session .pick{display:flex;flex-direction:column;align-items:center;gap:0;flex:none}
 .t-cap{margin-top:1.6em!important;opacity:.55}
 .t{display:grid;justify-content:center;margin-top:.4em}
 .t label{display:grid;gap:0;font-size:inherit;text-transform:none;letter-spacing:inherit;grid-template-columns:subgrid;grid-column:1/-1;column-gap:2.2em;text-align:left;position:relative;padding:.12em 0;cursor:url(assets/cursor-pink.png) 7 18,pointer;transition:color .15s}
@@ -106,3 +106,7 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .t label:has(input:checked)::before{content:'';position:absolute;left:-1.4em;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:#F6C5C4}
 .t label:has(input:focus-visible){outline:1px dotted currentColor;outline-offset:3px}
 .t2{grid-template-columns:auto auto}.t3{grid-template-columns:auto auto auto}.t1{grid-template-columns:auto}
+/* Titel + Untertitel als ein Block */
+.session .s-head{display:flex;flex-direction:column;align-items:center;gap:1.4em;margin-bottom:-6vh;position:relative;z-index:2}
+.session .s-head .s-title{margin-bottom:0}
+.s-sub{font-size:clamp(9px,.62vw,10px)}
