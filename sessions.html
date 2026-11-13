@@ -15,6 +15,7 @@
 <body>
 <main class="home">
 <article class="session s-session">
+<div class="s-mark s-sonne"><video class="s-video" src="assets/fleck.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span></div>
 <div class="s-next k-einzel" id="next">
 <p class="k-label">Queenpin Open Session</p>
 <p>&nbsp;</p>
@@ -25,7 +26,7 @@
 <p>Jede Queen mit ihrem ganz eigenen Level</p>
 <p>ist willkommen.</p>
 <p>Wir freuen uns auf dich.</p>
-<div class="s-mark"><video class="s-video" src="assets/fleck.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span></div>
+<p>&nbsp;</p>
 <p data-f="ort">Freestyle Halle Zürich</p>
 <p class="s-addr" data-f="strasse">Bändlistrasse 76</p>
 <p class="s-addr" data-f="plz">8064 Zürich</p>
@@ -84,19 +85,13 @@ var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändl
 })();
 </script>
 <script>
+/* Fleck: in normaler Geschwindigkeit abspielen, sobald er sichtbar ist */
 (function(){
   var v=document.querySelector('.s-video'),dot=document.querySelector('.s-dot');if(!v)return;
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
   var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();
-    var min=0.12,dur=1250,t0=null;
-    try{v.playbackRate=min;}catch(x){}
-    v.play().then(function(){dot.style.opacity=0;
-      function step(ts){if(t0===null)t0=ts;var p=Math.min((ts-t0)/dur,1);
-        try{v.playbackRate=min+(1-min)*p*p;}catch(x){}
-        if(p<1)requestAnimationFrame(step);}
-      requestAnimationFrame(step);
-    }).catch(function(){});}},{threshold:.6});
-  io.observe(dot);
+    v.play().then(function(){if(dot)dot.style.opacity=0;}).catch(function(){});}},{threshold:.3});
+  io.observe(v.parentNode);
 })();
 </script>
 </body>
