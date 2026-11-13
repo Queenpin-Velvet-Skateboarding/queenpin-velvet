@@ -18,20 +18,20 @@
 <div class="s-mark s-sonne"><video class="s-video" src="assets/fleck.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span>
 <div class="s-info" id="next">
 <p data-f="datum">Dienstag 17.11.2026</p>
-<p data-f="zeit">18.30 – 20.00</p>
+<p class="s-info-titel">Queenpin Open Session</p>
 <p data-f="ort">Freestyle Halle Zürich</p>
-<p class="s-addr" data-f="strasse">Bändlistrasse 76</p>
-<p class="s-addr" data-f="plz">8064 Zürich</p>
 <p class="s-special" data-f="special" hidden></p>
 </div></div>
 <div class="s-next k-einzel">
 <p class="k-label">Open Session</p>
 <p>&nbsp;</p>
 <h1 class="keep k-name">Queenpin</h1>
-<p class="k-tage">Jeden Dienstag</p>
+<p class="k-tage">Jeden Dienstag <span data-f="zeit">18.30 – 20.00</span></p>
 <p>&nbsp;</p>
 <p>Jede Queen mit ihrem ganz eigenen Level</p>
-<p>ist willkommen. Wir freuen uns auf dich.</p>
+<p>ist jederzeit willkommen.</p>
+<p>Die Sessions sind gratis.</p>
+<p>Wir freuen uns auf dich.</p>
 </div>
 </article>
 <nav aria-label="Hauptmenü">
@@ -56,7 +56,7 @@ var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändl
   }
   function fmt(d){return ('0'+d.getDate()).slice(-2)+'.'+('0'+(d.getMonth()+1)).slice(-2)+'.'+d.getFullYear();}
   function show(o){
-    document.querySelectorAll('#next [data-f]').forEach(function(el){
+    document.querySelectorAll('[data-f]').forEach(function(el){
       var k=el.getAttribute('data-f'),v=o[k]||'';
       if(k==='datum'&&v)v='Dienstag '+v;
       if(k==='zeit'&&v)v=v.replace(/\s*[–-]\s*/,' – ');

@@ -195,7 +195,7 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 /* Sessions: aktuelle Session im Farbtupfer */
 .s-info{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;text-align:center;white-space:nowrap;z-index:2}
 .s-info p{margin:0;position:relative;z-index:2}
-.s-info [data-f="ort"]{margin-top:.8em}
+.s-info [data-f="ort"]{margin-top:0}
 .s-session .s-sonne .s-dot{top:0}
 .s-info{font-size:clamp(9px,.62vw,10px);letter-spacing:.1em;line-height:1.45}
 .s-info .s-addr{font-size:.85em}
