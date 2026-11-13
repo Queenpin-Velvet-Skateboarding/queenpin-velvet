@@ -36,19 +36,43 @@
 </nav>
 </main>
 <script>
-/* Nächste Session aus Google Sheet (CSV) laden. URL eintragen, sobald das Sheet veröffentlicht ist. */
+/* Nächste Session: immer der nächste Dienstag (am Dienstag bis 20 Uhr: heute).
+   Einträge im Google Sheet (Blatt «Sessions», als CSV veröffentlicht) überschreiben Ort/Zeit/Adresse/Special für dieses Datum. */
 var SHEET_CSV='';
+var STANDARD={ort:'Freestyle Halle',zeit:'18.30–20.00',strasse:'Allmendstrasse 10',plz:'8045 Zürich',special:''};
 (function(){
+  function nextTuesday(){
+    var d=new Date(),day=d.getDay(),add=(2-day+7)%7;
+    if(add===0&&d.getHours()>=20)add=7;
+    d.setDate(d.getDate()+add);d.setHours(0,0,0,0);return d;
+  }
+  function fmt(d){return ('0'+d.getDate()).slice(-2)+'.'+('0'+(d.getMonth()+1)).slice(-2)+'.'+d.getFullYear();}
+  function show(o){
+    document.querySelectorAll('#next [data-f]').forEach(function(el){
+      var k=el.getAttribute('data-f'),v=o[k]||'';
+      el.textContent=v; if(k==='special')el.hidden=!v;
+    });
+  }
+  var day=nextTuesday(),info=Object.assign({datum:fmt(day)},STANDARD);
+  show(info);
   if(!SHEET_CSV)return;
+  function parse(t){
+    var rows=[],row=[],f='',q=false;
+    for(var i=0;i<t.length;i++){var c=t[i];
+      if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++;}else q=false;}else f+=c;}
+      else if(c=='"')q=true; else if(c==','){row.push(f);f='';}
+      else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;row.push(f);rows.push(row);row=[];f='';}
+      else f+=c;}
+    if(f||row.length){row.push(f);rows.push(row);}
+    return rows;
+  }
   fetch(SHEET_CSV,{cache:'no-store'}).then(function(r){return r.text();}).then(function(t){
-    var rows=t.trim().split(/\r?\n/).map(function(l){return l.split(',').map(function(c){return c.replace(/^"|"$/g,'').trim();});});
-    var head=rows.shift().map(function(h){return h.toLowerCase();});
-    var today=new Date();today.setHours(0,0,0,0);
-    var list=rows.map(function(r){var o={};head.forEach(function(h,i){o[h]=r[i]||'';});var p=(o.datum||'').split('.');o._d=new Date(+p[2],+p[1]-1,+p[0]);return o;})
-      .filter(function(o){return !isNaN(o._d)&&o._d>=today;}).sort(function(a,b){return a._d-b._d;});
-    if(!list.length)return;
-    var n=list[0];
-    document.querySelectorAll('#next [data-f]').forEach(function(el){var k=el.getAttribute('data-f');if(n[k]){el.textContent=n[k];el.hidden=false;}});
+    var rows=parse(t),head=rows.shift().map(function(h){return h.trim().toLowerCase();});
+    rows.forEach(function(r){
+      var o={};head.forEach(function(h,i){o[h]=(r[i]||'').trim();});
+      if(o.datum===info.datum){Object.keys(o).forEach(function(k){if(o[k])info[k]=o[k];});}
+    });
+    show(info);
   }).catch(function(){});
 })();
 </script>
