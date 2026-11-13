@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reguläre Kurse – Queenpin Velvet</title>
+<title>Sprouts to Aster – Queenpin Velvet</title>
 <meta name="description" content="Queenpin Velvet Skateboarding – Skate-Sessions, Kurse und Events für Frauen und Mädchen in Zürich.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,17 +15,16 @@
 <body>
 <main class="home">
 <article class="session">
-<h1 class="s-title">montag sprouts to aster</h1>
-<div class="s-next">
-<p>Skateboard-Kurse für Mädchen und junge Frauen bis 16.</p>
-<p>&nbsp;</p>
+<h1 class="s-title">sprouts to aster</h1>
+<div class="s-next" id="next">
+<p class="s-date" id="k-datum">montag</p>
+<p id="k-ort">Letty Ramp</p>
 <p>17.30–18.30</p>
+<div class="s-mark"><video class="s-video" src="assets/ausbreiten.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span></div>
+<p class="s-addr" id="k-strasse">Wasserwerkstrasse 105</p>
+<p class="s-addr" id="k-plz">8037 Zürich</p>
 <p>&nbsp;</p>
-<p>Allmend, Zürich</p>
-<p class="s-addr">im Frühling und im Sommer bei Sonnenschein</p>
-<p>Letty Ramp, Zürich</p>
-<p class="s-addr">im Herbst, im Winter und bei Regen</p>
-<p>&nbsp;</p>
+<p>Skateboard-Kurse für Queens bis 16.</p>
 <p>10 Lektionen CHF 300.–</p>
 <p>Drop-in CHF 35.–</p>
 <p>&nbsp;</p>
@@ -35,6 +34,7 @@
 <a class="s-btn" href="mailto:skateboard@queenpin.ch?subject=Anmeldung%20Sprouts%20to%20Aster">mail</a>
 <a class="s-btn" href="sms:[NUMMER]?&amp;body=Anmeldung%20Sprouts%20to%20Aster">sms</a>
 </p>
+<p>oder einfach vorbeikommen.</p>
 </div>
 <p class="s-welcome">it takes courage to bloom.<br>lerne hier alles:<br>vom ersten push<br>bis zu deinem ganz eigenen stil.</p>
 </article>
@@ -47,5 +47,53 @@
 <span class="lang"><a href="index.html" aria-current="true">DE</a><a href="#">FR</a><a href="#">EN</a></span>
 </nav>
 </main>
+<script>
+/* Nächster Kurs: immer der nächste Montag (am Montag bis 18.30: heute).
+   Ort: 1. April – 30. September Allmend, sonst Letty Ramp.
+   Im Sommer: Regen-Prognose (Open-Meteo, Zürich, 17–19 Uhr) → Letty Ramp. */
+(function(){
+  var ALLMEND={ort:'Freestyle-Park Allmend',strasse:'Allmendstrasse 10',plz:'8045 Zürich'};
+  var LETTY={ort:'Letty Ramp',strasse:'Wasserwerkstrasse 105',plz:'8037 Zürich'};
+  var SOMMER_VON=4, SOMMER_BIS=9; /* Monate: April bis September */
+  var d=new Date(),add=(1-d.getDay()+7)%7;
+  if(add===0&&(d.getHours()*60+d.getMinutes())>=18*60+30)add=7;
+  d.setDate(d.getDate()+add);
+  function p2(n){return ('0'+n).slice(-2);}
+  var datum=p2(d.getDate())+'.'+p2(d.getMonth()+1)+'.'+d.getFullYear();
+  var iso=d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());
+  function show(o){
+    document.getElementById('k-datum').textContent='montag '+datum;
+    document.getElementById('k-ort').textContent=o.ort;
+    document.getElementById('k-strasse').textContent=o.strasse;
+    document.getElementById('k-plz').textContent=o.plz;
+  }
+  var m=d.getMonth()+1,sommer=m>=SOMMER_VON&&m<=SOMMER_BIS;
+  show(sommer?ALLMEND:LETTY);
+  if(!sommer)return;
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=47.37&longitude=8.53&hourly=precipitation,precipitation_probability&timezone=Europe%2FZurich&start_date='+iso+'&end_date='+iso)
+    .then(function(r){return r.json();}).then(function(j){
+      var h=j.hourly,regen=false;
+      h.time.forEach(function(t,i){var hr=+t.slice(11,13);
+        if(hr>=17&&hr<=18&&((h.precipitation[i]||0)>=0.3||(h.precipitation_probability[i]||0)>=50))regen=true;});
+      if(regen)show(LETTY);
+    }).catch(function(){});
+})();
+</script>
+<script>
+(function(){
+  var v=document.querySelector('.s-video'),dot=document.querySelector('.s-dot');if(!v)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();
+    var min=0.12,dur=1250,t0=null;
+    try{v.playbackRate=min;}catch(x){}
+    v.play().then(function(){dot.style.opacity=0;
+      function step(ts){if(t0===null)t0=ts;var p=Math.min((ts-t0)/dur,1);
+        try{v.playbackRate=min+(1-min)*p*p;}catch(x){}
+        if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    }).catch(function(){});}},{threshold:.6});
+  io.observe(dot);
+})();
+</script>
 </body>
 </html>
