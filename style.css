@@ -126,3 +126,12 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .session .k-name{font-weight:400;font-size:inherit;margin:0;position:relative;z-index:2}
 .session .k-title.k-name{margin-bottom:.5em}
 .k-tage{font-style:italic;font-size:.85em}
+/* Ferienkurse nebeneinander, Punkt + Satz senkrecht in der Mitte */
+.session .k-cols{display:grid;grid-template-columns:1fr auto 1fr;column-gap:4vw;align-items:start;width:min(1200px,100%)}
+.k-cols .pick{min-width:0}
+.k-cols .dd{width:min(30em,100%)}
+.k-mitte{display:flex;flex-direction:column;align-items:center;gap:2.4em;padding-top:.3em}
+.k-mitte .k-dot{margin:0}
+.k-vertikal{writing-mode:vertical-rl;text-transform:lowercase;letter-spacing:.3em;opacity:.8}
+@media (max-width:900px){.session .k-cols{grid-template-columns:1fr;row-gap:5em}.k-vertikal{writing-mode:horizontal-tb;letter-spacing:.1em}}
+.session h2.k-name{margin-bottom:.5em}
