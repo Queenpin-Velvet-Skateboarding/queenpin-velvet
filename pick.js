@@ -15,7 +15,8 @@
       });
       box.querySelectorAll('select').forEach(function(x){x.classList.toggle('gewaehlt',!!x.value);});
       var pr=box.querySelector('.k-preis'),alle=[].every.call(box.querySelectorAll('select'),function(x){return x.value;});
-      if(pr){pr.hidden=!alle;pr.textContent=box.getAttribute('data-preis')||'';}
+      var mit=box.querySelector('input[name=board]:checked');
+      if(pr){pr.hidden=!alle;pr.textContent=(mit&&box.getAttribute('data-preis-mit'))||box.getAttribute('data-preis')||'';}
       var detail=[termin,kat].concat(rest).filter(Boolean).join(' · ');
       var text='Hallo Queenpin!\nIch interessiere mich für diesen Kurs:\n'+kurs+',\n'+(detail||'')+'\nName:\nAlter:';
       var t=encodeURIComponent(text);
