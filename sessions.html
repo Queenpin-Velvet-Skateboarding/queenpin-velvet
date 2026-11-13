@@ -70,7 +70,7 @@ var STANDARD={ort:'Freestyle Halle',zeit:'18.30–20.00',strasse:'Allmendstrasse
     var rows=parse(t),head=rows.shift().map(function(h){return h.trim().toLowerCase();});
     rows.forEach(function(r){
       var o={};head.forEach(function(h,i){o[h]=(r[i]||'').trim();});
-      if(o.datum===info.datum){Object.keys(o).forEach(function(k){if(o[k])info[k]=o[k];});}
+      if(o.datum===info.datum){Object.keys(o).forEach(function(k){if(o[k]&&o[k].charAt(0)!=='#')info[k]=o[k];});}
     });
     show(info);
   }).catch(function(){});
