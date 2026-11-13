@@ -199,3 +199,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .s-session .s-sonne .s-dot{top:0}
 .s-info{font-size:clamp(9px,.62vw,10px);letter-spacing:.1em;line-height:1.45}
 .s-info .s-addr{font-size:.85em}
+.s-info-titel{font-weight:400}
