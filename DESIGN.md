@@ -12,7 +12,7 @@ Die «feine Sprache» der Seite. Gilt für alle neuen Seiten.
 - Rosa nur als Farbfleck/Bild, nicht als Textfarbe
 
 ## Schrift
-- Fragment Mono, eine Stärke (400), überall – Menü und Titel
+- Forma DJR Mono (Adobe Fonts, Kit qkn7udf), feinster Schnitt (200), überall – Menü und Titel
 - Kleinschreibung, leicht gesperrt (letter-spacing .04–.12em)
 - Klein: Menü 13 px, Titel max. 19 px
 - Fliesstext normal geschrieben (Gross/Klein), z. B. «Bald hier. Geh so lange skaten.»
