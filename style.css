@@ -110,3 +110,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .session .s-head{display:flex;flex-direction:column;align-items:center;gap:1.4em;margin-bottom:-6vh;position:relative;z-index:2}
 .session .s-head .s-title{margin-bottom:0}
 .s-sub{font-size:clamp(9px,.62vw,10px)}
+.session .k-title{margin:0 0 1.4em}
