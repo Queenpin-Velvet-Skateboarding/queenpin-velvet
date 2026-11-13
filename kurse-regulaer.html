@@ -25,15 +25,18 @@
 <p class="s-addr" id="k-plz">8037 Zürich</p>
 <p>&nbsp;</p>
 <p>Skateboard-Kurse für Queens bis 16.</p>
-<p>10 Lektionen CHF 300.–</p>
-<p>Drop-in CHF 35.–</p>
-<p>&nbsp;</p>
-<p>anmelden über</p>
+<form class="pick" data-kurs="Sprouts to Aster" onsubmit="return false">
+<div class="t t2">
+<label><input type="radio" name="sta" value="10 Lektionen CHF 300.–"><span>10 Lektionen</span><span>CHF 300.–</span></label>
+<label><input type="radio" name="sta" value="Drop-in CHF 35.–"><span>Drop-in</span><span>CHF 35.–</span></label>
+</div>
+<p class="t-cap">anmelden über</p>
 <p class="s-signup">
 <a class="s-btn" href="[WHATSAPP-LINK]">whatsapp</a>
-<a class="s-btn" href="mailto:skateboard@queenpin.ch?subject=Anmeldung%20Sprouts%20to%20Aster">mail</a>
-<a class="s-btn" href="sms:[NUMMER]?&amp;body=Anmeldung%20Sprouts%20to%20Aster">sms</a>
+<a class="s-btn" href="mailto:skateboard@queenpin.ch">mail</a>
+<a class="s-btn" href="sms:[NUMMER]">sms</a>
 </p>
+</form>
 <p>oder einfach vorbeikommen.</p>
 </div>
 <p class="s-welcome">it takes courage to bloom.<br>lerne hier alles:<br>vom ersten push<br>bis zu deinem ganz eigenen stil.</p>
@@ -95,5 +98,6 @@
   io.observe(dot);
 })();
 </script>
+<script src="pick.js"></script>
 </body>
 </html>
