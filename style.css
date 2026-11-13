@@ -84,3 +84,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .s-video{position:absolute;left:50%;top:50%;width:min(100vw,1500px);aspect-ratio:16/9;transform:translate(-50%,-47%);object-fit:cover;mix-blend-mode:multiply;pointer-events:none;z-index:-1}
 .s-dot{transition:opacity .3s}
 .session{position:relative;isolation:isolate}
+.session .s-title,.session .s-next p,.session .s-welcome{position:relative;z-index:2}
