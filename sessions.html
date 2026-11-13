@@ -15,7 +15,7 @@
 <body>
 <main class="home">
 <article class="session">
-<h1 class="s-title">dienstag queenpin session</h1>
+<h1 class="s-title">queenpin open session</h1>
 <div class="s-next" id="next">
 <p class="s-date" data-f="datum">17.11.2026</p>
 <p data-f="ort">Freestyle Halle</p>
@@ -51,6 +51,7 @@ var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändl
   function show(o){
     document.querySelectorAll('#next [data-f]').forEach(function(el){
       var k=el.getAttribute('data-f'),v=o[k]||'';
+      if(k==='datum'&&v)v='dienstag '+v;
       el.textContent=v; if(k==='special')el.hidden=!v;
     });
   }
