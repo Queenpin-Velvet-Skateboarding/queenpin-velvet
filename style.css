@@ -55,3 +55,14 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .home{background:#FBF1EC}
 /* Forma DJR Mono (Adobe Fonts, Kit qkn7udf) – feinster Schnitt im Kit: 200 */
 .corner,.lang,.soon,.hero-title,.hero-title b,.hero-title span{font-family:'forma-djr-mono','IBM Plex Mono',monospace;font-weight:200}
+.choice{position:absolute;left:0;right:0;top:44%;display:flex;justify-content:center;gap:24vw;font-family:'forma-djr-mono','IBM Plex Mono',monospace;font-weight:200;font-size:clamp(12px,1.1vw,16px);letter-spacing:.1em;text-transform:lowercase}
+.choice a{text-decoration:none;padding:10px}
+.session{min-height:100vh;box-sizing:border-box;padding:22vh 24px 26vh;display:flex;flex-direction:column;align-items:center;gap:22vh;text-align:center;font-family:'forma-djr-mono','IBM Plex Mono',monospace;font-weight:200;font-size:clamp(12px,1.1vw,16px);letter-spacing:.1em;line-height:1.7}
+.session p,.session h1{margin:0}
+.s-title{font-weight:200;font-size:inherit;text-transform:lowercase}
+.s-next{display:flex;flex-direction:column;align-items:center}
+.s-media{width:min(80vw,900px);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin:4vh 0}
+.s-media video{width:100%;height:100%;object-fit:cover}
+.s-dot{width:8px;height:8px;border-radius:50%;background:#F6C5C4}
+.s-welcome{text-transform:lowercase}
+.session ~ nav .corner, .session ~ nav .lang{position:fixed}
