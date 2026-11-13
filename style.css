@@ -57,7 +57,7 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .corner,.lang,.soon,.hero-title,.hero-title b,.hero-title span{font-family:'forma-djr-mono','IBM Plex Mono',monospace;font-weight:200}
 .choice{position:absolute;left:0;right:0;top:44%;display:flex;justify-content:center;gap:24vw;font-family:'forma-djr-mono','IBM Plex Mono',monospace;font-weight:200;font-size:clamp(12px,1.1vw,16px);letter-spacing:.1em;text-transform:lowercase}
 .choice a{text-decoration:none;padding:10px}
-.session{min-height:100vh;box-sizing:border-box;padding:22vh 24px 26vh;display:flex;flex-direction:column;align-items:center;gap:22vh;text-align:center;font-family:'forma-djr-mono','IBM Plex Mono',monospace;font-weight:200;font-size:clamp(12px,1.1vw,16px);letter-spacing:.1em;line-height:1.7}
+.session{min-height:100vh;box-sizing:border-box;padding:20vh 24px 24vh;display:flex;flex-direction:column;align-items:center;gap:24vh;text-align:center;font-family:'forma-djr-mono','IBM Plex Mono',monospace;font-weight:200;font-size:clamp(12px,1.1vw,16px);letter-spacing:.1em;line-height:1.7}
 .session p,.session h1{margin:0}
 .s-title{font-weight:200;font-size:inherit;text-transform:lowercase}
 .s-next{display:flex;flex-direction:column;align-items:center}
@@ -68,3 +68,6 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .session ~ nav .corner, .session ~ nav .lang{position:fixed}
 .s-special{margin-top:1.2em!important}
 .s-special::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:#F6C5C4;margin-right:.7em;vertical-align:middle}
+.session{line-height:1.45}
+.s-line{width:min(240px,50vw);border:0;border-top:1px solid rgba(20,20,20,.18);margin:.9em 0 1em}
+.s-addr{font-size:.82em;line-height:1.35}
