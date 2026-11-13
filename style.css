@@ -191,3 +191,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .k-zeile .k-plan + .k-klein{margin:0!important}
 @media (max-width:1100px){.session form.k-spalte{grid-row:auto}}
 .dd{padding-left:1.6em;padding-right:1.6em}
+.k-info{font-size:.85em;opacity:.7;margin:.1em 0 .3em!important}

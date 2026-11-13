@@ -26,20 +26,25 @@
 <p class="k-tage">17.30 – 18.30</p>
 </div>
 <div class="k-zeile k-text">
-<p>Mädchen und junge Frauen lernen hier alles,</p>
-<p>vom ersten Push</p>
-<p>bis zu ihrem ganz eigenen Stil.</p>
+<p>Mädchen und junge Frauen* lernen hier alles,</p>
+<p>vom ersten Push bis zu ihrem ganz eigenen Stil.</p>
 </div>
 <div class="k-zeile k-ort">
 <p id="k-ort">Letty Ramp</p>
-<p class="s-addr" id="k-strasse">Wasserwerkstrasse 105</p>
-<p class="s-addr" id="k-plz">8037 Zürich</p>
 </div>
 <div class="k-zeile k-auswahl">
-<div class="t t2">
-<label><input type="radio" name="sta" value="10 Lektionen CHF 300.–"><span>10 Lektionen</span><span>CHF 300.–</span></label>
-<label><input type="radio" name="sta" value="Drop-in CHF 35.–"><span>Drop-in</span><span>CHF 35.–</span></label>
-</div>
+<select class="dd" name="kategorie" aria-label="Kategorie wählen">
+<option value="" selected disabled>Kategorie wählen</option>
+<option value="Sprouts · 7–18 Jahre · noch in den Anfängen · Mädchen und junge Frauen*">Sprouts · 7–18 Jahre · noch in den Anfängen · Mädchen und junge Frauen*</option>
+<option value="Aster · 7–18 Jahre · schon sicher auf dem Brett · Mädchen und junge Frauen*">Aster · 7–18 Jahre · schon sicher auf dem Brett · Mädchen und junge Frauen*</option>
+</select>
+<select class="dd" name="termin" aria-label="Kurs wählen">
+<option value="" selected disabled>Zuerst Kategorie wählen</option>
+<option value="10 Lektionen · CHF 300.–" data-k="Sprouts">10 Lektionen · CHF 300.–</option>
+<option value="Drop-in · CHF 35.–" data-k="Sprouts">Drop-in · CHF 35.–</option>
+<option value="10 Lektionen · CHF 300.–" data-k="Aster">10 Lektionen · CHF 300.–</option>
+<option value="Drop-in · CHF 35.–" data-k="Aster">Drop-in · CHF 35.–</option>
+</select>
 </div>
 <div class="k-zeile k-anmelden">
 <p class="t-cap">Mehr Infos oder anmelden über</p>
@@ -65,20 +70,20 @@
 <p class="k-tage">Donnerstag–Sonntag</p>
 </div>
 <div class="k-zeile k-text">
-<p>In diesem Ferienkurs skaten wir</p>
-<p>und du lernst, dein eigenes Deck zu designen.</p>
+<p>In diesem Ferienkurs lernst du neben dem Skaten,</p>
+<p>dein eigenes Deck zu designen.</p>
 <p>Wir arbeiten alle zusammen,</p>
 <p>aber am Ende hat jede ihr ganz eigenes Board.</p>
 </div>
 <div class="k-zeile k-ort">
-<p>Burrischopf</p>
+<p>Burrischopf, Letty Ramp</p>
 </div>
 <div class="k-zeile k-auswahl">
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Seeds · 4–6 Jahre · Buben und Mädchen">Seeds · 4–6 Jahre · Buben und Mädchen</option>
-<option value="Sprouts · 7–18 Jahre · noch in den Anfängen · nur Queens">Sprouts · 7–18 Jahre · noch in den Anfängen · nur Queens</option>
-<option value="Aster · 7–18 Jahre · schon sicher auf dem Brett · nur Queens">Aster · 7–18 Jahre · schon sicher auf dem Brett · nur Queens</option>
+<option value="Sprouts · 7–18 Jahre · noch in den Anfängen · Mädchen und junge Frauen*">Sprouts · 7–18 Jahre · noch in den Anfängen · Mädchen und junge Frauen*</option>
+<option value="Aster · 7–18 Jahre · schon sicher auf dem Brett · Mädchen und junge Frauen*">Aster · 7–18 Jahre · schon sicher auf dem Brett · Mädchen und junge Frauen*</option>
 </select>
 <select class="dd" name="termin" aria-label="Kurs wählen">
 <option value="" selected disabled>Zuerst Kategorie wählen</option>
@@ -130,14 +135,14 @@
 
 </div>
 <div class="k-zeile k-ort">
-
+<p>Skatepark Allmend</p>
 </div>
 <div class="k-zeile k-auswahl">
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Seeds · 4–6 Jahre · Buben und Mädchen">Seeds · 4–6 Jahre · Buben und Mädchen</option>
-<option value="Sprouts · 7–18 Jahre · noch in den Anfängen · nur Queens">Sprouts · 7–18 Jahre · noch in den Anfängen · nur Queens</option>
-<option value="Aster · 7–18 Jahre · schon sicher auf dem Brett · nur Queens">Aster · 7–18 Jahre · schon sicher auf dem Brett · nur Queens</option>
+<option value="Sprouts · 7–18 Jahre · noch in den Anfängen · Mädchen und junge Frauen*">Sprouts · 7–18 Jahre · noch in den Anfängen · Mädchen und junge Frauen*</option>
+<option value="Aster · 7–18 Jahre · schon sicher auf dem Brett · Mädchen und junge Frauen*">Aster · 7–18 Jahre · schon sicher auf dem Brett · Mädchen und junge Frauen*</option>
 </select>
 <select class="dd" name="termin" aria-label="Kurs wählen">
 <option value="" selected disabled>Zuerst Kategorie wählen</option>
@@ -168,13 +173,7 @@
 </p>
 </div>
 <div class="k-zeile k-zplan">
-<div class="k-klein k-plan">
-<span>9.00–10.30</span><span>Sprouts</span>
-<span>10.30–10.45</span><span>Pause</span>
-<span>10.45–11.45</span><span>Seeds</span>
-<span>11.45–12.00</span><span>Pause</span>
-<span>12.00–13.30</span><span>Aster</span>
-</div>
+
 </div>
 <div class="k-zeile k-zteil">
 <p class="k-klein">Die Kurse finden mit 4 Teilnehmenden (Seeds)<br>bzw. 6–8 Teilnehmerinnen (Sprouts, Aster) statt.</p>
@@ -208,7 +207,7 @@
    Ort: 1. April – 30. September Allmend, sonst Letty Ramp.
    Im Sommer: Regen-Prognose (Open-Meteo, Zürich, 17–19 Uhr) → Letty Ramp. */
 (function(){
-  var ALLMEND={ort:'Freestyle-Park Allmend',strasse:'Allmendstrasse 10',plz:'8045 Zürich'};
+  var ALLMEND={ort:'Skatepark Allmend',strasse:'Allmendstrasse 10',plz:'8045 Zürich'};
   var LETTY={ort:'Letty Ramp',strasse:'Wasserwerkstrasse 105',plz:'8037 Zürich'};
   var SOMMER_VON=4, SOMMER_BIS=9; /* Monate: April bis September */
   var d=new Date(),add=(1-d.getDay()+7)%7;
@@ -219,8 +218,6 @@
   var iso=d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());
   function show(o){
     document.getElementById('k-ort').textContent=o.ort;
-    document.getElementById('k-strasse').textContent=o.strasse;
-    document.getElementById('k-plz').textContent=o.plz;
   }
   var m=d.getMonth()+1,sommer=m>=SOMMER_VON&&m<=SOMMER_BIS;
   show(sommer?ALLMEND:LETTY);
