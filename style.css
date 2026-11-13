@@ -217,3 +217,16 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .k-landen video{position:absolute;left:0;top:0;width:min(62vw,820px);transform:translate(-50%,-42%);mix-blend-mode:multiply;display:block}
 @media (max-width:1100px){.k-landen video{width:min(150vw,820px)}}
 .k-landen{z-index:auto}
+/* Handy/Tablet: Kurse untereinander (muss am Schluss stehen) */
+@media (max-width:1100px){
+  .session .k-cols3{grid-template-columns:1fr;grid-template-rows:none;row-gap:7em}
+  .session form.k-spalte{display:flex;flex-direction:column;gap:1.8em;grid-row:auto}
+  .k-zeile:empty{display:none}
+  .k-landen video{width:min(170vw,820px)}
+  .k-motto{position:static;transform:none;margin:4em auto 0!important;text-align:center}
+}
+@media (max-width:1100px){
+  .session ~ nav .corner.bl,.session ~ nav .corner.br,.session ~ nav .lang{position:absolute}
+  .session{padding-bottom:16vh}
+}
+@media (max-width:1100px){.k-motto{position:absolute!important;left:50%;transform:translateX(-50%)!important;top:auto;bottom:62px;margin:0!important}}
