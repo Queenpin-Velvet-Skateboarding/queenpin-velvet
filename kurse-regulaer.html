@@ -14,14 +14,13 @@
 </head>
 <body>
 <main class="home">
-<article class="session">
+<article class="session s-kompakt">
 <header class="s-head">
 <h1 class="s-title keep">Sprouts to Aster</h1>
-<p class="s-sub">Skateboard-Kurse für Queens (bis 16)</p>
+<p class="s-sub">Skateboard-Kurse für Queens bis 18</p>
 </header>
 <div class="s-next" id="next">
-<p>montag</p>
-<p class="s-date" id="k-datum">16.11.2026</p>
+<p>jeden montag</p>
 <p>17.30–18.30</p>
 <div class="s-mark"><video class="s-video" src="assets/ausbreiten.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span></div>
 <p id="k-ort">Letty Ramp</p>
@@ -42,7 +41,7 @@
 </form>
 <p>oder einfach vorbeikommen.</p>
 </div>
-<p class="s-welcome">it takes courage to bloom.<br>lerne hier alles:<br>vom ersten push<br>bis zu deinem ganz eigenen stil.</p>
+<p class="s-welcome">lerne hier alles:<br>vom ersten push<br>bis zu deinem ganz eigenen stil.</p>
 </article>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
@@ -68,7 +67,6 @@
   var datum=p2(d.getDate())+'.'+p2(d.getMonth()+1)+'.'+d.getFullYear();
   var iso=d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());
   function show(o){
-    document.getElementById('k-datum').textContent=datum;
     document.getElementById('k-ort').textContent=o.ort;
     document.getElementById('k-strasse').textContent=o.strasse;
     document.getElementById('k-plz').textContent=o.plz;
