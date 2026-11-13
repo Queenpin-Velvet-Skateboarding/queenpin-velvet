@@ -122,3 +122,7 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .k-info{opacity:.7}
 .k-klein{margin-top:1.4em!important;font-size:.85em;opacity:.55;line-height:1.5}
 .k-plan{display:grid;grid-template-columns:auto auto;column-gap:2em;text-align:left;justify-content:center}.k-plan + .k-klein{margin-top:.8em!important}
+/* Kursnamen fett, Tage klein kursiv */
+.session .k-name{font-weight:400;font-size:inherit;margin:0;position:relative;z-index:2}
+.session .k-title.k-name{margin-bottom:.5em}
+.k-tage{font-style:italic;font-size:.85em}
