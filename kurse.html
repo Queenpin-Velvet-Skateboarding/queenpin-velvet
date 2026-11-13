@@ -18,6 +18,7 @@
 <div class="s-next k-cols k-cols3">
 <form class="pick k-spalte" data-kurs="Sprouts to Asters" onsubmit="return false">
 <div class="k-zeile k-kopf">
+<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <p class="k-label">Skateboard-Kurs</p>
 <p>&nbsp;</p>
 <h1 class="keep k-name">Sprouts to Asters</h1>
@@ -32,7 +33,6 @@
 <p id="k-ort">Letty Ramp</p>
 </div>
 <div class="k-zeile k-auswahl">
-<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Sprouts · 7–18 Jahre · Vom ersten Push zu deinen ersten Tricks · Mädchen und junge Frauen*">Sprouts · 7–18 Jahre · Vom ersten Push zu deinen ersten Tricks · Mädchen und junge Frauen*</option>
@@ -64,6 +64,7 @@
 </form>
 <form class="pick k-spalte" data-kurs="Ferien-Kurs Design Workshop + Skate" data-jahr="2027" data-preis="Kurs CHF 350.–&#10;Eigenes Board (freiwillig) + CHF 80.–" onsubmit="return false">
 <div class="k-zeile k-kopf">
+<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <p class="k-label">Ferien-Kurs</p>
 <p>&nbsp;</p>
 <h2 class="keep k-name">Design Workshop + Skate</h2>
@@ -79,7 +80,6 @@
 <p>Burrischopf, Letty Ramp</p>
 </div>
 <div class="k-zeile k-auswahl">
-<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Seeds · 4–6 Jahre · Open Level · Buben und Mädchen">Seeds · 4–6 Jahre · Open Level · Buben und Mädchen</option>
@@ -127,6 +127,7 @@
 </form>
 <form class="pick k-spalte" data-kurs="Ferien-Kurs Skatekurs" data-jahr="2027" data-preis="Preis folgt." onsubmit="return false">
 <div class="k-zeile k-kopf">
+<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <p class="k-label">Ferien-Kurs</p>
 <p>&nbsp;</p>
 <h2 class="keep k-name">Skatekurs</h2>
@@ -139,7 +140,6 @@
 <p>Skatepark Allmend</p>
 </div>
 <div class="k-zeile k-auswahl">
-<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Seeds · 4–6 Jahre · Open Level · Buben und Mädchen">Seeds · 4–6 Jahre · Open Level · Buben und Mädchen</option>
@@ -198,6 +198,9 @@
 /* Bei jedem Kurs landet ein Tropfen auf der Kategorie-Auswahl (leicht versetzt) */
 (function(){
   var vs=[].slice.call(document.querySelectorAll('.k-landen video'));if(!vs.length)return;
+  /* Mitte des Fleckens = Mitte des Kursnamens */
+  function setzen(){document.querySelectorAll('.k-kopf').forEach(function(k){var n=k.querySelector('.k-name'),l=k.querySelector('.k-landen');if(n&&l)l.style.top=(n.offsetTop+n.offsetHeight/2)+'px';});}
+  setzen();window.addEventListener('resize',setzen);if(document.fonts)document.fonts.ready.then(setzen);
   var ruhig=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   vs.forEach(function(v,i){
     if(ruhig){v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
