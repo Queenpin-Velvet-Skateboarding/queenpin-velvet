@@ -6,12 +6,18 @@
     var links=box.querySelectorAll('.s-btn');
     links.forEach(function(a){a.setAttribute('data-base',a.getAttribute('href'));});
     function update(){
-      var teile=[kurs];
-      box.querySelectorAll('input:checked, select').forEach(function(i){if(i.value)teile.push(i.value);});
+      var termin='',kat='',rest=[],jahr=box.getAttribute('data-jahr')||'';
+      box.querySelectorAll('input:checked, select').forEach(function(i){
+        if(!i.value)return;
+        if(i.name==='kategorie')kat=i.value.split(' ')[0];
+        else if(i.name==='termin')termin=i.value.replace(/(\d+\.\d+\.)( ·|$)/,'$1'+jahr+'$2');
+        else rest.push(i.value);
+      });
       box.querySelectorAll('select').forEach(function(x){x.classList.toggle('gewaehlt',!!x.value);});
       var pr=box.querySelector('.k-preis'),alle=[].every.call(box.querySelectorAll('select'),function(x){return x.value;});
       if(pr){pr.hidden=!alle;pr.textContent=box.getAttribute('data-preis')||'';}
-      var text='Hallo Queenpin! Ich möchte mich anmelden: '+teile.join(', ')+'.\nName:\nAlter:';
+      var detail=[termin,kat].concat(rest).filter(Boolean).join(' · ');
+      var text='Hallo Queenpin!\nIch interessiere mich für diesen Kurs:\n'+kurs+',\n'+(detail||'')+'\nName:\nAlter:';
       var t=encodeURIComponent(text);
       links.forEach(function(a){
         var b=a.getAttribute('data-base');
