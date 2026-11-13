@@ -200,3 +200,11 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .s-info{font-size:clamp(9px,.62vw,10px);letter-spacing:.1em;line-height:1.45}
 .s-info .s-addr{font-size:.85em}
 .s-info-titel{font-weight:400}
+/* Sessions: Tropfen landet, dann erscheinen Datum / Session / Ort darauf */
+.s-session .s-video{transform:translate(-50%,-42%)}
+.s-session .s-dot{display:none}
+.s-info{opacity:0;transition:opacity .8s ease}
+.s-info.da{opacity:1}
+.s-session .s-video{width:min(85vw,1100px)}
+.s-session .s-sonne{top:62vh}
+@media (max-width:600px){.s-session .s-video{width:160vw}.s-session .s-sonne{top:66vh}}
