@@ -21,7 +21,7 @@
 <p data-f="ort">Freestyle Halle</p>
 <p data-f="zeit">18.30–20.00</p>
 <p class="s-special" data-f="special" hidden></p>
-<div class="s-mark"><span class="s-dot" aria-hidden="true"></span></div>
+<div class="s-mark"><video class="s-video" src="assets/ausbreiten.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span></div>
 <p class="s-addr" data-f="strasse">Allmendstrasse 10</p>
 <p class="s-addr" data-f="plz">8045 Zürich</p>
 </div>
@@ -74,6 +74,14 @@ var STANDARD={ort:'Freestyle Halle',zeit:'18.30–20.00',strasse:'Allmendstrasse
     });
     show(info);
   }).catch(function(){});
+})();
+</script>
+<script>
+(function(){
+  var v=document.querySelector('.s-video'),dot=document.querySelector('.s-dot');if(!v)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();dot.style.opacity=0;v.play().catch(function(){dot.style.opacity=1;});}},{threshold:.6});
+  io.observe(dot);
 })();
 </script>
 </body>
