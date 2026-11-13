@@ -181,3 +181,6 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 /* Sessions: Fleck im unteren Drittel */
 .s-session .s-sonne{position:absolute;left:0;right:0;top:68vh;height:0;margin:0;z-index:auto}
 @media (max-width:600px){.s-session .s-sonne{top:72vh}}
+/* Motto unten mittig, grösser */
+.k-motto{top:auto;bottom:64px;font-size:13px;letter-spacing:.06em}
+@media (max-width:600px){.k-motto{top:auto;bottom:56px;font-size:11px}}
