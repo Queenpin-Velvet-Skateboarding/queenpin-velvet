@@ -77,3 +77,6 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 9 23,pointer}
 .s-mark{position:relative;display:flex;justify-content:center;align-items:center;margin:.9em 0 1em}
 .s-mark .s-line{margin:0}
 .s-mark .s-dot{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#F6C5C4}
+.s-title{font-size:clamp(10px,.78vw,11px)}
+.s-next,.s-welcome{font-size:clamp(9px,.62vw,10px)}
+.s-mark{height:3.2em;margin:0}
