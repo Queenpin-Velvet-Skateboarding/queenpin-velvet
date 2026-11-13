@@ -166,3 +166,10 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 @media (max-width:600px){.k-motto{top:84px}}
 .k-motto{text-transform:none}
 .k-label{font-size:.85em}
+/* Kurse: gleiche Infos auf gleicher Höhe (Zeilen über alle Spalten) */
+.session .k-cols3{grid-template-rows:repeat(6,auto);row-gap:2.2em;align-items:start}
+.session form.k-spalte{display:grid;grid-row:span 6;grid-template-rows:subgrid;justify-items:center;align-items:start;gap:inherit}
+.k-zeile{display:flex;flex-direction:column;align-items:center;width:100%}
+.k-zeile:empty{display:block}
+.k-zeile.k-klein{opacity:1;font-size:inherit;margin:0!important}
+@media (max-width:1100px){.session .k-cols3{grid-template-rows:none;row-gap:6em}.session form.k-spalte{display:flex;flex-direction:column;gap:1.8em;grid-row:auto}.k-zeile:empty{display:none}}
