@@ -9,6 +9,7 @@ Die «feine Sprache» der Seite. Gilt für alle neuen Seiten.
 ## Farben
 - Hintergrund: #FBF1EC (Papier, passend zum Tropfen-Video); sonst #F3EDE6
 - Text: #141414 (schwarz)
+- Rosa: #F6C5C4 (wie im Tropfen-Video) – überall gleich: Mauszeiger, Punkte, Videos
 - Rosa nur als Farbfleck/Bild, nicht als Textfarbe
 
 ## Schrift
