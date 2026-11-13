@@ -24,7 +24,8 @@ Die «feine Sprache» der Seite. Gilt für alle neuen Seiten.
 - Sprachen DE/FR/EN winzig (9 px) unten in der Mitte, auf Höhe der unteren Menüpunkte
 
 ## Details
-- Mauszeiger = Queenpin-Logo (schwarz, über Links pink)
+- Mauszeiger = Queenpin-Logo, klein (20 × 25 px), schwarz, über Links pink
+- Menüpunkte werden beim Darüberfahren fett (400 statt 200)
 - Favicon = Logo schwarz
 - Bilder: Farben abgeschwächt, Raster darüber (wenn Fotos dazukommen)
 
