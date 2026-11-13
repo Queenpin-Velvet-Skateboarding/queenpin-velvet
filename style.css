@@ -209,3 +209,11 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .s-session .s-sonne{top:62vh}
 @media (max-width:600px){.s-session .s-video{width:160vw}.s-session .s-sonne{top:66vh}}
 .s-info{opacity:1;transition:none}
+/* Kurse: Tropfen landet auf der Auswahl */
+.session.s-kurse > .s-next{z-index:auto}
+.k-cols3 .k-zeile{position:relative}
+.k-cols3 .k-zeile > *:not(.k-landen){position:relative;z-index:2}
+.k-landen{position:absolute;left:50%;top:1.4em;width:0;height:0;z-index:0;pointer-events:none}
+.k-landen video{position:absolute;left:0;top:0;width:min(62vw,820px);transform:translate(-50%,-42%);mix-blend-mode:multiply;display:block}
+@media (max-width:1100px){.k-landen video{width:min(150vw,820px)}}
+.k-landen{z-index:auto}

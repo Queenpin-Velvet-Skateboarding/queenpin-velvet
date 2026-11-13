@@ -14,8 +14,7 @@
 </head>
 <body>
 <main class="home">
-<article class="session">
-<div class="k-bg" aria-hidden="true"><video class="k-bg-video" src="assets/punkte.mp4" muted playsinline preload="auto"></video></div>
+<article class="session s-kurse">
 <div class="s-next k-cols k-cols3">
 <form class="pick k-spalte" data-kurs="Sprouts to Asters" onsubmit="return false">
 <div class="k-zeile k-kopf">
@@ -33,6 +32,7 @@
 <p id="k-ort">Letty Ramp</p>
 </div>
 <div class="k-zeile k-auswahl">
+<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Sprouts · 7–18 Jahre · Vom ersten Push zu deinen ersten Tricks · Mädchen und junge Frauen*">Sprouts · 7–18 Jahre · Vom ersten Push zu deinen ersten Tricks · Mädchen und junge Frauen*</option>
@@ -79,6 +79,7 @@
 <p>Burrischopf, Letty Ramp</p>
 </div>
 <div class="k-zeile k-auswahl">
+<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Seeds · 4–6 Jahre · Open Level · Buben und Mädchen">Seeds · 4–6 Jahre · Open Level · Buben und Mädchen</option>
@@ -138,6 +139,7 @@
 <p>Skatepark Allmend</p>
 </div>
 <div class="k-zeile k-auswahl">
+<div class="k-landen" aria-hidden="true"><video src="assets/landen.mp4" muted playsinline preload="auto"></video></div>
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
 <option value="" selected disabled>Kategorie wählen</option>
 <option value="Seeds · 4–6 Jahre · Open Level · Buben und Mädchen">Seeds · 4–6 Jahre · Open Level · Buben und Mädchen</option>
@@ -193,12 +195,16 @@
 </main>
 <script src="pick.js"></script>
 <script>
-/* Punkte-Video einmal abspielen, etwas langsamer; am Schluss bleiben die Punkte stehen */
+/* Bei jedem Kurs landet ein Tropfen auf der Kategorie-Auswahl (leicht versetzt) */
 (function(){
-  var v=document.querySelector('.k-bg-video');if(!v)return;
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
-  try{v.playbackRate=.7;}catch(e){}
-  v.play().then(function(){try{v.playbackRate=.7;}catch(e){}}).catch(function(){});
+  var vs=[].slice.call(document.querySelectorAll('.k-landen video'));if(!vs.length)return;
+  var ruhig=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  vs.forEach(function(v,i){
+    if(ruhig){v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
+    var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();
+      setTimeout(function(){v.play().catch(function(){});},i*450);}},{threshold:.3});
+    io.observe(v);
+  });
 })();
 </script>
 
