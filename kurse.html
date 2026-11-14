@@ -43,7 +43,12 @@
 <p>Oder einfach vorbeikommen.</p>
 </div>
 <div class="k-zeile k-zplan">
-
+<dl class="k-level">
+<dt>Seeds</dt><dd>Du stehst zum ersten Mal auf dem Board. Du rollst, balancierst und hast Spass dabei.</dd>
+<dt>Sprouts</dt><dd>Du beginnst mit Pushen. Du rollst alleine, lenkst und bremst.</dd>
+<dt>Asters</dt><dd>Du kannst deine ersten Tricks. Du willst sie sauberer und sicherer machen.</dd>
+<dt>Wildflower</dt><dd>Du fährst sicher und kennst mehrere Tricks. Du willst dich in Park, Bowl oder Street weiterentwickeln und deinen eigenen Stil finden.</dd>
+</dl>
 </div>
 <div class="k-zeile k-zteil">
 <p class="k-klein">10er-Abo CHF 300.– <br class="umbruch">Du musst nicht jede Woche kommen: <br class="umbruch">Die 10 Lektionen sind ein Jahr lang gültig <br class="umbruch">und können mit Unterbrüchen besucht werden.</p>
@@ -158,7 +163,6 @@
 <script>
 /* Bei jedem Kurs landet ein Tropfen auf der Kategorie-Auswahl (leicht versetzt) */
 (function(){
-  document.querySelectorAll('.k-spalte').forEach(function(f){if(!f.querySelector('.k-landen video'))f.classList.add('gelandet');});
   var vs=[].slice.call(document.querySelectorAll('.k-landen video'));if(!vs.length)return;
   /* Mitte des Fleckens = Mitte des Kursnamens */
   function setzen(){document.querySelectorAll('.k-kopf').forEach(function(k){
@@ -169,11 +173,11 @@
   setzen();window.addEventListener('resize',setzen);if(document.fonts)document.fonts.ready.then(setzen);
   var ruhig=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   vs.forEach(function(v,i){
-    if(ruhig){var f0=v.closest('.k-spalte');if(f0)f0.classList.add('gelandet');v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
+    if(ruhig){document.querySelectorAll('.k-spalte').forEach(function(f){f.classList.add('gelandet');});v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
     var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();
       setTimeout(function(){v.play().catch(landen);},i*450);
       setTimeout(landen,i*450+4500);}},{threshold:.3});
-    function landen(){var f=v.closest('.k-spalte');if(f)f.classList.add('gelandet');}
+    function landen(){document.querySelectorAll('.k-spalte').forEach(function(f){f.classList.add('gelandet');});}
     v.addEventListener('timeupdate',function(){if(v.currentTime>2.4)landen();});
     io.observe(v);
   });

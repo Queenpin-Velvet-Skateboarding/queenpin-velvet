@@ -325,3 +325,13 @@ nav:has(.k-motto) .lang{bottom:66px}
 .soon .soon-link{margin:0;font-size:inherit;color:inherit;text-decoration:none}.soon .soon-link:hover{font-weight:400}
 .k-landen video[src*="aquarell"]{filter:none!important}
 .k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen{margin-top:4vh}
+/* Levels bei Sprouts to Asters */
+.k-level{margin:0;max-width:26em;font-size:.85em;opacity:.75;line-height:1.5;text-align:center}
+.k-level dt{font-weight:400;margin-top:.9em}
+.k-level dt:first-child{margin-top:0}
+.k-level dd{margin:0;text-wrap:balance}
+.k-level{display:block!important;grid-template-columns:none}
+.k-level dt{text-transform:none;letter-spacing:.1em;opacity:1}
+.k-level dd{max-width:none}
+/* Kurse-Seite ist länger: unteres Menü am Seitenende statt fest */
+.s-kurse ~ nav .corner.bl,.s-kurse ~ nav .corner.br,.s-kurse ~ nav .lang,.s-kurse ~ nav .k-motto{position:absolute!important}
