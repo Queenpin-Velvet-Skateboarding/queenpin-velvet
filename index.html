@@ -15,8 +15,7 @@
 <body>
 <main class="home">
 <video class="hero-video" src="assets/tropfen.mp4" poster="" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
-<video class="hero-video hero-weiter" src="assets/tropfen-weiter.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
-<h1 class="hero-title"><b>queenpin velvet</b><br><span>skateboarding</span></h1>
+<h1 class="hero-title"><a href="sessions.html"><b>queenpin velvet</b><br><span>skateboarding</span></a></h1>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
 <a class="corner tc" href="kurse.html">kurse</a>
@@ -34,24 +33,6 @@
   v.addEventListener('ended',done);
   v.addEventListener('error',function(){v.poster='assets/tropfen-ende.jpg';done();});
   setTimeout(done,6500);
-})();
-</script>
-<script>
-/* Übergang: bei «sessions» und «queenpin» läuft der Fleck weiter, dann geht die Seite auf */
-(function(){
-  var w=document.querySelector('.hero-weiter');if(!w)return;
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  document.querySelectorAll('.corner.tl,.corner.tr').forEach(function(a){
-    a.addEventListener('click',function(e){
-      if(e.metaKey||e.ctrlKey||e.shiftKey||w.classList.contains('an'))return;
-      e.preventDefault();var ziel=a.href,weg=false;
-      function los(){if(!weg){weg=true;location.href=ziel;}}
-      w.classList.add('an');w.currentTime=0;
-      w.play().catch(los);
-      w.addEventListener('ended',los);
-      setTimeout(los,4600);
-    });
-  });
 })();
 </script>
 </body>

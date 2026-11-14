@@ -288,3 +288,7 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 /* Startseite: zweites Video für den Übergang */
 .hero-weiter{opacity:0;transition:opacity .45s ease;pointer-events:none}
 .hero-weiter.an{opacity:1}
+/* Ein Papierton für alle Seiten: Videos haben weisses Papier und werden auf den Hintergrund multipliziert */
+body{background:#FBF1EC}
+.home .hero-video{mix-blend-mode:multiply}
+.hero-title a{color:inherit;text-decoration:none}.hero-title a:hover b,.hero-title a:hover span{font-weight:400}
