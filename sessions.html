@@ -14,6 +14,7 @@
 </head>
 <body>
 <main class="home">
+<video class="s-bg" src="assets/zu-sessions.mp4" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
 <article class="session s-session">
 <div class="s-mark s-sonne"><video class="s-video" src="assets/landen.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span>
 <div class="s-info" id="next">
@@ -93,14 +94,24 @@ var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändl
 /* Fleck: in normaler Geschwindigkeit abspielen, sobald er sichtbar ist */
 (function(){
   var v=document.querySelector('.s-video'),dot=document.querySelector('.s-dot');if(!v)return;
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){var i0=document.querySelector('.s-info');if(i0)i0.classList.add('da');v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
-  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.classList.add('los');var i0=document.querySelector('.s-info');if(i0)i0.classList.add('da');v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
+  var bg=document.querySelector('.s-bg'),gestartet=false;
+  function start(){if(gestartet)return;gestartet=true;
+    v.classList.add('los');
+
     var info=document.querySelector('.s-info');
     function zeigen(){if(info)info.classList.add('da');}
     v.addEventListener('timeupdate',function(){if(v.currentTime>2.3)zeigen();});
     v.addEventListener('ended',zeigen);
-    v.play().then(function(){if(dot)dot.style.opacity=0;}).catch(zeigen);}},{threshold:.3});
-  io.observe(v.parentNode);
+    v.play().then(function(){if(dot)dot.style.opacity=0;}).catch(zeigen);}
+  /* Hintergrund: Fleck der Startseite zieht sich zusammen und zerstäubt; danach landet der Tropfen */
+  if(bg){
+    bg.addEventListener('timeupdate',function(){if(bg.currentTime>7.9){bg.classList.add('aus');start();}});
+    bg.addEventListener('ended',function(){bg.classList.add('aus');start();});
+    bg.addEventListener('error',start);
+    bg.play().catch(function(){bg.classList.add('aus');start();});
+    setTimeout(start,10000);
+  }else start();
 })();
 </script>
 </body>

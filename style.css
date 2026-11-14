@@ -375,3 +375,14 @@ body.weg main{transition:opacity .35s;opacity:0}
 .s-session{animation:qp-ein .5s ease}
 @keyframes qp-ein{from{opacity:0}to{opacity:1}}
 body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
+/* Sessions: Hintergrund-Video in gleicher Grösse wie die Startseite */
+.s-bg{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 43%;mix-blend-mode:multiply;z-index:0;pointer-events:none;transition:opacity 1s ease}
+.s-bg.aus{opacity:0}
+.home > .s-session{position:relative}
+.session.s-session{background:transparent}
+.s-session .s-video{opacity:0;transition:opacity .6s}.s-session .s-video.los{opacity:1}
+.session.s-session{isolation:auto}.s-session .s-sonne{z-index:auto}
+.s-session .s-video{z-index:1}
+.dd[data-bald]{opacity:1;cursor:default}
+.dd-wrap:has(.dd[data-bald]) .dd-anzeige{font-style:italic}
+.k-levels{margin-top:4vh}
