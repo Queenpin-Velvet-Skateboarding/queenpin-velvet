@@ -344,3 +344,7 @@ nav:has(.k-motto) .lang{bottom:66px}
 .dd-wrap.gewaehlt .dd-anzeige{font-weight:400}
 .k-info{display:none!important}
 @media (max-width:600px){.dd,.dd-anzeige{padding-left:1.4em;padding-right:2.2em}.dd{background-position:right 1em center,center}}
+.session.s-kurse{padding-top:12vh}
+.k-abo{margin-top:1.4em!important}
+@media (max-width:600px){.session.s-kurse{padding-top:11vh}}
+.k-zeile .k-klein.k-abo{margin-top:1.4em!important}
