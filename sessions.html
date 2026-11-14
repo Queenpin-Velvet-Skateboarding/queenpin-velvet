@@ -19,6 +19,7 @@
 <div class="s-mark s-sonne"><video class="s-video" src="assets/landen.mp4" muted playsinline preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span>
 <div class="s-info" id="next">
 <p data-f="datum">Dienstag 17.11.2026</p>
+<p data-f="zeit">18.30 – 20.00</p>
 <p class="s-info-titel">Queenpin Open Session</p>
 <p data-f="ort">Freestyle Halle Zürich</p>
 <p class="s-special" data-f="special" hidden></p>
@@ -32,7 +33,7 @@
 </div></div>
 <div class="s-next k-einzel">
 <h1 class="keep k-name">Queenpin Open Session</h1>
-<p class="k-tage">Jeden Dienstag <span data-f="zeit">18.30 – 20.00</span></p>
+<p class="k-tage">Jeden Dienstag</p>
 <p>&nbsp;</p>
 <p>Jede Queen mit ihrem ganz eigenen Level ist jederzeit willkommen. <br class="umbruch">Die Sessions sind gratis. Wir freuen uns auf dich.</p>
 </div>
@@ -106,8 +107,8 @@ var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändl
     v.play().then(function(){if(dot)dot.style.opacity=0;}).catch(zeigen);}
   /* Hintergrund: Fleck der Startseite zieht sich zusammen und zerstäubt; danach landet der Tropfen */
   if(bg){
-    bg.addEventListener('timeupdate',function(){if(bg.currentTime>7.9){bg.classList.add('aus');start();}});
-    bg.addEventListener('ended',function(){bg.classList.add('aus');start();});
+    bg.addEventListener('timeupdate',function(){if(bg.currentTime>7.9)start();});
+    bg.addEventListener('ended',start);
     bg.addEventListener('error',start);
     bg.play().catch(function(){bg.classList.add('aus');start();});
     setTimeout(start,10000);
