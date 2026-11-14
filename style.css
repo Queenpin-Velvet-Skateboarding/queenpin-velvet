@@ -272,3 +272,6 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 /* Dropdown wird erst farbig, wenn der Tropfen gelandet ist */
 .k-spalte .dd{background-size:auto,0% 0%;transition:background-size 1.1s cubic-bezier(.2,.7,.2,1),opacity .4s}
 .k-spalte.gelandet .dd{background-size:auto,100% 100%}
+/* Design-Ferienkurs: grösserer Tropfen */
+.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video{width:min(96vw,1300px)}
+@media (max-width:1100px){.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video{width:min(290vw,1300px)}}
