@@ -388,3 +388,6 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
 .k-levels{margin-top:4vh}
 .s-session .s-sonne{top:38vh}@media (max-width:600px){.s-session .s-sonne{top:42vh}}
 .session.s-kurse{padding-bottom:110px}.s-kurse .k-levels{margin-top:auto}
+.s-fragen .s-signup{display:flex;justify-content:center;gap:1.6em;flex-wrap:nowrap}
+.s-fragen .s-btn{display:inline-block;margin:0}
+@media (max-width:600px){.s-fragen{top:calc(var(--vb) * .5625 * .36)}}
