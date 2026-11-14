@@ -36,7 +36,7 @@
       wrap.appendChild(anz);
       function zeig(){var o=skat.selectedOptions[0],t=o?o.textContent:'',x=t.split(' · ');
         anz.innerHTML='';
-        var zeilen=x.length>2?[x.slice(0,2).join(' · ')].concat(x.slice(2)):[t];
+        var zeilen=[x.slice(0,2).join(' · ')];
         zeilen.forEach(function(z,i){if(i)anz.appendChild(document.createElement('br'));anz.appendChild(document.createTextNode(z));});wrap.classList.toggle('gewaehlt',!!skat.value);}
       skat.addEventListener('change',zeig);zeig();
     }
