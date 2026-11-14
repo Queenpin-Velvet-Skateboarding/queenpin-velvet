@@ -255,3 +255,13 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .s-session .s-video{width:min(100vw,1350px)}
 @media (max-width:1100px){.k-landen video{width:min(230vw,1000px)}}
 @media (max-width:600px){.s-session .s-video{width:220vw}}
+/* Dropdown als Farbfleck (Textur wie die Tropfen) */
+.dd{background-color:transparent;border-radius:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M.5.5 4 4 7.5.5' fill='none' stroke='%23141414' stroke-width='.8'/%3E%3C/svg%3E"),url(assets/dropdown-fleck.png);
+  background-repeat:no-repeat,no-repeat;background-position:right calc(13% + 1.1em) center,center;background-size:auto,100% 100%;
+  padding:1.05em calc(13% + 2.4em);margin:0}
+.k-cols .dd{width:min(31em,100%)}
+@media (max-width:1100px){.k-cols .dd{width:100%!important}}
+.dd{background-position:right calc(7% + 1em) center,center;padding:.95em calc(7% + 2.2em)}
+.k-cols .dd{width:min(36em,100%)}
+@media (max-width:1100px){.session ~ nav .corner{position:absolute}}
