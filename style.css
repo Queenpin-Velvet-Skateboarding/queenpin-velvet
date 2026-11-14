@@ -284,3 +284,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .s-fragen p{margin:0;position:relative;z-index:2}
 .s-fragen .s-signup{margin-top:.6em}
 @media (max-width:600px){.s-session{--vb:220vw;padding-top:12vh}.s-session .s-sonne{top:50vh}.s-fragen{font-size:13px;letter-spacing:.04em}}
+.s-session{padding-top:15vh}@media (max-width:600px){.s-session{padding-top:15vh}}
