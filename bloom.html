@@ -35,6 +35,11 @@
   var i=0;try{i=(parseInt(localStorage.getItem('qp-spruch2'),10)+1)||0;}catch(e){i=Math.floor(Math.random()*S.length);}
   i=i%S.length;document.getElementById('spruch').textContent=S[i];
   try{localStorage.setItem('qp-spruch2',i);}catch(e){}
+  var el=document.getElementById('spruch');
+  el.setAttribute('role','button');el.setAttribute('tabindex','0');el.title='Nächster Spruch';
+  function weiter(){i=(i+1)%S.length;el.textContent=S[i];try{localStorage.setItem('qp-spruch2',i);}catch(e){}}
+  el.addEventListener('click',weiter);
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();weiter();}});
 })();
 </script>
 </body>
