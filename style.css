@@ -367,3 +367,11 @@ nav:has(.k-motto) .lang{bottom:66px}
 @media (max-width:1100px){.session form.k-spalte{grid-row:auto}}
 .k-levels{align-content:start;align-items:start;height:auto;flex:none}
 .k-levels{padding-top:0}
+/* Startseite: Übergang zu den Sessions */
+.hero-weiter{opacity:0;pointer-events:none}
+.hero-weiter.an{opacity:1}
+body.uebergang .hero-title{transition:opacity .4s;opacity:0!important}
+body.weg main{transition:opacity .35s;opacity:0}
+.s-session{animation:qp-ein .5s ease}
+@keyframes qp-ein{from{opacity:0}to{opacity:1}}
+body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}

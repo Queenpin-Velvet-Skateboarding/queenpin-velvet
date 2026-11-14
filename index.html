@@ -15,6 +15,7 @@
 <body>
 <main class="home">
 <video class="hero-video" src="assets/tropfen.mp4" poster="" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
+<video class="hero-video hero-weiter" src="assets/zu-sessions.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
 <h1 class="hero-title"><a href="sessions.html"><b>queenpin velvet</b><br><span>skateboarding</span></a></h1>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
@@ -34,6 +35,24 @@
   v.addEventListener('ended',done);
   v.addEventListener('error',function(){v.poster='assets/tropfen-ende.jpg';done();});
   setTimeout(done,6500);
+})();
+</script>
+<script>
+/* Übergang zu den Sessions: Fleck zieht sich zusammen und zerstäubt, dann öffnet die Seite */
+(function(){
+  var w=document.querySelector('.hero-weiter');if(!w)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.querySelectorAll('a[href="sessions.html"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      if(e.metaKey||e.ctrlKey||e.shiftKey||w.classList.contains('an'))return;
+      e.preventDefault();var ziel=a.href,weg=false;
+      function los(){if(!weg){weg=true;document.body.classList.add('weg');setTimeout(function(){location.href=ziel;},350);}}
+      document.body.classList.add('uebergang');
+      w.classList.add('an');w.currentTime=0;w.playbackRate=1.5;
+      w.play().then(function(){w.playbackRate=1.5;}).catch(los);
+      w.addEventListener('ended',los);setTimeout(los,7000);
+    });
+  });
 })();
 </script>
 </body>
