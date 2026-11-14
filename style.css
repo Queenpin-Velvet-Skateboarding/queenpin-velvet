@@ -276,3 +276,11 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video{width:min(96vw,1300px)}
 @media (max-width:1100px){.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video{width:min(290vw,1300px)}}
 .s-session .k-name{font-size:clamp(14px,1.8vw,22px);letter-spacing:.14em;margin-bottom:.4em}
+/* Sessions: Titel näher am Menü, aktuelle Session in der Mitte, Fragen am Ende der Tropfen */
+.s-session{--vb:min(85vw,1100px);padding-top:11vh}
+.s-session .s-video{width:var(--vb)}
+.s-session .s-sonne{top:48vh}
+.s-fragen{position:absolute;left:50%;top:calc(var(--vb) * .5625 * .49);transform:translateX(-50%);text-align:center;white-space:nowrap;z-index:2;font-size:clamp(11px,.82vw,12.5px);letter-spacing:.1em}
+.s-fragen p{margin:0;position:relative;z-index:2}
+.s-fragen .s-signup{margin-top:.6em}
+@media (max-width:600px){.s-session{--vb:220vw;padding-top:12vh}.s-session .s-sonne{top:50vh}.s-fragen{font-size:13px;letter-spacing:.04em}}
