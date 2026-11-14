@@ -318,3 +318,4 @@ nav:has(.k-motto) .lang{bottom:66px}
 .k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video[src*="aquarell"]{width:min(76vw,1040px)}
 @media (max-width:1100px){.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video[src*="aquarell"]{width:min(210vw,1040px)}}
 .bloom-text p{text-shadow:none!important;font-weight:400!important}
+.s-kurse .k-name{font-size:clamp(14px,1.35vw,18px);letter-spacing:.12em;margin-bottom:.45em}@media (max-width:600px){.s-kurse .k-name{font-size:15px}}
