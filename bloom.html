@@ -16,7 +16,7 @@
 <main class="home">
 <video class="hero-video bloom-video" src="assets/bloom.mp4" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
 <div class="soon bloom-text">
-<p id="spruch">But bloom.</p>
+<p id="spruch">Bloom!</p>
 </div>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
@@ -31,10 +31,10 @@
 <script>
 /* Bei jedem Besuch ein anderer Spruch, der Reihe nach */
 (function(){
-  var S=['Scrapes heal. Blooms stay.','Grow through the concrete.','Bloom loud.','But bloom.','Roots down. Wheels up.','We all start as seeds.','Bloom at your own speed.'];
-  var i=0;try{i=(parseInt(localStorage.getItem('qp-spruch'),10)+1)||0;}catch(e){i=Math.floor(Math.random()*S.length);}
+  var S=['Bloom!','Roots down. Wheels up.','We all start as seeds.','Bloom at your own speed.','Scrapes heal. Blooms stay.','Grow through the concrete.','Bloom loud.'];
+  var i=0;try{i=(parseInt(localStorage.getItem('qp-spruch2'),10)+1)||0;}catch(e){i=Math.floor(Math.random()*S.length);}
   i=i%S.length;document.getElementById('spruch').textContent=S[i];
-  try{localStorage.setItem('qp-spruch',i);}catch(e){}
+  try{localStorage.setItem('qp-spruch2',i);}catch(e){}
 })();
 </script>
 </body>
