@@ -308,3 +308,8 @@ nav:has(.k-motto) .lang{bottom:52px}
 nav:has(.k-motto) .lang{bottom:66px}
 @media (max-width:600px){.k-motto{bottom:24px!important;padding:10px 0}nav:has(.k-motto) .lang{bottom:62px}}
 @media (max-width:600px){.k-motto{bottom:58px!important}nav:has(.k-motto) .lang{bottom:30px}}
+/* Test: Aquarell-Tropfen (Fleck ist im Video grösser, darum kleiner zeigen) */
+.k-landen video[src*="aquarell"]{width:min(40vw,540px)}
+.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video[src*="aquarell"]{width:min(52vw,700px)}
+@media (max-width:1100px){.k-landen video[src*="aquarell"]{width:min(120vw,540px)}.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video[src*="aquarell"]{width:min(150vw,700px)}}
+.k-landen video[src*="aquarell"]{-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 70%,transparent 100%)}
