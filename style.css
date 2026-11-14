@@ -386,3 +386,5 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
 .dd[data-bald]{opacity:1;cursor:default}
 .dd-wrap:has(.dd[data-bald]) .dd-anzeige{font-style:italic}
 .k-levels{margin-top:4vh}
+.s-session .s-sonne{top:38vh}@media (max-width:600px){.s-session .s-sonne{top:42vh}}
+.session.s-kurse{padding-bottom:110px}.s-kurse .k-levels{margin-top:auto}
