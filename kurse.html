@@ -25,11 +25,11 @@
 <p class="k-tage">Jeden Montag</p>
 <p class="k-tage">17.30 – 18.30</p>
 </div>
-<div class="k-zeile k-text">
-<p>Mädchen und junge Frauen* lernen hier alles, <br class="umbruch">vom ersten Push bis zu ihrem ganz eigenen Stil.</p>
-</div>
 <div class="k-zeile k-ort">
 <p id="k-ort">Letty Ramp</p>
+</div>
+<div class="k-zeile k-text">
+<p>Mädchen und junge Frauen* lernen hier alles, <br class="umbruch">vom ersten Push bis zu ihrem ganz eigenen Stil.</p>
 </div>
 <div class="k-zeile k-auswahl">
 <p>10er-Abo CHF 300.–</p>
@@ -58,11 +58,11 @@
 <h2 class="keep k-name">Design Workshop + Skate</h2>
 <p class="k-tage">Donnerstag–Sonntag</p>
 </div>
-<div class="k-zeile k-text">
-<p>In diesem Ferienkurs lernst du neben dem Skaten, <br class="umbruch">dein eigenes Deck zu designen. <br class="umbruch">Wir arbeiten alle zusammen, <br class="umbruch">aber am Ende hat jede ihr ganz eigenes Board.</p>
-</div>
 <div class="k-zeile k-ort">
 <p>Burrischopf, Letty Ramp</p>
+</div>
+<div class="k-zeile k-text">
+<p>In diesem Ferienkurs lernst du neben dem Skaten, <br class="umbruch">dein eigenes Deck zu designen. <br class="umbruch">Wir arbeiten alle zusammen, <br class="umbruch">aber am Ende hat jede ihr ganz eigenes Board.</p>
 </div>
 <div class="k-zeile k-auswahl">
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
@@ -114,11 +114,11 @@
 <h2 class="keep k-name">Skatekurs</h2>
 <p class="k-tage">Donnerstag–Sonntag</p>
 </div>
-<div class="k-zeile k-text">
-
-</div>
 <div class="k-zeile k-ort">
 <p>Skatepark Allmend</p>
+</div>
+<div class="k-zeile k-text">
+
 </div>
 <div class="k-zeile k-auswahl">
 <select class="dd" name="kategorie" aria-label="Kategorie wählen">
@@ -171,7 +171,11 @@
 (function(){
   var vs=[].slice.call(document.querySelectorAll('.k-landen video'));if(!vs.length)return;
   /* Mitte des Fleckens = Mitte des Kursnamens */
-  function setzen(){document.querySelectorAll('.k-kopf').forEach(function(k){var n=k.querySelector('.k-name'),l=k.querySelector('.k-landen');if(n&&l)l.style.top=(n.offsetTop+n.offsetHeight/2)+'px';});}
+  function setzen(){document.querySelectorAll('.k-kopf').forEach(function(k){
+    var l=k.querySelector('.k-landen'),f=k.closest('.k-spalte'),o=f&&f.querySelector('.k-ort p'),kr=k.getBoundingClientRect();if(!l)return;
+    /* Mitte zwischen Kursart oben und Ort unten, damit alles im Fleck liegt */
+    var unten=o?o.getBoundingClientRect().bottom:kr.bottom;
+    l.style.top=((kr.top+unten)/2-kr.top)+'px';});}
   setzen();window.addEventListener('resize',setzen);if(document.fonts)document.fonts.ready.then(setzen);
   var ruhig=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   vs.forEach(function(v,i){
