@@ -356,3 +356,4 @@ nav:has(.k-motto) .lang{bottom:66px}
 @media (max-width:600px){.k-levels{grid-template-columns:1fr;font-size:13px}}
 .k-levels h3{text-transform:none}.k-levels{margin-top:-17vh}@media (max-width:1100px){.k-levels{margin-top:0}}
 .session.s-kurse{gap:9vh;padding-bottom:20vh}.k-levels{margin-top:0}
+.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen{margin-top:9vh}
