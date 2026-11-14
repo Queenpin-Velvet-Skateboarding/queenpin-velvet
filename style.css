@@ -292,3 +292,19 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 body{background:#FBF1EC}
 .home .hero-video{mix-blend-mode:multiply}
 .hero-title a{color:inherit;text-decoration:none}.hero-title a:hover b,.hero-title a:hover span{font-weight:400}
+/* Motto: auf Höhe der unteren Menüpunkte, als Link; Sprachen darüber */
+.k-motto{position:fixed!important;top:auto!important;bottom:24px!important;left:50%;transform:translateX(-50%)!important;font-size:13px;color:inherit;text-decoration:none;margin:0!important}
+.k-motto:hover,.k-motto[aria-current]{font-weight:400}
+nav:has(.k-motto) .lang{bottom:52px}
+@media (max-width:1100px){.session ~ nav .k-motto{position:absolute!important}}
+@media (max-width:600px){.k-motto{font-size:11px;bottom:48px!important}nav:has(.k-motto) .lang{bottom:74px}}
+/* But bloom! */
+.bloom-video{mix-blend-mode:multiply}
+.bloom-text{z-index:2;pointer-events:none}
+.bloom-text p{text-shadow:0 0 18px #FBF1EC,0 0 8px #FBF1EC,0 0 3px #FBF1EC}
+.bloom-text p:first-child{font-weight:400}
+.bloom-klein{font-size:clamp(12px,1vw,14px)!important;margin-top:.6em!important}
+.k-motto{padding:10px 0;letter-spacing:.04em}
+nav:has(.k-motto) .lang{bottom:66px}
+@media (max-width:600px){.k-motto{bottom:24px!important;padding:10px 0}nav:has(.k-motto) .lang{bottom:62px}}
+@media (max-width:600px){.k-motto{bottom:58px!important}nav:has(.k-motto) .lang{bottom:30px}}
