@@ -18,7 +18,7 @@
       var mit=box.querySelector('input[name=board]:checked');
       if(pr){pr.hidden=!alle||!(box.getAttribute('data-preis'));pr.textContent=(mit&&box.getAttribute('data-preis-mit'))||box.getAttribute('data-preis')||'';}
       var detail=[termin,kat].concat(rest).filter(Boolean).join(' · ');
-      var text='Hallo Queenpin!\nIch interessiere mich für diesen Kurs:\n'+kurs+',\n'+(detail||'')+'\nName:\nAlter:';
+      var text='Liebe Irene\nWir interessieren uns für diesen Kurs:\n'+kurs+',\n'+(detail||'')+'\nName:\nAlter:';
       var t=encodeURIComponent(text);
       links.forEach(function(a){
         var b=a.getAttribute('data-base');

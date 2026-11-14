@@ -171,9 +171,12 @@
   setzen();window.addEventListener('resize',setzen);if(document.fonts)document.fonts.ready.then(setzen);
   var ruhig=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   vs.forEach(function(v,i){
-    if(ruhig){v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
+    if(ruhig){var f0=v.closest('.k-spalte');if(f0)f0.classList.add('gelandet');v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
     var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();
-      setTimeout(function(){v.play().catch(function(){});},i*450);}},{threshold:.3});
+      setTimeout(function(){v.play().catch(landen);},i*450);
+      setTimeout(landen,i*450+4500);}},{threshold:.3});
+    function landen(){var f=v.closest('.k-spalte');if(f)f.classList.add('gelandet');}
+    v.addEventListener('timeupdate',function(){if(v.currentTime>2.4)landen();});
     io.observe(v);
   });
 })();

@@ -265,3 +265,10 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 .dd{background-position:right calc(7% + 1em) center,center;padding:.95em calc(7% + 2.2em)}
 .k-cols .dd{width:min(36em,100%)}
 @media (max-width:1100px){.session ~ nav .corner{position:absolute}}
+/* Schrift: Light statt Hairline (lesbarer) */
+.corner,.lang,.soon,.hero-title,.hero-title span,.choice,.session,.s-title,.k-motto,.session .s-next p,.s-info p,.dd,.s-btn,.t label,.k-tage,.k-label{font-weight:300}
+.hero-title b,.session .k-name,.s-info .s-info-titel,.corner:hover,.corner[aria-current],.choice a:hover,.dd.gewaehlt,.dd:hover,.k-preis{font-weight:400}
+
+/* Dropdown wird erst farbig, wenn der Tropfen gelandet ist */
+.k-spalte .dd{background-size:auto,0% 0%;transition:background-size 1.1s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.k-spalte.gelandet .dd{background-size:auto,100% 100%}
