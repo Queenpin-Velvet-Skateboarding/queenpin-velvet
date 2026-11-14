@@ -335,3 +335,12 @@ nav:has(.k-motto) .lang{bottom:66px}
 .k-level dd{max-width:none}
 /* Kurse-Seite ist länger: unteres Menü am Seitenende statt fest */
 .s-kurse ~ nav .corner.bl,.s-kurse ~ nav .corner.br,.s-kurse ~ nav .lang,.s-kurse ~ nav .k-motto{position:absolute!important}
+/* Kategorie-Dropdown: Text bricht um und bleibt ganz sichtbar */
+.dd-wrap{display:grid;width:min(36em,100%);margin:.15em auto}
+.dd-wrap > *{grid-area:1/1}
+.dd-wrap .dd{width:100%!important;color:transparent}
+.dd-wrap .dd option{color:#141414}
+.dd-anzeige{pointer-events:none;align-self:center;padding:.95em calc(7% + 2.2em);text-align:center;line-height:1.45;text-wrap:balance;z-index:1}
+.dd-wrap.gewaehlt .dd-anzeige{font-weight:400}
+.k-info{display:none!important}
+@media (max-width:600px){.dd,.dd-anzeige{padding-left:1.4em;padding-right:2.2em}.dd{background-position:right 1em center,center}}

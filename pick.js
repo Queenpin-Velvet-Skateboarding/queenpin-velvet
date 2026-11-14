@@ -27,20 +27,18 @@
         else if(b.indexOf('https://wa.me/')===0)a.href=b.split('?')[0]+'?text='+t;
       });
     }
-    /* Kategorie: in der Liste die volle Erklärung, gewählt nur Name + Alter, Rest als Zeile darunter */
+    /* Kategorie: voller Text bleibt nach der Wahl sichtbar (bricht um, statt abgeschnitten) */
     var skat=box.querySelector('select[name=kategorie]');
     if(skat){
-      var opts=[].slice.call(skat.options).filter(function(o){return o.value;});
-      opts.forEach(function(o){o.setAttribute('data-voll',o.textContent);});
-      var info=document.createElement('p');info.className='k-info';info.hidden=true;
-      skat.parentNode.insertBefore(info,skat.nextSibling);
-      skat.addEventListener('change',function(){
-        opts.forEach(function(o){o.textContent=o.getAttribute('data-voll');});
-        var o=skat.selectedOptions[0];if(!o||!o.value){info.hidden=true;return;}
-        var teile=o.getAttribute('data-voll').split(' · ');
-        o.textContent=teile.slice(0,2).join(' · ');
-        var rest=teile.slice(2).join(' · ');info.textContent=rest;info.hidden=!rest;
-      });
+      var wrap=document.createElement('div');wrap.className='dd-wrap';
+      skat.parentNode.insertBefore(wrap,skat);wrap.appendChild(skat);
+      var anz=document.createElement('span');anz.className='dd-anzeige';anz.setAttribute('aria-hidden','true');
+      wrap.appendChild(anz);
+      function zeig(){var o=skat.selectedOptions[0],t=o?o.textContent:'',x=t.split(' · ');
+        anz.innerHTML='';
+        var zeilen=x.length>2?[x.slice(0,2).join(' · ')].concat(x.slice(2)):[t];
+        zeilen.forEach(function(z,i){if(i)anz.appendChild(document.createElement('br'));anz.appendChild(document.createTextNode(z));});wrap.classList.toggle('gewaehlt',!!skat.value);}
+      skat.addEventListener('change',zeig);zeig();
     }
     /* Erst Kategorie, dann nur die passenden Kurse (mit Datum + Zeit) */
     var sk=box.querySelector('select[name=kategorie]'),st=box.querySelector('select[name=termin]');
