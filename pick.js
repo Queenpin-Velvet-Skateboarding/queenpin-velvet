@@ -16,7 +16,7 @@
       box.querySelectorAll('select').forEach(function(x){x.classList.toggle('gewaehlt',!!x.value);});
       var pr=box.querySelector('.k-preis'),alle=[].every.call(box.querySelectorAll('select'),function(x){return x.value;});
       var mit=box.querySelector('input[name=board]:checked');
-      if(pr){pr.hidden=!alle||!(box.getAttribute('data-preis'));pr.textContent=(mit&&box.getAttribute('data-preis-mit'))||box.getAttribute('data-preis')||'';}
+      if(pr){pr.hidden=!alle||!(box.getAttribute('data-preis'));pr.textContent=(mit&&box.getAttribute('data-preis-mit'))||(kat==='Seeds'&&box.getAttribute('data-preis-seeds'))||box.getAttribute('data-preis')||'';}
       var detail=[termin,kat].concat(rest).filter(Boolean).join(' · ');
       var text='Liebe Irene\nWir interessieren uns für diesen Kurs:\n'+kurs+',\n'+(detail||'')+'\nName:\nAlter:';
       var t=encodeURIComponent(text);
