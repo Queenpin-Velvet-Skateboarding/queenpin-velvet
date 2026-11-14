@@ -16,8 +16,7 @@
 <main class="home">
 <video class="hero-video bloom-video" src="assets/bloom.mp4" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
 <div class="soon bloom-text">
-<p>But bloom!</p>
-<p class="bloom-klein">Zusammen braucht es plötzlich gar nicht mehr so viel Mut.</p>
+<p id="spruch">But bloom.</p>
 </div>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
@@ -29,5 +28,14 @@
 <a class="k-motto" href="bloom.html" aria-current="page">It takes courage to bloom</a>
 </nav>
 </main>
+<script>
+/* Bei jedem Besuch ein anderer Spruch, der Reihe nach */
+(function(){
+  var S=['Scrapes heal. Blooms stay.','Grow through the concrete.','Bloom loud.','But bloom.','Roots down. Wheels up.','We all start as seeds.','Bloom at your own speed.'];
+  var i=0;try{i=(parseInt(localStorage.getItem('qp-spruch'),10)+1)||0;}catch(e){i=Math.floor(Math.random()*S.length);}
+  i=i%S.length;document.getElementById('spruch').textContent=S[i];
+  try{localStorage.setItem('qp-spruch',i);}catch(e){}
+})();
+</script>
 </body>
 </html>
