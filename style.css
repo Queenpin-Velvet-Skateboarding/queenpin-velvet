@@ -275,3 +275,4 @@ a,select,button,label{cursor:url(assets/cursor-pink.png) 7 18,pointer}
 /* Design-Ferienkurs: grösserer Tropfen */
 .k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video{width:min(96vw,1300px)}
 @media (max-width:1100px){.k-spalte[data-kurs^="Ferien-Kurs Design"] .k-landen video{width:min(290vw,1300px)}}
+.s-session .k-name{font-size:clamp(14px,1.8vw,22px);letter-spacing:.14em;margin-bottom:.4em}
