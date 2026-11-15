@@ -405,3 +405,4 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
   .corner.bl,.corner.br{bottom:30px}
   .k-motto{bottom:64px!important}
 }
+@media (max-width:1100px){.session .k-cols3{row-gap:11em}}
