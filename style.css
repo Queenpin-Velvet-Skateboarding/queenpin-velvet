@@ -429,3 +429,10 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
 @media (max-width:1100px){.session .k-cols3{grid-template-rows:none!important}}
 /* Streifen nur auf der Kurse-Seite (Text scrollt); Videos laufen sonst frei bis an den Rand */
 @media (max-width:1100px){body:not(:has(.s-kurse))::before,body:not(:has(.s-kurse))::after{display:none}}
+/* iPhone: Seite reicht unter Statusleiste und Safari-Leiste, Menü bleibt im sicheren Bereich */
+@supports (padding:env(safe-area-inset-top)){
+  .corner.tl,.corner.tc,.corner.tr{margin-top:env(safe-area-inset-top)}
+  .corner.bl,.corner.br,.lang,.k-motto{margin-bottom:env(safe-area-inset-bottom)}
+  .session{padding-top:calc(15vh + env(safe-area-inset-top))}
+}
+.home{min-height:100svh;min-height:100lvh}
