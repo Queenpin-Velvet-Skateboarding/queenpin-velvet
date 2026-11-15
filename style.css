@@ -602,3 +602,17 @@ html.f-geo .s-session .s-next.k-einzel p.k-tage{font-size:10.5px!important;lette
 @media (min-width:1101px){.k-deck{left:calc(50% - 85px)!important;transform:none!important}}
 @media (min-width:1101px){.k-deck{position:static!important;left:auto!important;margin:.4em auto -100px!important}}
 html.f-geo .hero-title,html.f-geo .hero-title a,html.f-geo .hero-title b,html.f-geo .hero-title span{letter-spacing:.28em!important;font-size:clamp(15px,1.3vw,19px)!important;line-height:1.9!important;font-weight:400!important}
+/* Handy: unteres Menü auf einer Linie, Sprachen darunter */
+@media (max-width:600px){
+  html nav .corner.bl,html nav .corner.br,html nav .k-motto{bottom:34px!important;top:auto!important;font-size:9px!important;letter-spacing:.1em!important;line-height:1!important;padding:6px 0!important;white-space:nowrap}
+  html nav .corner.bl{left:14px!important}
+  html nav .corner.br{right:14px!important;left:auto!important}
+  html nav .k-motto{left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:auto!important;text-align:center}
+  html nav .lang,html nav:has(.k-motto) .lang{bottom:12px!important}
+}
+@media (max-width:600px){
+  nav a.corner.bl.bl,nav a.corner.br.br,nav a.k-motto.k-motto{font-size:8.5px!important;letter-spacing:.06em!important;bottom:34px!important;line-height:1!important;padding:6px 0!important}
+  html.f-geo nav a.corner.bl.bl,html.f-geo nav a.corner.br.br,html.f-geo nav a.k-motto.k-motto{font-size:8.5px!important;letter-spacing:.1em!important}
+  nav a.corner.bl.bl{left:12px!important}nav a.corner.br.br{right:12px!important}
+}
+@media (max-width:600px){html.f-geo nav a.corner.bl.bl,html.f-geo nav a.corner.br.br,html.f-geo nav a.k-motto.k-motto{letter-spacing:.05em!important;font-size:8px!important}}
