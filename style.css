@@ -470,3 +470,21 @@ html.f-mix .t-cap,html.f-mix .s-signup,html.f-mix .s-signup *{font-family:'ff-ti
   .corner.bl,.corner.br{bottom:34px}
   .k-motto{bottom:34px!important}
 }
+/* Schrift-Test «geo»: geometrische Grotesk, gesperrte Versalien, ruhige Typo-Skala */
+html.f-geo{--g:'futura-pt','Jost',sans-serif;--t:'ff-tisa-sans-web-pro','Helvetica Neue',Helvetica,Arial,sans-serif}
+html.f-geo body,html.f-geo body *:not(video){font-family:var(--t)!important;font-weight:300!important;letter-spacing:.01em!important;line-height:1.55}
+/* Titel, Obertitel, Zwischentitel, Menü: alle gleiche Familie, Versalien, weit gesperrt – nur Grösse unterscheidet */
+html.f-geo .corner,html.f-geo .k-motto,html.f-geo .lang,html.f-geo .k-label,html.f-geo .k-name,html.f-geo .k-levels-titel,html.f-geo .k-levels h3,html.f-geo .t-cap,html.f-geo .s-btn,html.f-geo .s-naechste,html.f-geo .hero-title,html.f-geo .hero-title *{font-family:var(--g)!important;text-transform:uppercase!important;font-style:normal!important;font-weight:400!important}
+html.f-geo .k-name,html.f-geo .k-levels-titel{font-size:clamp(17px,1.5vw,21px)!important;letter-spacing:.28em!important;margin-bottom:.55em!important}
+html.f-geo .corner,html.f-geo .k-motto{font-size:12px!important;letter-spacing:.24em!important}
+html.f-geo .k-label,html.f-geo .k-levels h3,html.f-geo .t-cap,html.f-geo .s-naechste{font-size:10.5px!important;letter-spacing:.26em!important;opacity:1!important;margin-bottom:.9em!important}
+html.f-geo .s-btn{font-size:11px!important;letter-spacing:.22em!important}
+html.f-geo .lang{font-size:9px!important;letter-spacing:.24em!important}
+html.f-geo .hero-title{letter-spacing:.3em!important}
+/* Fliesstext */
+html.f-geo .k-text p{font-style:italic!important;font-size:14px!important;line-height:1.6!important}
+html.f-geo .k-ort p,html.f-geo .k-tage,html.f-geo .s-info p:not(.s-naechste),html.f-geo .s-next.k-einzel p{font-size:13.5px!important}
+html.f-geo .k-tage{font-style:normal!important;opacity:.75}
+html.f-geo .k-levels p{font-size:13px!important;opacity:.85}
+html.f-geo .k-klein,html.f-geo .k-klein *{font-size:11.5px!important;opacity:.7}
+html.f-geo .dd,html.f-geo .dd-anzeige{font-size:13px!important}
