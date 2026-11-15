@@ -801,3 +801,28 @@ body:has(.zeige-design){overflow-x:hidden}
 .k-malerei-band{transform:scaleY(-1)!important;height:140vh!important;top:-50vh!important;object-position:66% 50%!important}
 .k-malerei-band{height:160vh!important;top:-55vh!important;object-position:68% 50%!important}
 @media (min-width:1101px) and (max-height:860px){html .session.s-kurse{padding-top:104px!important}}
+/* Datum und Ort direkt unter dem Titel */
+.k-kopf .k-block{min-height:0!important;margin:.2em 0 0!important;display:block}
+.k-kopf .k-block p,html.f-geo .k-kopf .k-block p{font-family:var(--g,'futura-pt','Jost',sans-serif)!important;text-transform:uppercase!important;font-style:normal!important;font-weight:400!important;font-size:10.5px!important;letter-spacing:.26em!important;line-height:1.6!important;opacity:1!important;margin:0!important}
+@media (max-width:600px){nav a.corner.tc.tc,html.f-geo nav a.corner.tc.tc{font-size:8.5px!important;letter-spacing:.08em!important}}
+@media (max-width:1100px){html .session.s-kurse{padding-bottom:calc(200px + env(safe-area-inset-bottom))!important}}
+@media (max-width:1100px){body:has(.s-kurse)::before{top:-200px!important;height:calc(292px + env(safe-area-inset-top))!important}}
+/* Handy, Design + Skate: Zeichnung läuft ins Menü, etwas nach links geschoben */
+@media (max-width:1100px){
+  body:has(.zeige-design)::before,body:has(.zeige-design)::after{display:none!important}
+  .k-malerei-band{object-position:84% 50%!important;height:calc(100lvh + 40px)!important;top:-20px!important}
+}
+/* Level: wachsende Blumen über dem Titel */
+.lv-blumen{display:none}
+.session.s-kurse.zeige-level .k-levels > .lv-blumen{display:block;grid-column:1/-1;grid-row:1!important;justify-self:center;width:min(390px,80vw);height:auto;mix-blend-mode:multiply;pointer-events:none;margin:0 0 .4em}
+.session.s-kurse.zeige-level .k-levels > .k-levels-titel{grid-row:2!important}
+.session.s-kurse.zeige-level .k-levels > div{grid-row:3!important}
+@media (max-width:1100px){.session.s-kurse.zeige-level .k-levels > div{grid-row:auto!important}}
+.session.s-kurse.zeige-level .k-levels > .lv-blumen{mix-blend-mode:normal!important}
+/* Level: Blumen ganz unten */
+.session.s-kurse.zeige-level .k-levels > .k-levels-titel{grid-row:1!important}
+.session.s-kurse.zeige-level .k-levels > div{grid-row:2!important}
+.session.s-kurse.zeige-level .k-levels > .lv-blumen{grid-row:3!important;order:9!important;margin:2.4em 0 0!important;width:min(420px,86vw)!important}
+@media (max-width:1100px){.session.s-kurse.zeige-level .k-levels > div{grid-row:auto!important}.session.s-kurse.zeige-level .k-levels > .lv-blumen{grid-row:auto!important}}
+@media (min-width:1101px){.session.s-kurse.zeige-level .k-levels{margin:auto 0 0!important;padding-top:40px!important}.session.s-kurse.zeige-level{padding-bottom:70px!important}}
+@media (max-width:600px){html nav a.corner.tc.tc,html nav a.corner.tc.tc[aria-current]{font-size:8.5px!important;letter-spacing:.08em!important}}
