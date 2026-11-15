@@ -804,3 +804,4 @@ body:has(.zeige-design){overflow-x:hidden}
 /* Datum und Ort direkt unter dem Titel */
 .k-kopf .k-block{min-height:0!important;margin:.2em 0 0!important;display:block}
 .k-kopf .k-block p,html.f-geo .k-kopf .k-block p{font-family:var(--g,'futura-pt','Jost',sans-serif)!important;text-transform:uppercase!important;font-style:normal!important;font-weight:400!important;font-size:10.5px!important;letter-spacing:.26em!important;line-height:1.6!important;opacity:1!important;margin:0!important}
+@media (max-width:600px){nav a.corner.tc.tc,html.f-geo nav a.corner.tc.tc{font-size:8.5px!important;letter-spacing:.08em!important}}
