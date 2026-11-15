@@ -17,7 +17,7 @@
 <main class="home">
 <article class="session s-kurse">
 <div class="s-next k-cols k-cols3">
-<form class="pick k-spalte" data-kurs="Sprouts to Asters" onsubmit="return false">
+<form class="pick k-spalte" data-kurs="Sprouts to Asters" data-termin="Jeden Montag · 17.30 – 18.30" onsubmit="return false">
 <div class="k-zeile k-kopf">
 <p class="k-label">Jahreskurs</p>
 <p>&nbsp;</p>
@@ -30,7 +30,10 @@
 <video class="k-zeichnung" src="assets/blume-sprouts.mp4" autoplay muted playsinline preload="auto"></video>
 </div>
 <div class="k-zeile k-auswahl">
-
+<select class="dd" name="kategorie" aria-label="Kategorie wählen">
+<option value="" selected disabled>Kategorie wählen</option>
+<option value="Sprouts to Asters (7–16) · Mädchen und junge Frauen*" data-name="7–16 Jahre">Sprouts to Asters (7–16) · Mädchen und junge Frauen*</option>
+</select>
 </div>
 <div class="k-zeile k-anmelden">
 <div class="k-block">
@@ -93,7 +96,6 @@
 </div>
 <div class="k-zeile k-zteil">
 <p class="k-klein">Die Kurse finden mit 4 Teilnehmenden (4–6 Jahre)<br>bzw. 6–8 Teilnehmerinnen (7–16 Jahre) statt.</p>
-<video class="k-deck" src="assets/deck-blumen2.mp4" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
 </div>
 </form>
 <form class="pick k-spalte" data-kurs="Ferienkurs Summer Bloom" data-jahr="2027" data-preis="Kurs CHF 200.–" data-preis-seeds="Kurs CHF 120.–" onsubmit="return false">
@@ -147,6 +149,7 @@
 </form>
 </div>
 <section class="k-levels" aria-label="Bloom Levels">
+<video class="k-deck" src="assets/deck-blumen2.mp4" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
 <h2 class="k-levels-titel">Bloom Levels</h2>
 <div><h3>Seeds</h3><p>Ich stehe zum ersten Mal auf dem Board. Ich rolle, balanciere und habe Spass dabei.</p></div>
 <div><h3>Sprouts</h3><p>Ich rolle, pushe und bewege mich sicher auf dem Brett. Meine ersten Tricks sind gar nicht so weit weg.</p></div>

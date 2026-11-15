@@ -6,10 +6,10 @@
     var links=box.querySelectorAll('.s-btn');
     links.forEach(function(a){a.setAttribute('data-base',a.getAttribute('href'));});
     function update(){
-      var termin='',kat='',rest=[],jahr=box.getAttribute('data-jahr')||'';
+      var termin=box.getAttribute('data-termin')||'',kat='',rest=[],jahr=box.getAttribute('data-jahr')||'';
       box.querySelectorAll('input:checked, select').forEach(function(i){
         if(!i.value)return;
-        if(i.name==='kategorie')kat=i.value.split(' ')[0];
+        if(i.name==='kategorie'){var so=i.selectedOptions&&i.selectedOptions[0];kat=(so&&so.getAttribute('data-name'))||i.value.split(' ')[0];}
         else if(i.name==='termin')termin=i.value.replace(/(\d+\.\d+\.)( ·|$)/,'$1'+jahr+'$2');
         else rest.push(i.value);
       });

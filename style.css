@@ -619,3 +619,14 @@ html.f-geo .hero-title,html.f-geo .hero-title a,html.f-geo .hero-title b,html.f-
 @media (min-width:1101px){.k-deck{width:190px!important;margin:.3em auto -110px!important}}
 .k-deck{-webkit-mask-image:none!important;mask-image:none!important}
 @media (min-width:1101px){.k-deck{width:168px!important;margin:.8em auto -110px!important}}
+.k-cols .dd,.k-cols .dd-wrap .dd{background-position:right 3em top 52%,center!important}
+.k-cols select.dd[name=termin]{width:min(27em,100%)!important}
+/* Blumenwiese direkt über Bloom Levels */
+.k-levels > .k-deck{grid-column:1/-1;margin:0 auto 1em!important}
+@media (min-width:1101px){
+  .session .k-levels{position:relative}
+  .session .k-levels > .k-deck{position:absolute!important;bottom:calc(100% + 6px);top:auto;left:50%!important;margin:0 0 0 -84px!important;width:168px!important}
+}
+html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;max-width:319px}
+.k-cols select.dd[hidden]{display:none!important}
+@media (min-width:1101px){.session .k-levels{z-index:auto!important;isolation:auto!important}.session .k-levels > .k-deck{bottom:calc(100% + 16px)}}
