@@ -584,3 +584,4 @@ html.f-geo .s-session .s-next.k-einzel p.k-tage{font-size:10.5px!important;lette
   .session .k-levels > div:nth-of-type(4){order:5}
 }
 @media (min-width:1101px){.session .k-levels > .k-levels-titel{margin-top:-3px!important}}
+@media (min-width:1101px){.k-zeichnung:not(.k-sonne){height:76px!important;top:-18px!important}}
