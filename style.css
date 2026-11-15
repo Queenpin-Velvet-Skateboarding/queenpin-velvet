@@ -459,3 +459,6 @@ html.f-mix .t-cap,html.f-mix .s-signup,html.f-mix .s-signup *{font-family:'ff-ti
 .k-cols .dd{background-position:right 2em center,center}.k-cols .dd,.dd-anzeige{padding-right:3.2em!important;padding-left:2em!important}
 @media (min-width:1101px){.session .k-cols3{row-gap:1.1em}.session.s-kurse{gap:2vh}}
 @media (min-width:1101px){.session.s-kurse{padding-bottom:94px}}
+/* Zwischentitel: Seeds/Sprouts/…, Mehr Infos …, Fragen oder Infos – Versalien */
+.k-levels h3,.t-cap,.s-fragen .t-cap{text-transform:uppercase!important;letter-spacing:.12em!important;font-size:.85em}
+.k-levels h3{font-size:inherit}
