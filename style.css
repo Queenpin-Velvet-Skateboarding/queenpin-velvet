@@ -399,3 +399,9 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
 .s-sonne .s-bg{-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 54%,#000 38%,transparent 92%);mask-image:radial-gradient(ellipse 50% 50% at 50% 54%,#000 38%,transparent 92%)}
 .s-session{--vb:min(96vw,1240px)}@media (max-width:600px){.s-session{--vb:250vw}}
 .session.s-kurse{padding-top:calc(10vh + 45px)}@media (max-width:600px){.session.s-kurse{padding-top:calc(11vh + 43px)}}
+/* Handy: Sprachen ganz unten, mittig unter dem Menü */
+@media (max-width:600px){
+  .lang,nav:has(.k-motto) .lang{bottom:6px!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;text-align:center}
+  .corner.bl,.corner.br{bottom:30px}
+  .k-motto{bottom:64px!important}
+}
