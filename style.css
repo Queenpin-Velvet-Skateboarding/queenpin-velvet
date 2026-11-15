@@ -442,11 +442,11 @@ html.f-monte .k-name,html.f-monte .hero-title b,html.f-monte .hero-title span,ht
 html.f-basic body,html.f-basic body *:not(video){font-family:'basic-gothic','basic-gothic-pro','IBM Plex Sans',sans-serif!important;letter-spacing:.02em!important}
 .session .k-name,.k-levels-titel{text-transform:uppercase!important;letter-spacing:.14em}
 /* Schrift-Test «mix»: Titel Forma DJR Mono, Beschriebe kursiv, Infos + Menü Grotesk */
-html.f-mix body,html.f-mix body *:not(video){font-family:'Helvetica Neue',Helvetica,Arial,sans-serif!important;font-weight:300;letter-spacing:.02em!important}
+html.f-mix body,html.f-mix body *:not(video){font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;font-weight:300;letter-spacing:.02em!important}
 html.f-mix .k-name,html.f-mix .k-levels-titel,html.f-mix .k-levels h3,html.f-mix .hero-title,html.f-mix .hero-title *{font-family:'forma-djr-mono','IBM Plex Mono',monospace!important;letter-spacing:.14em!important}
 html.f-mix .k-text p,html.f-mix .k-levels p,html.f-mix .s-next.k-einzel > p:not(.k-label):not(.k-tage):not(.t-cap),html.f-mix .soon p,html.f-mix #spruch{font-family:'forma-djr-mono','IBM Plex Mono',monospace!important;font-style:italic!important;font-weight:400!important;letter-spacing:.04em!important}
 html.f-mix .k-name,html.f-mix .k-levels-titel,html.f-mix .k-levels h3,html.f-mix .s-info-titel,html.f-mix .dd.gewaehlt{font-weight:400}
 /* mix: nur Kursbeschreibungen kursiv (Grotesk), Bloom Levels und Rest gerade */
-html.f-mix .k-levels p,html.f-mix .s-next.k-einzel > p:not(.k-label):not(.k-tage):not(.t-cap),html.f-mix .soon p,html.f-mix #spruch{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif!important;font-style:normal!important;font-weight:300!important;letter-spacing:.02em!important}
-html.f-mix .k-levels h3{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif!important;letter-spacing:.02em!important}
-html.f-mix .k-text p{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif!important;font-style:italic!important;font-weight:300!important;letter-spacing:.02em!important}
+html.f-mix .k-levels p,html.f-mix .s-next.k-einzel > p:not(.k-label):not(.k-tage):not(.t-cap),html.f-mix .soon p,html.f-mix #spruch{font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;font-style:normal!important;font-weight:300!important;letter-spacing:.02em!important}
+html.f-mix .k-levels h3{font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;letter-spacing:.02em!important}
+html.f-mix .k-text p{font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;font-style:italic!important;font-weight:300!important;letter-spacing:.02em!important}
