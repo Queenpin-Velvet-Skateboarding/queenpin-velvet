@@ -563,3 +563,13 @@ html.f-geo .k-anmelden .s-signup{margin-top:.1em!important}
 @media (min-width:1101px){.k-zeichnung,.k-zeichnung.k-sonne{height:68px;bottom:-4px}}
 @media (min-width:1101px){.k-zeichnung,.k-zeichnung.k-sonne{top:-64px!important;bottom:auto!important}}
 @media (min-width:1101px){.k-zeichnung:not(.k-sonne){top:-14px!important}}
+/* geo: Sessions + Events gleiche Typo-Regeln wie Kurse */
+html.f-geo .s-session .s-next.k-einzel p:not(.k-tage),html.f-geo .soon p{font-family:var(--g)!important;text-transform:uppercase!important;font-style:normal!important;font-weight:300!important;font-size:11px!important;letter-spacing:.2em!important;line-height:1.8!important;opacity:1!important}
+html.f-geo .s-session .s-next.k-einzel .k-tage{margin-top:.2em!important}
+html.f-geo .soon p{margin:0!important}
+html.f-geo .soon .soon-link{font-weight:400!important}
+.ev-tropfen{display:block;width:min(340px,80vw);height:auto;mix-blend-mode:multiply;pointer-events:none;margin:0 auto 1.6em}
+html.f-geo .soon .soon-link{font:inherit!important;text-transform:uppercase!important;letter-spacing:inherit!important;font-weight:400!important}
+html.f-geo .session .s-info [data-f="datum"],html.f-geo .session .s-info [data-f="zeit"]{font-size:10.5px!important;letter-spacing:.26em!important;line-height:1.5!important;margin:0 0 .15em!important}
+html.f-geo .session .s-info [data-f="ort"]{font-size:11.5px!important;letter-spacing:.24em!important;line-height:1.5!important;margin:0!important}
+html.f-geo .s-session .s-next.k-einzel p.k-tage{font-size:10.5px!important;letter-spacing:.26em!important}
