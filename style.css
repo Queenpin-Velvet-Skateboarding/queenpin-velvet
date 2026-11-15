@@ -616,3 +616,4 @@ html.f-geo .hero-title,html.f-geo .hero-title a,html.f-geo .hero-title b,html.f-
   nav a.corner.bl.bl{left:12px!important}nav a.corner.br.br{right:12px!important}
 }
 @media (max-width:600px){html.f-geo nav a.corner.bl.bl,html.f-geo nav a.corner.br.br,html.f-geo nav a.k-motto.k-motto{letter-spacing:.05em!important;font-size:8px!important}}
+@media (min-width:1101px){.k-deck{width:190px!important;margin:.3em auto -110px!important}}
