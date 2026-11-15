@@ -650,3 +650,9 @@ html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;ma
   html .session .k-levels > div p{top:1.9em!important}
 }
 @media (min-width:1101px){.session.s-kurse{padding-bottom:85px!important}}
+/* Malerei grösser, liegt unter der Schrift */
+@media (min-width:1101px){
+  .session.s-kurse .k-levels{margin-top:62px!important}
+  .session .k-levels > .k-deck{width:150px!important;height:200px!important;margin:0 0 0 -75px!important;bottom:calc(100% + 12px)!important;z-index:-1}
+  .session.s-kurse{padding-bottom:110px!important}
+}
