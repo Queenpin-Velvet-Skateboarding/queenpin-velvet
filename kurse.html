@@ -16,7 +16,6 @@
 <body>
 <main class="home">
 <article class="session s-kurse zeige-jahreskurs">
-<nav class="k-tabs" aria-label="Kurse"><a href="#jahreskurs" data-tab="jahreskurs">Jahreskurs</a><a href="#ferienkurse" data-tab="ferienkurse">Ferienkurse</a><a href="#kurslevels" data-tab="kurslevels">Kurslevels</a></nav>
 <div class="s-next k-cols k-cols3">
 <form class="pick k-spalte" data-kurs="Sprouts to Asters" data-termin="Jeden Montag · 17.30 – 18.30" onsubmit="return false">
 <div class="k-zeile k-kopf">
@@ -152,6 +151,7 @@
 </div>
 </form>
 </div>
+<p class="k-zu-levels-zeile"><a class="k-zu-levels" href="#kurslevels">Welches Level passt?</a></p>
 <section class="k-levels" aria-label="Bloom Levels">
 <h2 class="k-levels-titel">Bloom Levels</h2>
 <div><h3>Seeds</h3><p>Ich stehe zum ersten Mal auf dem Board. Ich rolle, balanciere und habe Spass dabei.</p></div>
@@ -162,7 +162,8 @@
 </article>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
-<a class="corner tc" href="kurse.html" aria-current="page">kurse</a>
+<a class="corner tc tc1" href="kurse.html#ferienkurse">ferienkurse</a>
+<a class="corner tc tc2" href="kurse.html#jahreskurs">jahreskurs</a>
 <a class="k-motto" href="bloom.html">It takes courage to bloom</a>
 <a class="corner tr" href="bald.html">queenpin</a>
 <a class="corner bl" href="events.html">Events</a>
@@ -174,16 +175,16 @@
 <script>
 /* Auswahl Jahreskurs / Ferienkurse / Kurslevels */
 (function(){
-  var art=document.querySelector('.s-kurse'),tabs=[].slice.call(document.querySelectorAll('.k-tabs a'));
+  var art=document.querySelector('.s-kurse'),tabs=[].slice.call(document.querySelectorAll('.k-tabs a, nav .tc1, nav .tc2, .k-zu-levels'));
   var namen=['jahreskurs','ferienkurse','kurslevels'];
   function zeigen(n,neu){
     if(namen.indexOf(n)<0)n='jahreskurs';
     namen.forEach(function(x){art.classList.toggle('zeige-'+x,x===n);});
-    tabs.forEach(function(a){var an=a.getAttribute('data-tab')===n;a.classList.toggle('aktiv',an);if(an)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+    tabs.forEach(function(a){var an=(a.getAttribute('data-tab')||a.getAttribute('href').split('#')[1])===n;a.classList.toggle('aktiv',an);if(an)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
     if(neu){art.querySelectorAll('video').forEach(function(v){if(v.offsetParent){try{v.currentTime=0;v.play().catch(function(){});}catch(e){}}});}
     window.dispatchEvent(new Event('resize'));
   }
-  tabs.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var n=a.getAttribute('data-tab');history.replaceState(null,'','#'+n);zeigen(n,true);});});
+  tabs.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var n=a.getAttribute('data-tab')||a.getAttribute('href').split('#')[1];history.replaceState(null,'','#'+n);zeigen(n,true);});});
   window.addEventListener('hashchange',function(){zeigen(location.hash.slice(1),true);});
   zeigen(location.hash.slice(1),false);
 })();

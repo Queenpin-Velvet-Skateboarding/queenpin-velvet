@@ -708,3 +708,18 @@ html.f-geo .k-tabs a{font-family:var(--g)!important}
 .s-kurse.zeige-jahreskurs .k-zeile.k-ort:has(.k-zeichnung){display:flex!important;height:auto!important;justify-content:center}
 .s-kurse.zeige-jahreskurs .k-zeichnung{position:static!important;height:96px!important;top:auto!important;margin:.2em auto .4em!important}
 .s-kurse.zeige-jahreskurs .k-zeichnung{transform:none!important;left:auto!important}
+/* Menü oben: sessions · ferienkurse · jahreskurs · queenpin */
+nav .corner.tc1{left:auto!important;right:calc(50% + 1.7em)!important;transform:none!important}
+nav .corner.tc2{left:calc(50% + 1.7em)!important;right:auto!important;transform:none!important}
+@media (max-width:600px){
+  nav a.corner.tl.tl,nav a.corner.tc1.tc1,nav a.corner.tc2.tc2,nav a.corner.tr.tr{font-size:8.5px!important;letter-spacing:.08em!important}
+  nav .corner.tc1{right:calc(50% + .9em)!important}nav .corner.tc2{left:calc(50% + .9em)!important}
+  nav a.corner.tl.tl{left:12px!important}nav a.corner.tr.tr{right:12px!important}
+}
+/* Link zu den Kurslevels */
+.k-zu-levels-zeile{margin:1.5em 0 0;text-align:center}
+.k-zu-levels{font-family:var(--g,'Jost'),sans-serif;text-transform:uppercase;font-size:10.5px;letter-spacing:.26em;color:#141414;text-decoration:none;cursor:url(assets/cursor-pink.png) 7 18,pointer}
+.k-zu-levels:hover{color:#E89BA0}
+.s-kurse.zeige-kurslevels .k-zu-levels-zeile{display:none}
+@media (min-width:1101px){.session.s-kurse .k-zu-levels-zeile{margin-top:auto!important;padding-bottom:10px}}
+.k-zu-levels,html.f-geo .k-zu-levels{font-family:var(--g,"futura-pt","Jost",sans-serif)!important;font-size:10.5px!important;letter-spacing:.26em!important;font-weight:400!important;text-transform:uppercase!important;font-style:normal!important}
