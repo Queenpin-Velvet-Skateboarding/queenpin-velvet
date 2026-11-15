@@ -679,3 +679,32 @@ html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;ma
 .k-spalte:has(> .k-teil){position:relative}
 .k-teil{position:absolute;width:96px;height:54px;mix-blend-mode:multiply;pointer-events:none;z-index:0}
 @media (max-width:600px){.k-teil{width:80px;height:45px}}
+/* ===== Kurse: Auswahl Jahreskurs / Ferienkurse / Kurslevels ===== */
+.k-tabs{display:flex;justify-content:center;gap:3.2em;flex-wrap:wrap;margin:0 0 1.5em;position:relative;z-index:5}
+.k-tabs a{font-family:var(--g,'Jost'),sans-serif;text-transform:uppercase;font-size:10.5px;letter-spacing:.26em;color:#141414;text-decoration:none;opacity:.4;transition:opacity .2s,color .2s;cursor:url(assets/cursor-pink.png) 7 18,pointer}
+.k-tabs a:hover{color:#E89BA0;opacity:1}
+.k-tabs a.aktiv{opacity:1}
+html.f-geo .k-tabs a{font-family:var(--g)!important}
+/* Jahreskurs: eine Spalte in der Mitte */
+.s-kurse.zeige-jahreskurs .k-spalte:not([data-kurs="Sprouts to Asters"]),
+.s-kurse.zeige-ferienkurse .k-spalte[data-kurs="Sprouts to Asters"],
+.s-kurse.zeige-kurslevels .k-cols3,
+.s-kurse:not(.zeige-kurslevels) .k-levels{display:none!important}
+@media (min-width:1101px){
+  .session.s-kurse.zeige-jahreskurs .k-cols3{grid-template-columns:minmax(0,560px)!important;justify-content:center}
+  .session.s-kurse.zeige-ferienkurse .k-cols3{grid-template-columns:repeat(2,minmax(0,520px))!important;justify-content:center;column-gap:8vw!important}
+}
+/* Kurslevels: eigene Ansicht, Texte immer sichtbar */
+.session.s-kurse.zeige-kurslevels .k-levels{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;column-gap:4vw!important;row-gap:2.2em!important;margin:auto 0!important;padding:0!important;width:min(1100px,100%)}
+.session.s-kurse.zeige-kurslevels .k-levels > .k-levels-titel{grid-column:1/-1!important;grid-row:1!important;order:0!important;margin:0 0 .4em!important}
+.session.s-kurse.zeige-kurslevels .k-levels > div{grid-row:2!important;order:0!important;padding-bottom:0!important;cursor:default}
+.session.s-kurse.zeige-kurslevels .k-levels > div p{position:static!important;opacity:.75!important;margin-top:.9em!important}
+.session.s-kurse.zeige-kurslevels .k-levels > div:hover h3{color:inherit}
+@media (max-width:1100px){.session.s-kurse.zeige-kurslevels .k-levels{grid-template-columns:1fr 1fr!important}.session.s-kurse.zeige-kurslevels .k-levels > div{grid-row:auto!important}}
+@media (max-width:600px){.session.s-kurse.zeige-kurslevels .k-levels{grid-template-columns:1fr!important}}
+.k-tabs a,html.f-geo .k-tabs a{font-family:var(--g,'futura-pt','Jost',sans-serif)!important;font-size:10.5px!important;letter-spacing:.26em!important;font-weight:400!important;font-style:normal!important;text-transform:uppercase!important}
+@media (max-width:600px){.k-tabs{gap:1.4em}.k-tabs a,html.f-geo .k-tabs a{font-size:9.5px!important;letter-spacing:.14em!important}}
+/* Jahreskurs allein: Blume im Fluss, etwas grösser */
+.s-kurse.zeige-jahreskurs .k-zeile.k-ort:has(.k-zeichnung){display:flex!important;height:auto!important;justify-content:center}
+.s-kurse.zeige-jahreskurs .k-zeichnung{position:static!important;height:96px!important;top:auto!important;margin:.2em auto .4em!important}
+.s-kurse.zeige-jahreskurs .k-zeichnung{transform:none!important;left:auto!important}
