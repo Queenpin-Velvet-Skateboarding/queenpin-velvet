@@ -48,7 +48,7 @@
         var so=sk.selectedOptions[0],k=sk.value?((so&&so.getAttribute('data-k'))||sk.value.split(' ')[0]):'';
         alle.forEach(function(o){if(o.parentNode)o.parentNode.removeChild(o);});
         if(k)alle.forEach(function(o){if(o.getAttribute('data-k')===k)st.appendChild(o);});
-        st.value='';if(sk.hasAttribute('data-bald')){ph.textContent='Bald buchbar';st.disabled=true;return;}ph.textContent=k?'Kurs wählen':'Zuerst Kategorie wählen';st.disabled=!k;
+        st.value='';if(sk.hasAttribute('data-bald')){ph.textContent='Bald buchbar';st.disabled=true;return;}ph.textContent='Datum';st.disabled=!k;
       }
       sk.addEventListener('change',fill);fill();
     }
