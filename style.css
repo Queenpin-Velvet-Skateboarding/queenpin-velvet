@@ -669,3 +669,9 @@ html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;ma
   .k-spalte .k-zeile.k-auswahl{position:relative!important;z-index:3!important}
 }
 @media (min-width:1101px){.k-spalte .k-zeile.k-ort:has(.k-malerei){z-index:auto!important;isolation:auto!important}.k-zeichnung.k-malerei{z-index:auto!important}}
+/* Bloom Levels immer knapp über dem unteren Menü (jede Bildschirmgrösse) */
+@media (min-width:1101px){
+  .session.s-kurse{min-height:100vh;min-height:100dvh;box-sizing:border-box;display:flex!important;flex-direction:column}
+  .session.s-kurse .k-levels{margin-top:auto!important;padding-top:48px!important}
+}
+@media (min-width:1101px) and (max-height:860px){html .session.s-kurse{padding-top:calc(5vh + 24px)!important}html .session.s-kurse .k-levels{padding-top:30px!important}}
