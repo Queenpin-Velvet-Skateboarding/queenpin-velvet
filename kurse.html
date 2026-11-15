@@ -52,6 +52,10 @@
 </div>
 </form>
 <form class="pick k-spalte" data-kurs="Ferienkurs Design + Skate" data-jahr="2027" data-preis="Kurs CHF 350.–&#10;Eigenes Board (freiwillig) + CHF 80.–" onsubmit="return false">
+<video class="k-teil" data-pos="tl" src="assets/malerei-tl.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+<video class="k-teil" data-pos="tr" src="assets/malerei-tr.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+<video class="k-teil" data-pos="bl" src="assets/malerei-bl.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+<video class="k-teil" data-pos="br" src="assets/malerei-br.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
 <div class="k-zeile k-kopf">
 
 <p class="k-label">Ferienkurs</p>
@@ -62,7 +66,6 @@
 <p>In diesem Ferienkurs skaten wir zusammen <br class="umbruch">und gestalten dein eigenes Deck. <br class="umbruch">Wir arbeiten gemeinsam an einem <br class="umbruch">grossen Entwurf, doch am Ende <br class="umbruch">findest du dein eigenes Design.</p>
 </div>
 <div class="k-zeile k-ort">
-<video class="k-zeichnung k-malerei" src="assets/deck-malerei-hoch.mp4" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
 </div>
 <div class="k-zeile k-auswahl">
 <select class="dd" name="kategorie" aria-label="Bald buchbar" disabled data-bald>
@@ -167,6 +170,29 @@
 </nav>
 </main>
 <script src="pick.js"></script>
+<script>
+/* Malerei in vier Stücken rund um Design + Skate */
+(function(){
+  var f=document.querySelector('.k-spalte[data-kurs^="Ferienkurs Design"]');if(!f)return;
+  var vs=[].slice.call(f.querySelectorAll('.k-teil'));if(!vs.length)return;
+  function txt(el){var r=document.createRange();r.selectNodeContents(el);return r.getBoundingClientRect();}
+  function setzen(){
+    var fr=f.getBoundingClientRect(),h=f.querySelector('.k-name'),d=f.querySelector('.k-text p'),dd=f.querySelector('.dd-wrap')||f.querySelector('.dd');
+    if(!h||!d)return;var t=txt(h),b=txt(d),a=dd?dd.getBoundingClientRect():b;
+    vs.forEach(function(v){var w=v.offsetWidth,hh=v.offsetHeight,x,y,p=v.getAttribute('data-pos');
+      if(p==='tl'){x=t.left-w+6;y=t.top-hh+4;}
+      else if(p==='tr'){x=t.right-6;y=t.top-hh+4;}
+      else{y=b.bottom+6;
+        var vw=document.documentElement.clientWidth;
+        if(p==='bl'){x=a.left-10-w;if(x<4){x=b.left;y=b.bottom+4;}}
+        else{x=a.right+10;if(x+w>vw-4){x=b.right-w;y=b.bottom+4;}}}
+      v.style.left=(x-fr.left)+'px';v.style.top=(y-fr.top)+'px';});
+  }
+  setzen();window.addEventListener('resize',setzen);window.addEventListener('load',setzen);if(document.fonts)document.fonts.ready.then(setzen);
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();vs.forEach(function(v){v.currentTime=0;v.play().catch(function(){});});}},{threshold:.2});
+  io.observe(f);
+})();
+</script>
 <script>
 /* Bei jedem Kurs landet ein Tropfen auf der Kategorie-Auswahl (leicht versetzt) */
 (function(){

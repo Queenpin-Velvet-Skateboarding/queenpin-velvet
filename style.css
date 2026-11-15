@@ -675,3 +675,7 @@ html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;ma
   .session.s-kurse .k-levels{margin-top:auto!important;padding-top:48px!important}
 }
 @media (min-width:1101px) and (max-height:860px){html .session.s-kurse{padding-top:calc(5vh + 24px)!important}html .session.s-kurse .k-levels{padding-top:30px!important}}
+/* Vier Malerei-Stücke um Design + Skate */
+.k-spalte:has(> .k-teil){position:relative}
+.k-teil{position:absolute;width:96px;height:54px;mix-blend-mode:multiply;pointer-events:none;z-index:0}
+@media (max-width:600px){.k-teil{width:80px;height:45px}}
