@@ -819,3 +819,9 @@ body:has(.zeige-design){overflow-x:hidden}
 .session.s-kurse.zeige-level .k-levels > div{grid-row:3!important}
 @media (max-width:1100px){.session.s-kurse.zeige-level .k-levels > div{grid-row:auto!important}}
 .session.s-kurse.zeige-level .k-levels > .lv-blumen{mix-blend-mode:normal!important}
+/* Level: Blumen ganz unten */
+.session.s-kurse.zeige-level .k-levels > .k-levels-titel{grid-row:1!important}
+.session.s-kurse.zeige-level .k-levels > div{grid-row:2!important}
+.session.s-kurse.zeige-level .k-levels > .lv-blumen{grid-row:3!important;order:9!important;margin:2.4em 0 0!important;width:min(420px,86vw)!important}
+@media (max-width:1100px){.session.s-kurse.zeige-level .k-levels > div{grid-row:auto!important}.session.s-kurse.zeige-level .k-levels > .lv-blumen{grid-row:auto!important}}
+@media (min-width:1101px){.session.s-kurse.zeige-level .k-levels{margin:auto 0 0!important;padding-top:40px!important}.session.s-kurse.zeige-level{padding-bottom:70px!important}}
