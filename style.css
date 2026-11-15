@@ -585,3 +585,14 @@ html.f-geo .s-session .s-next.k-einzel p.k-tage{font-size:10.5px!important;lette
 }
 @media (min-width:1101px){.session .k-levels > .k-levels-titel{margin-top:-3px!important}}
 @media (min-width:1101px){.k-zeichnung:not(.k-sonne){height:76px!important;top:-18px!important}}
+/* Test: Deck-Design-Malerei bei Design + Skate */
+.k-landen video[src*="deck"]{width:min(46vw,640px);-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 45%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 45%,transparent 100%)}
+@media (max-width:1100px){.k-landen video[src*="deck"]{width:min(150vw,640px)}}
+/* Test: Aquarell-Fleck bei Sessions */
+.s-sonne .s-bg[src*="aquarell"]{width:min(70vw,980px)}
+@media (max-width:600px){.s-sonne .s-bg[src*="aquarell"]{width:180vw}}
+.k-spalte .k-landen video[src*="deck"]{width:min(46vw,640px)!important}
+@media (max-width:1100px){.k-spalte .k-landen video[src*="deck"]{width:min(150vw,640px)!important}}
+/* Blume und Sonne auf gleicher Höhe und gleich gross */
+@media (min-width:1101px){.k-zeichnung,.k-zeichnung.k-sonne,.k-zeichnung:not(.k-sonne){height:72px!important;top:-68px!important}}
+.k-spalte .k-landen video[src*="deck"]{opacity:.6}
