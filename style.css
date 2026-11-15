@@ -427,3 +427,5 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
   .s-kurse .k-levels{margin-top:5em!important}
 }
 @media (max-width:1100px){.session .k-cols3{grid-template-rows:none!important}}
+/* Streifen nur auf der Kurse-Seite (Text scrollt); Videos laufen sonst frei bis an den Rand */
+@media (max-width:1100px){body:not(:has(.s-kurse))::before,body:not(:has(.s-kurse))::after{display:none}}
