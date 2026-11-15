@@ -533,3 +533,4 @@ html.f-geo .k-anmelden .k-block p,html.f-geo .k-anmelden .t-cap{margin:0 0 .15em
 html.f-geo .k-anmelden .s-signup{margin-top:.6em!important}
 @media (min-width:1101px){html.f-geo .k-block{min-height:0!important}}
 @media (min-width:1101px){html.f-geo .k-block{min-height:50.4px!important;justify-content:flex-end}}
+html.f-geo .dd-wrap .dd,html.f-geo .dd-wrap .dd.gewaehlt,.dd-wrap .dd{color:transparent!important}html.f-geo .dd-wrap .dd option{color:#141414}.dd-wrap{outline:none}
