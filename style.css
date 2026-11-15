@@ -436,3 +436,6 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
   .session{padding-top:calc(15vh + env(safe-area-inset-top))}
 }
 .home{min-height:100svh;min-height:100lvh}
+/* Schrift-Test */
+html.f-nitti body,html.f-nitti body *:not(video){font-family:'nitti-grotesk','IBM Plex Sans',sans-serif!important;letter-spacing:.02em!important}
+html.f-monte .k-name,html.f-monte .hero-title b,html.f-monte .hero-title span,html.f-monte .s-info-titel,html.f-monte .k-levels-titel,html.f-monte .soon p:first-child,html.f-monte #spruch{font-family:'monte-stella',sans-serif!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none}
