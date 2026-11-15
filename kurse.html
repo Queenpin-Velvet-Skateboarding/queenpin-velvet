@@ -15,7 +15,7 @@
 </head>
 <body>
 <main class="home">
-<article class="session s-kurse zeige-jahreskurs">
+<article class="session s-kurse zeige-sprouts">
 <div class="s-next k-cols k-cols3">
 <form class="pick k-spalte" data-kurs="Sprouts to Asters" data-termin="Jeden Montag · 17.30 – 18.30" onsubmit="return false">
 <div class="k-zeile k-kopf">
@@ -52,10 +52,6 @@
 </div>
 </form>
 <form class="pick k-spalte" data-kurs="Ferienkurs Design + Skate" data-jahr="2027" data-preis="Kurs CHF 350.–&#10;Eigenes Board (freiwillig) + CHF 80.–" onsubmit="return false">
-<video class="k-teil" data-pos="tl" src="assets/malerei-tl.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
-<video class="k-teil" data-pos="tr" src="assets/malerei-tr.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
-<video class="k-teil" data-pos="bl" src="assets/malerei-bl.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
-<video class="k-teil" data-pos="br" src="assets/malerei-br.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
 <div class="k-zeile k-kopf">
 
 <p class="k-label">Ferienkurs</p>
@@ -99,6 +95,7 @@
 </div>
 <div class="k-zeile k-zteil">
 <p class="k-klein">Die Kurse finden mit 4 Teilnehmenden (4–6 Jahre)<br>bzw. 6–8 Teilnehmerinnen (7–16 Jahre) statt.</p>
+<video class="k-malerei-band" src="assets/malerei-band.mp4" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
 </div>
 </form>
 <form class="pick k-spalte" data-kurs="Ferienkurs Summer Bloom" data-jahr="2027" data-preis="Kurs CHF 200.–" data-preis-seeds="Kurs CHF 120.–" onsubmit="return false">
@@ -151,7 +148,7 @@
 </div>
 </form>
 </div>
-<p class="k-zu-levels-zeile"><a class="k-zu-levels" href="#kurslevels">Welches Level passt?</a></p>
+<p class="k-zu-levels-zeile"><a class="k-zu-levels" href="#level">Welches Level passt?</a></p>
 <section class="k-levels" aria-label="Bloom Levels">
 <h2 class="k-levels-titel">Bloom Levels</h2>
 <div><h3>Seeds</h3><p>Ich stehe zum ersten Mal auf dem Board. Ich rolle, balanciere und habe Spass dabei.</p></div>
@@ -160,10 +157,10 @@
 <div><h3>Wildflower</h3><p>Ich übe Kickflips, Blunts, Smith Grinds oder Tre Flips. Ich schleife an meinen Tricks und möchte meinen eigenen Stil finden.</p></div>
 </section>
 </article>
+<nav class="k-tabs" aria-label="Kurse"><a href="#sprouts-to-asters" data-tab="sprouts">Sprouts to Asters</a><a href="#design-skate" data-tab="design">Design + Skate</a><a href="#summer-bloom" data-tab="summer">Summer Bloom</a><a href="#level" data-tab="level">Level</a></nav>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
-<a class="corner tc tc1" href="kurse.html#ferienkurse">ferienkurse</a>
-<a class="corner tc tc2" href="kurse.html#jahreskurs">jahreskurs</a>
+<a class="corner tc" href="kurse.html" aria-current="page">kurse</a>
 <a class="k-motto" href="bloom.html">It takes courage to bloom</a>
 <a class="corner tr" href="bald.html">queenpin</a>
 <a class="corner bl" href="events.html">Events</a>
@@ -173,43 +170,22 @@
 </main>
 <script src="pick.js"></script>
 <script>
-/* Auswahl Jahreskurs / Ferienkurse / Kurslevels */
+/* Unterauswahl: Sprouts to Asters / Design + Skate / Summer Bloom / Level */
 (function(){
-  var art=document.querySelector('.s-kurse'),tabs=[].slice.call(document.querySelectorAll('.k-tabs a, nav .tc1, nav .tc2, .k-zu-levels'));
-  var namen=['jahreskurs','ferienkurse','kurslevels'];
+  var art=document.querySelector('.s-kurse'),links=[].slice.call(document.querySelectorAll('.k-tabs a, .k-zu-levels'));
+  var hash={'sprouts-to-asters':'sprouts','design-skate':'design','summer-bloom':'summer','level':'level','kurslevels':'level','jahreskurs':'sprouts','ferienkurse':'design'};
+  var namen=['sprouts','design','summer','level'];
+  function name(a){return a.getAttribute('data-tab')||hash[a.getAttribute('href').slice(1)];}
   function zeigen(n,neu){
-    if(namen.indexOf(n)<0)n='jahreskurs';
+    if(namen.indexOf(n)<0)n='sprouts';
     namen.forEach(function(x){art.classList.toggle('zeige-'+x,x===n);});
-    tabs.forEach(function(a){var an=(a.getAttribute('data-tab')||a.getAttribute('href').split('#')[1])===n;a.classList.toggle('aktiv',an);if(an)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+    links.forEach(function(a){var an=a.closest('.k-tabs')&&name(a)===n;a.classList.toggle('aktiv',!!an);if(an)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
     if(neu){art.querySelectorAll('video').forEach(function(v){if(v.offsetParent){try{v.currentTime=0;v.play().catch(function(){});}catch(e){}}});}
     window.dispatchEvent(new Event('resize'));
   }
-  tabs.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var n=a.getAttribute('data-tab')||a.getAttribute('href').split('#')[1];history.replaceState(null,'','#'+n);zeigen(n,true);});});
-  window.addEventListener('hashchange',function(){zeigen(location.hash.slice(1),true);});
-  zeigen(location.hash.slice(1),false);
-})();
-</script>
-<script>
-/* Malerei in vier Stücken rund um Design + Skate */
-(function(){
-  var f=document.querySelector('.k-spalte[data-kurs^="Ferienkurs Design"]');if(!f)return;
-  var vs=[].slice.call(f.querySelectorAll('.k-teil'));if(!vs.length)return;
-  function txt(el){var r=document.createRange();r.selectNodeContents(el);return r.getBoundingClientRect();}
-  function setzen(){
-    var fr=f.getBoundingClientRect(),h=f.querySelector('.k-name'),d=f.querySelector('.k-text p'),dd=f.querySelector('.dd-wrap')||f.querySelector('.dd');
-    if(!h||!d)return;var t=txt(h),b=txt(d),a=dd?dd.getBoundingClientRect():b;
-    vs.forEach(function(v){var w=v.offsetWidth,hh=v.offsetHeight,x,y,p=v.getAttribute('data-pos');
-      if(p==='tl'){x=t.left-w+6;y=t.top-hh+4;}
-      else if(p==='tr'){x=t.right-6;y=t.top-hh+4;}
-      else{y=b.bottom+6;
-        var vw=document.documentElement.clientWidth;
-        if(p==='bl'){x=a.left-10-w;if(x<4){x=b.left;y=b.bottom+4;}}
-        else{x=a.right+10;if(x+w>vw-4){x=b.right-w;y=b.bottom+4;}}}
-      v.style.left=(x-fr.left)+'px';v.style.top=(y-fr.top)+'px';});
-  }
-  setzen();window.addEventListener('resize',setzen);window.addEventListener('load',setzen);if(document.fonts)document.fonts.ready.then(setzen);
-  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();vs.forEach(function(v){v.currentTime=0;v.play().catch(function(){});});}},{threshold:.2});
-  io.observe(f);
+  links.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();history.replaceState(null,'',a.getAttribute('href'));zeigen(name(a),true);a.blur();});});
+  window.addEventListener('hashchange',function(){zeigen(hash[location.hash.slice(1)],true);});
+  zeigen(hash[location.hash.slice(1)],false);
 })();
 </script>
 <script>

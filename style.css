@@ -723,3 +723,61 @@ nav .corner.tc2{left:calc(50% + 1.7em)!important;right:auto!important;transform:
 .s-kurse.zeige-kurslevels .k-zu-levels-zeile{display:none}
 @media (min-width:1101px){.session.s-kurse .k-zu-levels-zeile{margin-top:auto!important;padding-bottom:10px}}
 .k-zu-levels,html.f-geo .k-zu-levels{font-family:var(--g,"futura-pt","Jost",sans-serif)!important;font-size:10.5px!important;letter-spacing:.26em!important;font-weight:400!important;text-transform:uppercase!important;font-style:normal!important}
+/* ===== Kurse: Unterauswahl direkt unter «kurse» ===== */
+.session.s-kurse > .k-tabs{position:absolute;top:66px;left:0;right:0;margin:0;gap:2.6em;z-index:30}
+.session.s-kurse{position:relative}
+.k-tabs a,html.f-geo .k-tabs a{font-size:9.5px!important;letter-spacing:.24em!important;opacity:.45}
+.k-tabs a.aktiv{opacity:1}
+.k-tabs a:focus{outline:none}.k-tabs a:focus-visible{outline:1px solid #E89BA0;outline-offset:3px}
+.s-kurse.zeige-sprouts .k-spalte:not([data-kurs="Sprouts to Asters"]),
+.s-kurse.zeige-design .k-spalte:not([data-kurs^="Ferienkurs Design"]),
+.s-kurse.zeige-summer .k-spalte:not([data-kurs^="Ferienkurs Summer"]),
+.s-kurse.zeige-level .k-cols3,
+.s-kurse:not(.zeige-level) .k-levels,
+.s-kurse.zeige-level .k-zu-levels-zeile{display:none!important}
+@media (min-width:1101px){
+  .session.s-kurse:is(.zeige-sprouts,.zeige-design,.zeige-summer) .k-cols3{grid-template-columns:minmax(0,600px)!important;justify-content:center}
+}
+/* Zeichnung (Blume / Sonne) in der Einzelansicht im Fluss, zentriert */
+.s-kurse:is(.zeige-sprouts,.zeige-summer) .k-zeile.k-ort:has(.k-zeichnung){display:flex!important;height:auto!important;justify-content:center}
+.s-kurse:is(.zeige-sprouts,.zeige-summer) .k-zeichnung{position:static!important;height:96px!important;top:auto!important;left:auto!important;transform:none!important;margin:.2em auto .4em!important}
+/* Level-Ansicht */
+.session.s-kurse.zeige-level .k-levels{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;column-gap:4vw!important;row-gap:2.2em!important;margin:auto 0!important;padding:0!important;width:min(1100px,100%)}
+.session.s-kurse.zeige-level .k-levels > .k-levels-titel{grid-column:1/-1!important;grid-row:1!important;order:0!important;margin:0 0 .4em!important}
+.session.s-kurse.zeige-level .k-levels > div{grid-row:2!important;order:0!important;padding-bottom:0!important;cursor:default}
+.session.s-kurse.zeige-level .k-levels > div p{position:static!important;opacity:.75!important;margin-top:.9em!important}
+.session.s-kurse.zeige-level .k-levels > div:hover h3{color:inherit}
+@media (max-width:1100px){.session.s-kurse.zeige-level .k-levels{grid-template-columns:1fr 1fr!important}.session.s-kurse.zeige-level .k-levels > div{grid-row:auto!important}}
+@media (max-width:600px){
+  .session.s-kurse.zeige-level .k-levels{grid-template-columns:1fr!important}
+  .session.s-kurse > .k-tabs{top:58px;gap:1.1em}
+  .k-tabs a,html.f-geo .k-tabs a{font-size:8.5px!important;letter-spacing:.1em!important}
+}
+/* Malerei als breites Band unter Design + Skate */
+.k-band{display:flex;justify-content:center;grid-column:1/-1}
+.k-malerei-band{display:block;width:min(720px,92vw);height:auto;mix-blend-mode:multiply;pointer-events:none;margin:1.4em auto 0}
+@media (min-width:1101px){.k-spalte[data-kurs^="Ferienkurs Design"] .k-band{grid-row:auto}}
+/* Handy: Unterauswahl fix unter dem Menü */
+@media (max-width:1100px){
+  .session.s-kurse > .k-tabs{position:fixed;top:calc(58px + env(safe-area-inset-top));z-index:40}
+  .session.s-kurse{padding-top:calc(110px + env(safe-area-inset-top))!important}
+}
+body > main > .k-tabs,main > .k-tabs,.k-tabs{position:absolute;top:66px;left:0;right:0;margin:0;gap:2.6em;z-index:30}
+.k-malerei-band{width:min(720px,92vw)!important;max-width:none;position:relative;left:50%;transform:translateX(-50%);margin:1.6em 0 0!important}
+@media (max-width:1100px){
+  .k-tabs{position:fixed!important;top:calc(60px + env(safe-area-inset-top))!important;z-index:60!important}
+  .s-kurse ~ nav, main > nav{z-index:50}
+}
+@media (max-width:600px){.k-tabs{gap:1.1em}}
+.s-kurse:is(.zeige-sprouts,.zeige-design,.zeige-summer) .k-cols3 > .k-spalte{grid-column:1!important}
+.k-malerei-band{width:min(660px,92vw)!important}
+@media (max-width:600px){
+  .k-tabs{gap:.9em!important}
+  .k-tabs a,html.f-geo .k-tabs a{font-size:8px!important;letter-spacing:.06em!important}
+  .session.s-kurse{padding-top:calc(118px + env(safe-area-inset-top))!important}
+}
+/* Sessions: Text näher an den Titel */
+.s-session .s-next.k-einzel .k-name{margin-bottom:.9em!important}
+.k-cols3 > .k-spalte{min-width:0}
+.k-malerei-band{left:auto!important;transform:none!important;width:660px!important;max-width:none!important;margin:1.6em 0 0 calc((100% - 660px) / 2)!important}
+@media (max-width:700px){.k-malerei-band{width:100%!important;margin:1.4em 0 0!important}}
