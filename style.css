@@ -781,3 +781,13 @@ body > main > .k-tabs,main > .k-tabs,.k-tabs{position:absolute;top:66px;left:0;r
 .k-cols3 > .k-spalte{min-width:0}
 .k-malerei-band{left:auto!important;transform:none!important;width:660px!important;max-width:none!important;margin:1.6em 0 0 calc((100% - 660px) / 2)!important}
 @media (max-width:700px){.k-malerei-band{width:100%!important;margin:1.4em 0 0!important}}
+/* Malerei über die ganze Fensterbreite */
+.k-malerei-band{width:100vw!important;height:clamp(180px,26vh,300px)!important;object-fit:cover;object-position:50% 55%;margin:1.6em 0 0 calc(50% - 50vw)!important}
+@media (max-width:700px){.k-malerei-band{width:100vw!important;height:160px!important;margin:1.4em 0 0 calc(50% - 50vw)!important}}
+body:has(.zeige-design){overflow-x:hidden}
+/* Band absolut, damit die Spalte mittig bleibt */
+.k-spalte[data-kurs^="Ferienkurs Design"] .k-zteil{position:relative;padding-bottom:calc(clamp(170px,22vh,260px) + 1.6em)}
+.k-malerei-band{position:absolute!important;left:50%!important;bottom:0;transform:translateX(-50%)!important;margin:0!important;width:100vw!important;height:clamp(170px,22vh,260px)!important}
+@media (max-width:700px){.k-spalte[data-kurs^="Ferienkurs Design"] .k-zteil{padding-bottom:calc(160px + 1.4em)}.k-malerei-band{height:160px!important}}
+/* «Welches Level passt?» näher am Text */
+.session.s-kurse .k-zu-levels-zeile{margin-top:1.8em!important;padding-bottom:0}
