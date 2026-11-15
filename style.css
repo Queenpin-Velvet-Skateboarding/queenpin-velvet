@@ -545,3 +545,8 @@ html.f-geo .dd-wrap .dd,html.f-geo .dd-wrap .dd.gewaehlt,.dd-wrap .dd{color:tran
 }
 /* weniger Abstand «Anmelden über» → WhatsApp */
 html.f-geo .k-anmelden .s-signup{margin-top:.1em!important}
+/* Bloom Levels Hover: stärker als die geo-Regel */
+@media (min-width:1101px) and (hover:hover){
+  html .session .k-levels > div p{opacity:0!important}
+  html .session .k-levels > div:hover p{opacity:.75!important}
+}
