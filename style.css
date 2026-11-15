@@ -635,3 +635,6 @@ html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;ma
 .k-wiese{position:absolute;left:-2%;top:-4%;width:104%;height:108%;object-fit:cover;mix-blend-mode:multiply;opacity:.5;pointer-events:none;z-index:0}
 @media (max-width:1100px){.k-wiese{opacity:.4}}
 .k-wiese{opacity:.4}
+.k-wiese{opacity:1!important}
+.k-spalte:has(> .k-wiese) :is(p,h1,h2,h3,a,span,.k-label,.k-name,.t-cap,.s-btn,.k-tage,.k-klein){text-shadow:0 0 2px #fff,0 0 3px #fff,0 0 5px #fff,0 0 8px #fff,0 0 12px #fff}
+.k-spalte:has(> .k-wiese) .k-klein{opacity:1!important;color:#3a3a3a!important}
