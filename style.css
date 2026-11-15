@@ -396,3 +396,4 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
   -webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 45%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 45%,#000 60%,transparent 100%)}
 .s-naechste{font-size:.85em;opacity:.75;margin-bottom:.2em!important}
 .soon p{text-wrap:balance;padding:0 1em}
+.s-sonne .s-bg{-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 54%,#000 38%,transparent 92%);mask-image:radial-gradient(ellipse 50% 50% at 50% 54%,#000 38%,transparent 92%)}
