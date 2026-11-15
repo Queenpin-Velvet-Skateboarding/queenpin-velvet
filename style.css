@@ -656,3 +656,16 @@ html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;ma
   .session .k-levels > .k-deck{width:150px!important;height:200px!important;margin:0 0 0 -75px!important;bottom:calc(100% + 12px)!important;z-index:-1}
   .session.s-kurse{padding-bottom:110px!important}
 }
+/* Malerei unter der Beschreibung von Design + Skate, Auswahl liegt darüber */
+.k-zeichnung.k-malerei{object-fit:cover;width:120px;height:160px}
+@media (min-width:1101px){
+  .k-zeichnung.k-malerei{width:102px!important;height:136px!important;top:-6px!important;z-index:0}
+  .k-spalte .k-auswahl{position:relative;z-index:1}
+  .session.s-kurse .k-levels{margin-top:87px!important}
+  .session.s-kurse{padding-bottom:85px!important}
+}
+@media (min-width:1101px){
+  .k-spalte .k-zeile.k-ort:has(.k-malerei){z-index:0!important}
+  .k-spalte .k-zeile.k-auswahl{position:relative!important;z-index:3!important}
+}
+@media (min-width:1101px){.k-spalte .k-zeile.k-ort:has(.k-malerei){z-index:auto!important;isolation:auto!important}.k-zeichnung.k-malerei{z-index:auto!important}}
