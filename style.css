@@ -518,3 +518,9 @@ html.f-geo .k-levels-titel{font-size:clamp(13px,1.05vw,15px)!important}
 html.f-geo .dd.gewaehlt{opacity:1!important;color:#141414!important}html.f-geo select[name=termin].gewaehlt{letter-spacing:.12em!important}@media (min-width:1101px){html.f-geo .session.s-kurse{padding-bottom:74px}}
 /* geo: ein Info-Stil für Kleingedrucktes, Preis und Bloom-Level-Texte */
 html.f-geo .k-klein,html.f-geo .k-klein *,html.f-geo .k-levels p,html.f-geo .k-preis{font-family:var(--t)!important;text-transform:none!important;font-style:normal!important;font-weight:300!important;font-size:12px!important;letter-spacing:.01em!important;line-height:1.6!important;opacity:.75!important;color:#141414!important}
+.k-block{display:flex;flex-direction:column;align-items:center;margin-bottom:1.6em}
+.k-block > *{margin:0}
+.k-block .k-tage + p:not(.k-tage){margin-top:.5em!important}
+html.f-geo .k-zeile.k-ort{margin-top:0}
+html.f-geo .k-block p:not(.k-tage){font-family:var(--g)!important;text-transform:uppercase!important;font-weight:400!important;font-size:11.5px!important;letter-spacing:.24em!important;font-style:normal!important}
+@media (min-width:1101px){html.f-geo .k-block{min-height:57px;justify-content:flex-start}}
