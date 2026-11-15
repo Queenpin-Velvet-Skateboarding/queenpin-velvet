@@ -630,3 +630,8 @@ html.f-geo .hero-title,html.f-geo .hero-title a,html.f-geo .hero-title b,html.f-
 html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;max-width:319px}
 .k-cols select.dd[hidden]{display:none!important}
 @media (min-width:1101px){.session .k-levels{z-index:auto!important;isolation:auto!important}.session .k-levels > .k-deck{bottom:calc(100% + 16px)}}
+/* Blumenwiese wächst über den ganzen Design-Kurs */
+.k-spalte:has(> .k-wiese){position:relative}
+.k-wiese{position:absolute;left:-2%;top:-4%;width:104%;height:108%;object-fit:cover;mix-blend-mode:multiply;opacity:.5;pointer-events:none;z-index:0}
+@media (max-width:1100px){.k-wiese{opacity:.4}}
+.k-wiese{opacity:.4}
