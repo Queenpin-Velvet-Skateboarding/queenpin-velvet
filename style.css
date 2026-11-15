@@ -543,3 +543,5 @@ html.f-geo .dd-wrap .dd,html.f-geo .dd-wrap .dd.gewaehlt,.dd-wrap .dd{color:tran
   .k-levels > div:hover h3{color:#E89BA0}
   .session.s-kurse{padding-bottom:110px!important}
 }
+/* weniger Abstand «Anmelden über» → WhatsApp */
+html.f-geo .k-anmelden .s-signup{margin-top:.1em!important}
