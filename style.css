@@ -450,3 +450,7 @@ html.f-mix .k-name,html.f-mix .k-levels-titel,html.f-mix .k-levels h3,html.f-mix
 html.f-mix .k-levels p,html.f-mix .s-next.k-einzel > p:not(.k-label):not(.k-tage):not(.t-cap),html.f-mix .soon p,html.f-mix #spruch{font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;font-style:normal!important;font-weight:300!important;letter-spacing:.02em!important}
 html.f-mix .k-levels h3{font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;letter-spacing:.02em!important}
 html.f-mix .k-text p{font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;font-style:italic!important;font-weight:300!important;letter-spacing:.02em!important}
+/* BLOOM LEVELS ist ein Titel wie die Kurstitel */
+.k-levels-titel{font-size:clamp(14px,1.35vw,18px);letter-spacing:.14em;margin-bottom:.4em}
+@media (max-width:600px){.k-levels-titel{font-size:15px}}
+html.f-mix .t-cap,html.f-mix .s-signup,html.f-mix .s-signup *{font-family:'ff-tisa-sans-web-pro','ff-tisa-sans-pro','tisa-sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;font-style:normal!important;font-weight:300!important}
