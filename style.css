@@ -462,3 +462,11 @@ html.f-mix .t-cap,html.f-mix .s-signup,html.f-mix .s-signup *{font-family:'ff-ti
 /* Zwischentitel: Seeds/Sprouts/…, Mehr Infos …, Fragen oder Infos – Versalien */
 .k-levels h3,.t-cap,.s-fragen .t-cap{text-transform:uppercase!important;letter-spacing:.12em!important;font-size:.85em}
 .k-levels h3{font-size:inherit}
+/* SEEDS, SPROUTS … wie der Obertitel «Ferienkurs» */
+.k-levels h3{text-transform:none!important;letter-spacing:inherit!important;font-size:.85em!important;font-weight:inherit!important}
+/* Sprachen ganz unten (Computer) */
+@media (min-width:601px){
+  .lang,nav:has(.k-motto) .lang{bottom:10px!important;top:auto!important}
+  .corner.bl,.corner.br{bottom:34px}
+  .k-motto{bottom:34px!important}
+}
