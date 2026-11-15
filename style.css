@@ -493,3 +493,6 @@ html.f-geo .k-ort p,html.f-geo .s-info [data-f="ort"]{font-family:var(--g)!impor
 html.f-geo .s-info [data-f="datum"],html.f-geo .s-info [data-f="zeit"]{font-family:var(--g)!important;text-transform:uppercase!important;font-weight:400!important;font-size:10.5px!important;letter-spacing:.26em!important;opacity:1!important}
 html.f-geo .k-tage{font-family:var(--g)!important;text-transform:uppercase!important;font-weight:400!important;font-size:10.5px!important;letter-spacing:.26em!important;opacity:1!important}
 html.f-geo .k-text p{font-family:'freight-text-pro','freight-text','freight-big-pro','freight-display-pro','Georgia',serif!important;font-style:italic!important;font-weight:300!important;font-size:15.5px!important;letter-spacing:0!important;line-height:1.5!important}
+/* geo: Textschrift überall Helvetica Light, Beschreibung Helvetica Light kursiv */
+html.f-geo{--t:'neue-haas-grotesk-text','Helvetica Neue',Helvetica,Arial,sans-serif}
+html.f-geo .k-text p{font-family:var(--t)!important;font-style:italic!important;font-weight:300!important;font-size:14px!important;letter-spacing:.01em!important;line-height:1.6!important}
