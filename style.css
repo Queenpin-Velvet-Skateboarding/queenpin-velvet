@@ -534,3 +534,12 @@ html.f-geo .k-anmelden .s-signup{margin-top:.6em!important}
 @media (min-width:1101px){html.f-geo .k-block{min-height:0!important}}
 @media (min-width:1101px){html.f-geo .k-block{min-height:50.4px!important;justify-content:flex-end}}
 html.f-geo .dd-wrap .dd,html.f-geo .dd-wrap .dd.gewaehlt,.dd-wrap .dd{color:transparent!important}html.f-geo .dd-wrap .dd option{color:#141414}.dd-wrap{outline:none}
+/* Bloom Levels: Text erscheint beim Drüberfahren (Computer) */
+@media (min-width:1101px) and (hover:hover){
+  .k-levels > div{position:relative;cursor:url(assets/cursor-pink.png) 7 18,pointer;padding-bottom:5.5em}
+  .k-levels > div p{position:absolute;left:0;right:0;top:2.2em;opacity:0!important;transition:opacity .35s ease}
+  .k-levels > div:hover p{opacity:.75!important}
+  .k-levels > div h3{transition:color .2s}
+  .k-levels > div:hover h3{color:#E89BA0}
+  .session.s-kurse{padding-bottom:110px!important}
+}
