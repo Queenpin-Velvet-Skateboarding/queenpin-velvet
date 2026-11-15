@@ -410,3 +410,13 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
 .k-levels-titel{grid-column:1/-1;margin:0;font-size:inherit;font-weight:400;letter-spacing:.1em;text-transform:none;text-align:center}
 .k-levels{row-gap:1.1em}
 .session.s-kurse{padding-bottom:100px}
+/* Handy/Tablet: Menü oben und unten immer sichtbar, auf Papier-Streifen */
+@media (max-width:1100px){
+  body::before,body::after{content:'';position:fixed;left:0;right:0;background:#FBF1EC;z-index:20;pointer-events:none}
+  body::before{top:0;height:68px}
+  body::after{bottom:0;height:106px}
+  .corner,.session ~ nav .corner,.s-kurse ~ nav .corner.bl,.s-kurse ~ nav .corner.br,
+  .lang,.session ~ nav .lang,.s-kurse ~ nav .lang,
+  .k-motto,.session ~ nav .k-motto,.s-kurse ~ nav .k-motto{position:fixed!important;z-index:21}
+  .session{padding-bottom:140px!important}
+}
