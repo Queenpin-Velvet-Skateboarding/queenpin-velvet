@@ -500,3 +500,10 @@ html.f-geo .k-text p{font-family:var(--g)!important;text-transform:uppercase!imp
 html.f-geo .k-text br.umbruch{display:none}html.f-geo .k-text p{max-width:34em;text-wrap:balance;line-height:1.85!important}
 @media (min-width:1101px){html.f-geo .k-text br.umbruch{display:inline}html.f-geo .k-text p{max-width:none;line-height:1.8!important}html.f-geo .session.s-kurse{padding-top:calc(10vh + 30px)}}
 @media (min-width:1101px){html.f-geo .session.s-kurse{padding-bottom:84px}html.f-geo .session .k-cols3{row-gap:.9em}}
+/* geo: Abstand zwischen Beschreibung und Zeit/Ort; Bloom-Level-Texte wie Beschreibung */
+.k-ort .k-tage{margin:0}
+html.f-geo .k-zeile.k-ort{margin-top:1.4em}
+html.f-geo .k-zeile.k-ort .k-tage + p:not(.k-tage),html.f-geo .k-zeile.k-ort .k-tage + #k-ort{margin-top:.5em}
+html.f-geo .k-levels p{font-family:var(--g)!important;text-transform:uppercase!important;font-style:normal!important;font-weight:300!important;font-size:11px!important;letter-spacing:.2em!important;line-height:1.8!important;opacity:1!important}
+@media (min-width:1101px){html.f-geo .k-levels p{letter-spacing:.16em!important;line-height:1.7!important}html.f-geo .k-levels{column-gap:2vw;row-gap:.8em}html.f-geo .k-zeile.k-ort{margin-top:.8em}}
+.k-klein br.umbruch{display:inline!important}@media (min-width:1101px){html.f-geo .session.s-kurse{padding-bottom:80px}}
