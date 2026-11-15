@@ -2,90 +2,115 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sessions &amp; Kurse – Queenpin Velvet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sessions – Queenpin Velvet</title>
 <meta name="description" content="Queenpin Velvet Skateboarding – Skate-Sessions, Kurse und Events für Frauen und Mädchen in Zürich.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;family=Fragment+Mono&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;family=Fragment+Mono&amp;family=IBM+Plex+Mono:wght@100;200;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/queenpin-logo-schwarz.svg">
+<link rel="stylesheet" href="https://use.typekit.net/qkn7udf.css">
 <link rel="stylesheet" href="style.css">
+<script src="schrift.js"></script>
 </head>
 <body>
-<main class="page">
-<nav aria-label="Hauptmenü">
-<a class="corner tl" href="sessions.html" aria-current="page">Sessions &amp; Kurse</a>
-<a class="corner tc" href="index.html">queenpin velvet</a>
-<a class="corner tr" href="#">Über uns</a>
-</nav>
-<div class="page-head"><div class="blob"><img src="assets/farbtupfer.png" alt=""><h1>sessions<br>&amp; kurse</h1></div></div>
-<div class="wrap">
-<nav class="index" aria-label="Inhalt">
-<a href="#sessions"><span>sessions</span><span>(2)</span></a>
-<a href="#kurse"><span>kurse</span><span>(1)</span></a>
-<a href="#events"><span>events</span><span>(1)</span></a>
-</nav>
-
-<section id="sessions">
-<div class="sec-head"><h2>sessions</h2><p class="lbl">jede Woche</p></div>
-<article><p class="lbl">Di · 18.30 – 20.00 · für alle · kostenlos</p><h3>queenpin session</h3><p>Freestyle Halle Zürich</p></article>
-<article><p class="lbl">Mo · 17.30 – 18.30 · Mädchen 6 – 14 Jahre · CHF 300 / 10er-Abo</p><h3>queenpin sprouts to asters</h3><p>Letty-Ramp, Zürich</p></article>
-</section>
-
-<section id="kurse">
-<div class="sec-head"><h2>kurse</h2><p class="lbl">mit Anmeldung</p></div>
-<article class="kurs">
-<div>
-<h3>skate workshop</h3>
-<dl>
-<dt>Ort</dt><dd>[Ort]</dd>
-<dt>Alter</dt><dd>[Alter]</dd>
-<dt>Was wir machen</dt><dd>Design your own Deck, Bricolage &amp; Skate</dd>
-<dt>Daten</dt><dd>7 Workshops 2027, jeweils Do – So</dd>
-<dt>Preis</dt><dd>[Preis]</dd>
-</dl>
+<main class="home">
+<article class="session s-session">
+<div class="s-mark s-sonne"><video class="s-bg" src="assets/landen-aquarell-rg.mp4" muted playsinline autoplay preload="auto" aria-hidden="true"></video><span class="s-dot" aria-hidden="true"></span>
+<div class="s-info" id="next">
+<p class="s-naechste">Nächste Session am</p>
+<p data-f="datum">Dienstag 17.11.2026</p>
+<p data-f="zeit">18.30 – 20.00</p>
+<p data-f="ort">Freestyle Halle Zürich</p>
+<p class="s-special" data-f="special" hidden></p>
 </div>
-<form id="anmeldung">
-<label>Alter
-<select name="alter"><option value="">bitte wählen</option><option value="6–9 Jahre">6 – 9 Jahre</option><option value="10–12 Jahre">10 – 12 Jahre</option><option value="13–15 Jahre">13 – 15 Jahre</option></select>
-</label>
-<label>Datum
-<select name="datum"><option value="">bitte wählen</option>
-<option value="Workshop 1: Do 18.2. – So 21.2.">Do 18.2. – So 21.2.</option>
-<option value="Workshop 2: Do 25.2. – So 28.2.">Do 25.2. – So 28.2.</option>
-<option value="Workshop 3: Do 25.3. – So 28.3. (Ostern)">Do 25.3. – So 28.3. (Ostern)</option>
-<option value="Workshop 4: Do 29.4. – So 2.5.">Do 29.4. – So 2.5.</option>
-<option value="Workshop 5: Do 6.5. (Auffahrt) – So 9.5.">Do 6.5. (Auffahrt) – So 9.5.</option>
-<option value="Workshop 6: Do 14.10. – So 17.10.">Do 14.10. – So 17.10.</option>
-<option value="Workshop 7: Do 21.10. – So 24.10.">Do 21.10. – So 24.10.</option>
-</select>
-</label>
-<a class="btn" id="anmelden" href="#">anmelden →</a>
-</form>
+<div class="s-fragen">
+<p class="t-cap">Fragen oder Infos</p>
+<p class="s-signup">
+<a class="s-btn" href="https://chat.whatsapp.com/H5YMY4JPafy4ZB4XPKv6u3" target="_blank" rel="noopener">WhatsApp</a>
+<a class="s-btn" href="https://www.instagram.com/queenpin_skateboarding/" target="_blank" rel="noopener">Instagram</a>
+</p>
+</div></div>
+<div class="s-next k-einzel">
+<h1 class="keep k-name">Queenpin Open Session</h1>
+<p>Jedes Level, jede Queen, jeden Dienstag. <br class="umbruch">Gratis, ohne Anmeldung.</p>
+</div>
 </article>
-<article class="row"><h3>privatkurse</h3><a href="mailto:skateboard@queenpin.ch?subject=Privatkurs">auf anfrage →</a></article>
-</section>
-
-<section id="events">
-<div class="sec-head"><h2>events</h2><p class="lbl">Rückblick</p></div>
-<article><p class="lbl">Sa 24.10.2026 · Letty-Ramp · Contest</p><h3>queenpin open</h3><p>Mini-Ramp, Cash for Tricks, Live Drawing, Poesie, Konzert, DJs, Deck-Release</p></article>
-</section>
-</div>
-<nav aria-label="Weitere Seiten">
-<a class="corner bl" href="#events">Events</a>
-<a class="corner br" href="#">Gönnerin werden</a>
+<nav aria-label="Hauptmenü">
+<a class="corner tl" href="sessions.html" aria-current="page">sessions</a>
+<a class="corner tc" href="kurse.html">kurse</a>
+<a class="corner tr" href="bald.html">queenpin</a>
+<a class="corner bl" href="events.html">Events</a>
+<a class="corner br" href="bald.html">Gönnerin werden</a>
 <span class="lang"><a href="index.html" aria-current="true">DE</a><a href="#">FR</a><a href="#">EN</a></span>
+<a class="k-motto" href="bloom.html">It takes courage to bloom</a>
 </nav>
 </main>
 <script>
+/* Nächste Session: immer der nächste Dienstag (am Dienstag bis 20 Uhr: heute).
+   Einträge im Google Sheet (Blatt «Sessions», als CSV veröffentlicht) überschreiben Ort/Zeit/Adresse/Special für dieses Datum. */
+var SHEET_CSV='https://docs.google.com/spreadsheets/d/1kYG4ogNdltVRIJexxZI1mbG_KoOXpFpBImUoy6ZhLSc/gviz/tq?tqx=out:csv&sheet=Sessions';
+var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändlistrasse 76',plz:'8064 Zürich',special:''};
 (function(){
-  var f=document.getElementById('anmeldung'),b=document.getElementById('anmelden');
-  function upd(){
-    var a=f.alter.value||'-',d=f.datum.value||'-';
-    var body='Kurs: Skate Workshop\nAlter: '+a+'\nDatum: '+d+'\nName: \nTelefon: ';
-    b.href='mailto:skateboard@queenpin.ch?subject='+encodeURIComponent('Anmeldung Skate Workshop')+'&body='+encodeURIComponent(body);
+  function nextTuesday(){
+    var d=new Date(),day=d.getDay(),add=(2-day+7)%7;
+    if(add===0&&d.getHours()>=20)add=7;
+    d.setDate(d.getDate()+add);d.setHours(0,0,0,0);return d;
   }
-  f.addEventListener('change',upd);upd();
+  function fmt(d){return ('0'+d.getDate()).slice(-2)+'.'+('0'+(d.getMonth()+1)).slice(-2)+'.'+d.getFullYear();}
+  function show(o){
+    document.querySelectorAll('[data-f]').forEach(function(el){
+      var k=el.getAttribute('data-f'),v=o[k]||'';
+      if(k==='datum'&&v)v='Dienstag '+v;
+      if(k==='zeit'&&v)v=v.replace(/\s*[–-]\s*/,' – ');
+      el.textContent=v; if(k==='special')el.hidden=!v;
+    });
+  }
+  var day=nextTuesday(),info=Object.assign({datum:fmt(day)},STANDARD);
+  show(info);
+  if(!SHEET_CSV)return;
+  function parse(t){
+    var rows=[],row=[],f='',q=false;
+    for(var i=0;i<t.length;i++){var c=t[i];
+      if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++;}else q=false;}else f+=c;}
+      else if(c=='"')q=true; else if(c==','){row.push(f);f='';}
+      else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;row.push(f);rows.push(row);row=[];f='';}
+      else f+=c;}
+    if(f||row.length){row.push(f);rows.push(row);}
+    return rows;
+  }
+  fetch(SHEET_CSV,{cache:'no-store'}).then(function(r){return r.text();}).then(function(t){
+    var rows=parse(t),head=rows.shift().map(function(h){return h.trim().toLowerCase();});
+    rows.forEach(function(r){
+      var o={};head.forEach(function(h,i){o[h]=(r[i]||'').trim();});
+      if(o.datum===info.datum){Object.keys(o).forEach(function(k){if(o[k]&&o[k].charAt(0)!=='#')info[k]=o[k];});}
+    });
+    show(info);
+  }).catch(function(){});
+})();
+</script>
+<script>
+/* Fleck: in normaler Geschwindigkeit abspielen, sobald er sichtbar ist */
+(function(){
+  var v=document.querySelector('.s-video'),dot=document.querySelector('.s-dot');if(!v)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.classList.add('los');var i0=document.querySelector('.s-info');if(i0)i0.classList.add('da');v.addEventListener('loadeddata',function(){v.currentTime=v.duration-0.05;});return;}
+  var bg=document.querySelector('.s-bg'),gestartet=false;
+  function start(){if(gestartet)return;gestartet=true;
+    v.classList.add('los');
+
+    var info=document.querySelector('.s-info');
+    function zeigen(){if(info)info.classList.add('da');}
+    v.addEventListener('timeupdate',function(){if(v.currentTime>2.3)zeigen();});
+    v.addEventListener('ended',zeigen);
+    v.play().then(function(){if(dot)dot.style.opacity=0;}).catch(zeigen);}
+  /* Hintergrund: Fleck der Startseite zieht sich zusammen und zerstäubt; danach landet der Tropfen */
+  if(bg){
+    bg.addEventListener('timeupdate',function(){if(bg.currentTime>7.9)start();});
+    bg.addEventListener('ended',start);
+    bg.addEventListener('error',start);
+    bg.play().catch(function(){bg.classList.add('aus');start();});
+    setTimeout(start,10000);
+  }else start();
 })();
 </script>
 </body>
