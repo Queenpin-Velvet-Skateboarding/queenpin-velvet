@@ -638,3 +638,15 @@ html .k-cols .k-auswahl select.dd[name=termin]{width:min(27em,100%)!important;ma
 .k-wiese{opacity:1!important}
 .k-spalte:has(> .k-wiese) :is(p,h1,h2,h3,a,span,.k-label,.k-name,.t-cap,.s-btn,.k-tage,.k-klein){text-shadow:0 0 2px #fff,0 0 3px #fff,0 0 5px #fff,0 0 8px #fff,0 0 12px #fff}
 .k-spalte:has(> .k-wiese) .k-klein{opacity:1!important;color:#3a3a3a!important}
+/* Malerei hochformat, etwas grösser */
+@media (min-width:1101px){
+  .session .k-levels > .k-deck{width:105px!important;height:140px!important;object-fit:cover;margin:0 0 0 -52px!important;bottom:calc(100% + 14px)}
+  .session.s-kurse .k-levels{margin-top:30px!important}
+}
+.k-levels > .k-deck{width:120px;height:160px;object-fit:cover}
+@media (min-width:1101px){
+  .session.s-kurse .k-levels{margin-top:87px!important}
+  .session .k-levels > .k-deck{width:96px!important;height:128px!important;margin:0 0 0 -48px!important;bottom:calc(100% + 10px)!important}
+  html .session .k-levels > div p{top:1.9em!important}
+}
+@media (min-width:1101px){.session.s-kurse{padding-bottom:85px!important}}
