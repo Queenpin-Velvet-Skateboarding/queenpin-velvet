@@ -791,3 +791,7 @@ body:has(.zeige-design){overflow-x:hidden}
 @media (max-width:700px){.k-spalte[data-kurs^="Ferienkurs Design"] .k-zteil{padding-bottom:calc(160px + 1.4em)}.k-malerei-band{height:160px!important}}
 /* «Welches Level passt?» näher am Text */
 .session.s-kurse .k-zu-levels-zeile{margin-top:1.8em!important;padding-bottom:0}
+/* Design + Skate: Malerei über das ganze Fenster, Text darüber */
+.k-spalte[data-kurs^="Ferienkurs Design"] .k-zteil{padding-bottom:0!important;position:static!important}
+.k-malerei-band{position:fixed!important;inset:0!important;left:0!important;top:0!important;bottom:auto!important;transform:none!important;width:100vw!important;height:100vh!important;height:100dvh!important;object-fit:cover!important;object-position:50% 50%!important;z-index:0!important;margin:0!important}
+.s-kurse:not(.zeige-design) .k-malerei-band{display:none!important}
