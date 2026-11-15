@@ -420,3 +420,9 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
   .k-motto,.session ~ nav .k-motto,.s-kurse ~ nav .k-motto{position:fixed!important;z-index:21}
   .session{padding-bottom:140px!important}
 }
+@media (max-width:1100px){
+  /* Streifen über den Bildschirmrand hinaus (iPhone: Statusleiste und Safari-Leiste) */
+  body::before{top:-200px;height:268px}
+  body::after{bottom:-200px;height:306px}
+  .s-kurse .k-levels{margin-top:5em!important}
+}
