@@ -409,3 +409,4 @@ body.uebergang .hero-video:not(.hero-weiter){visibility:hidden}
 .k-spalte:has([data-bald]) select[name=termin]{display:none}
 .k-levels-titel{grid-column:1/-1;margin:0;font-size:inherit;font-weight:400;letter-spacing:.1em;text-transform:none;text-align:center}
 .k-levels{row-gap:1.1em}
+.session.s-kurse{padding-bottom:100px}
