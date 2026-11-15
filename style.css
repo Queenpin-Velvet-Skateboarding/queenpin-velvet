@@ -550,3 +550,16 @@ html.f-geo .k-anmelden .s-signup{margin-top:.1em!important}
   html .session .k-levels > div p{opacity:0!important}
   html .session .k-levels > div:hover p{opacity:.75!important}
 }
+/* Zeichnungs-Videos (Blumen Jahreskurs, Sonne Summer Bloom) */
+.k-zeile.k-ort:has(.k-zeichnung){display:flex!important;justify-content:center;align-items:center;margin:0!important;padding:0!important}
+.k-zeichnung{display:block;height:92px;width:auto;mix-blend-mode:multiply;pointer-events:none;margin:.4em auto .2em}
+.k-zeichnung.k-sonne{height:92px}
+@media (max-width:1100px){.k-zeichnung{height:110px}}
+/* Zeichnungen: nehmen keinen Platz, liegen in der Lücke zwischen Text und Auswahl */
+@media (min-width:1101px){
+  .k-zeile.k-ort:has(.k-zeichnung){display:block!important;height:0!important;min-height:0!important;position:relative;overflow:visible}
+  .k-zeichnung{position:absolute;left:50%;transform:translateX(-50%);margin:0;bottom:var(--zb,-10px)}
+}
+@media (min-width:1101px){.k-zeichnung,.k-zeichnung.k-sonne{height:68px;bottom:-4px}}
+@media (min-width:1101px){.k-zeichnung,.k-zeichnung.k-sonne{top:-64px!important;bottom:auto!important}}
+@media (min-width:1101px){.k-zeichnung:not(.k-sonne){top:-14px!important}}
