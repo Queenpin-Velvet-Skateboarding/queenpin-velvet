@@ -529,3 +529,7 @@ html.f-geo .k-block{margin-bottom:0;min-height:0}
 html.f-geo .k-anmelden .k-block p,html.f-geo .k-anmelden .t-cap{font-family:var(--g)!important;text-transform:uppercase!important;font-style:normal!important;font-weight:400!important;font-size:10.5px!important;letter-spacing:.26em!important;line-height:1.5!important;opacity:1!important;margin:0 0 .55em!important}
 html.f-geo .k-anmelden .s-signup{margin-top:.9em!important}
 @media (min-width:1101px){html.f-geo .k-block{min-height:64.6px!important;justify-content:flex-end}}
+html.f-geo .k-anmelden .k-block p,html.f-geo .k-anmelden .t-cap{margin:0 0 .15em!important;line-height:1.45!important}
+html.f-geo .k-anmelden .s-signup{margin-top:.6em!important}
+@media (min-width:1101px){html.f-geo .k-block{min-height:0!important}}
+@media (min-width:1101px){html.f-geo .k-block{min-height:50.4px!important;justify-content:flex-end}}
