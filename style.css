@@ -812,3 +812,10 @@ body:has(.zeige-design){overflow-x:hidden}
   body:has(.zeige-design)::before,body:has(.zeige-design)::after{display:none!important}
   .k-malerei-band{object-position:84% 50%!important;height:calc(100lvh + 40px)!important;top:-20px!important}
 }
+/* Level: wachsende Blumen über dem Titel */
+.lv-blumen{display:none}
+.session.s-kurse.zeige-level .k-levels > .lv-blumen{display:block;grid-column:1/-1;grid-row:1!important;justify-self:center;width:min(390px,80vw);height:auto;mix-blend-mode:multiply;pointer-events:none;margin:0 0 .4em}
+.session.s-kurse.zeige-level .k-levels > .k-levels-titel{grid-row:2!important}
+.session.s-kurse.zeige-level .k-levels > div{grid-row:3!important}
+@media (max-width:1100px){.session.s-kurse.zeige-level .k-levels > div{grid-row:auto!important}}
+.session.s-kurse.zeige-level .k-levels > .lv-blumen{mix-blend-mode:normal!important}
