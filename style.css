@@ -509,3 +509,10 @@ html.f-geo .k-levels p{font-family:var(--g)!important;text-transform:uppercase!i
 .k-klein br.umbruch{display:inline!important}@media (min-width:1101px){html.f-geo .session.s-kurse{padding-bottom:80px}}
 .k-auswahl .t-cap{margin-top:0!important}
 .k-abo2{margin-top:1.6em!important}
+.k-zeile .k-klein.k-abo2{margin-top:1.6em!important}
+/* Dropdown nach Auswahl in Versalien */
+html.f-geo .dd.gewaehlt,html.f-geo .dd-wrap.gewaehlt .dd-anzeige{font-family:var(--g)!important;text-transform:uppercase!important;font-weight:400!important;font-size:11px!important;letter-spacing:.2em!important;font-style:normal!important}
+html.f-geo .dd option{text-transform:none}
+/* Bloom Levels Titel kleiner */
+html.f-geo .k-levels-titel{font-size:clamp(13px,1.05vw,15px)!important}
+html.f-geo .dd.gewaehlt{opacity:1!important;color:#141414!important}html.f-geo select[name=termin].gewaehlt{letter-spacing:.12em!important}@media (min-width:1101px){html.f-geo .session.s-kurse{padding-bottom:74px}}
