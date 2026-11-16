@@ -834,3 +834,4 @@ body:has(.zeige-design){overflow-x:hidden}
 nav a.k-motto{transition:color .2s}
 nav a.k-motto:hover,html.f-geo nav a.k-motto:hover{color:#E89BA0!important;opacity:1!important}
 .k-cols .dd-wrap + select.dd,.k-cols select.dd + select.dd{margin-top:.6em!important}
+.k-malerei-band{mix-blend-mode:normal!important}
