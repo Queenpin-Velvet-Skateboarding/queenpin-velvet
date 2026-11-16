@@ -826,3 +826,11 @@ body:has(.zeige-design){overflow-x:hidden}
 @media (max-width:1100px){.session.s-kurse.zeige-level .k-levels > div{grid-row:auto!important}.session.s-kurse.zeige-level .k-levels > .lv-blumen{grid-row:auto!important}}
 @media (min-width:1101px){.session.s-kurse.zeige-level .k-levels{margin:auto 0 0!important;padding-top:40px!important}.session.s-kurse.zeige-level{padding-bottom:70px!important}}
 @media (max-width:600px){html nav a.corner.tc.tc,html nav a.corner.tc.tc[aria-current]{font-size:8.5px!important;letter-spacing:.08em!important}}
+/* Dropdown: glatte rosa Fläche ohne Sprenkel */
+.dd,.k-cols .dd,.k-cols .dd-wrap .dd{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M.5.5 4 4 7.5.5' fill='none' stroke='%23141414' stroke-width='.8'/%3E%3C/svg%3E"),linear-gradient(#F2C9CC,#F2C9CC)!important;border-radius:999px!important}
+.k-spalte .dd{background-size:auto,0% 100%!important}
+.k-spalte.gelandet .dd,.s-kurse .k-spalte .dd{background-size:auto,100% 100%!important}
+.k-cols .dd,.k-cols .dd-wrap .dd{padding-top:.8em!important;padding-bottom:.8em!important}
+nav a.k-motto{transition:color .2s}
+nav a.k-motto:hover,html.f-geo nav a.k-motto:hover{color:#E89BA0!important;opacity:1!important}
+.k-cols .dd-wrap + select.dd,.k-cols select.dd + select.dd{margin-top:.6em!important}
