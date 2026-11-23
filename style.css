@@ -835,3 +835,19 @@ nav a.k-motto{transition:color .2s}
 nav a.k-motto:hover,html.f-geo nav a.k-motto:hover{color:#E89BA0!important;opacity:1!important}
 .k-cols .dd-wrap + select.dd,.k-cols select.dd + select.dd{margin-top:.6em!important}
 .k-malerei-band{mix-blend-mode:normal!important}
+/* ===== Kurse: Übersicht zum Auswählen ===== */
+.k-wahl{display:none}
+.s-kurse.zeige-wahl .k-cols3,.s-kurse.zeige-wahl .k-levels,.s-kurse.zeige-wahl .k-zu-levels-zeile,body.k-uebersicht .k-tabs{display:none!important}
+.s-kurse.zeige-wahl .k-wahl{display:flex;flex-direction:column;align-items:center;gap:3.2em;margin:auto 0;padding:1em 0;text-align:center}
+.k-wahl a{display:flex;flex-direction:column;align-items:center;gap:.7em;text-decoration:none;color:#141414;cursor:url(assets/cursor-pink.png) 7 18,pointer}
+.k-wahl a:hover{opacity:1}
+.k-wahl-ober,.k-wahl-info{font-family:var(--g,'futura-pt','Jost',sans-serif);text-transform:uppercase;font-size:10.5px;letter-spacing:.26em;font-weight:400}
+.k-wahl-info{font-weight:300;opacity:.6}
+.k-wahl-titel{font-family:var(--g,'futura-pt','Jost',sans-serif);text-transform:uppercase;font-size:clamp(20px,2vw,26px);letter-spacing:.24em;font-weight:400;transition:color .2s}
+.k-wahl a:hover .k-wahl-titel,.k-wahl a:focus-visible .k-wahl-titel{color:#E89BA0}
+@media (min-width:1101px){.session.s-kurse.zeige-wahl{justify-content:center}}
+@media (max-width:600px){.s-kurse.zeige-wahl .k-wahl{gap:2.6em;padding-top:1.5em}.k-wahl-titel{font-size:19px;letter-spacing:.18em}.k-wahl-ober,.k-wahl-info{font-size:9.5px;letter-spacing:.18em}
+  body.k-uebersicht .session.s-kurse{padding-top:calc(90px + env(safe-area-inset-top))!important}}
+.s-kurse .k-wahl .k-wahl-ober,.s-kurse .k-wahl .k-wahl-info{font-family:var(--g,'futura-pt','Jost',sans-serif)!important;font-size:10.5px!important;letter-spacing:.26em!important;text-transform:uppercase!important;font-style:normal!important;line-height:1.4!important}
+.s-kurse .k-wahl .k-wahl-titel{font-family:var(--g,'futura-pt','Jost',sans-serif)!important;font-size:clamp(19px,1.7vw,23px)!important;letter-spacing:.24em!important;text-transform:uppercase!important;font-weight:400!important;line-height:1.3!important}
+@media (max-width:600px){.s-kurse .k-wahl .k-wahl-titel{font-size:17px!important;letter-spacing:.16em!important}.s-kurse .k-wahl .k-wahl-ober,.s-kurse .k-wahl .k-wahl-info{font-size:9px!important;letter-spacing:.16em!important}}

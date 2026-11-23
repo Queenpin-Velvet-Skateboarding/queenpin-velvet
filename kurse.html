@@ -10,12 +10,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;family=Fragment+Mono&amp;family=IBM+Plex+Mono:wght@100;200;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/queenpin-logo-schwarz.svg">
 <link rel="stylesheet" href="https://use.typekit.net/qkn7udf.css">
-<link rel="stylesheet" href="style.css?v=0914b">
+<link rel="stylesheet" href="style.css?v=1052">
 <script src="schrift.js?v=2300"></script>
 </head>
 <body>
 <main class="home">
-<article class="session s-kurse zeige-sprouts">
+<article class="session s-kurse zeige-wahl">
+<nav class="k-wahl" aria-label="Kurse wählen">
+<a href="#sprouts-to-asters" data-tab="sprouts"><span class="k-wahl-ober">Jahreskurs</span><span class="k-wahl-titel">Sprouts to Asters</span><span class="k-wahl-info">Jeden Montag · Letty Ramp</span></a>
+<a href="#design-skate" data-tab="design"><span class="k-wahl-ober">Ferienkurs</span><span class="k-wahl-titel">Design + Skate</span><span class="k-wahl-info">Letty Ramp und Passat Art Space</span></a>
+<a href="#summer-bloom" data-tab="summer"><span class="k-wahl-ober">Ferienkurs</span><span class="k-wahl-titel">Summer Bloom</span><span class="k-wahl-info">Sommerferien · Skatepark Allmend</span></a>
+<a href="#level" data-tab="level"><span class="k-wahl-ober">Welches Level passt?</span><span class="k-wahl-titel">Bloom Levels</span><span class="k-wahl-info">Seeds · Sprouts · Asters · Wildflower</span></a>
+</nav>
 <div class="s-next k-cols k-cols3">
 <form class="pick k-spalte" data-kurs="Sprouts to Asters" data-termin="Jeden Montag · 17.30 – 18.30" onsubmit="return false">
 <div class="k-zeile k-kopf">
@@ -167,21 +173,23 @@
 </main>
 <script src="pick.js"></script>
 <script>
-/* Unterauswahl: Sprouts to Asters / Design + Skate / Summer Bloom / Level */
+/* Übersicht (Auswahl) und Unterauswahl: Sprouts to Asters / Design + Skate / Summer Bloom / Level */
 (function(){
-  var art=document.querySelector('.s-kurse'),links=[].slice.call(document.querySelectorAll('.k-tabs a, .k-zu-levels'));
+  var art=document.querySelector('.s-kurse'),links=[].slice.call(document.querySelectorAll('.k-tabs a, .k-zu-levels, .k-wahl a'));
   var hash={'sprouts-to-asters':'sprouts','design-skate':'design','summer-bloom':'summer','level':'level','kurslevels':'level','jahreskurs':'sprouts','ferienkurse':'design'};
-  var namen=['sprouts','design','summer','level'];
+  var namen=['wahl','sprouts','design','summer','level'];
   function name(a){return a.getAttribute('data-tab')||hash[a.getAttribute('href').slice(1)];}
   function zeigen(n,neu){
-    if(namen.indexOf(n)<0)n='sprouts';
+    if(namen.indexOf(n)<0)n='wahl';
     namen.forEach(function(x){art.classList.toggle('zeige-'+x,x===n);});
+    document.body.classList.toggle('k-uebersicht',n==='wahl');
     links.forEach(function(a){var an=a.closest('.k-tabs')&&name(a)===n;a.classList.toggle('aktiv',!!an);if(an)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-    if(neu){art.querySelectorAll('video').forEach(function(v){if(v.offsetParent){try{v.currentTime=0;v.play().catch(function(){});}catch(e){}}});}
+    if(neu){window.scrollTo(0,0);art.querySelectorAll('video').forEach(function(v){if(v.offsetParent){try{v.currentTime=0;v.play().catch(function(){});}catch(e){}}});}
     window.dispatchEvent(new Event('resize'));
   }
-  links.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();history.replaceState(null,'',a.getAttribute('href'));zeigen(name(a),true);a.blur();});});
-  window.addEventListener('hashchange',function(){zeigen(hash[location.hash.slice(1)],true);});
+  links.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();history.pushState(null,'',a.getAttribute('href'));zeigen(name(a),true);a.blur();});});
+  function vonAdresse(){zeigen(hash[location.hash.slice(1)],true);}
+  window.addEventListener('popstate',vonAdresse);window.addEventListener('hashchange',vonAdresse);
   zeigen(hash[location.hash.slice(1)],false);
 })();
 </script>
