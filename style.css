@@ -856,3 +856,8 @@ nav a.k-motto:hover,html.f-geo nav a.k-motto:hover{color:#E89BA0!important;opaci
   nav a.k-motto.k-motto{max-width:calc(100vw - 2 * (var(--eck-b,190px) + 24px));white-space:normal!important;text-align:center;line-height:1.5!important}
 }
 @media (min-width:601px) and (max-width:900px){nav a.k-motto.k-motto,html.f-geo nav a.k-motto.k-motto{letter-spacing:.14em!important}}
+/* TEST Raster über alle Filme und Illustrationen (Löcher in Papierfarbe, wie Siebdruck-Raster) */
+html.raster video{
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,transparent .6px,#000 1.1px);mask-image:radial-gradient(circle at 50% 50%,transparent .6px,#000 1.1px);
+  -webkit-mask-size:3px 3px;mask-size:3px 3px;-webkit-mask-repeat:repeat;mask-repeat:repeat;
+  filter:blur(.35px) saturate(1.05)}
