@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;family=Fragment+Mono&amp;family=IBM+Plex+Mono:wght@100&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/queenpin-logo-schwarz.svg">
 <link rel="stylesheet" href="https://use.typekit.net/qkn7udf.css">
-<link rel="stylesheet" href="style.css?v=1052">
+<link rel="stylesheet" href="style.css?v=1125">
 <script src="schrift.js?v=2300"></script>
 </head>
 <body>
@@ -42,6 +42,11 @@
   el.addEventListener('click',weiter);
   el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();weiter();}});
 })();
+</script>
+<script>
+/* Platz für das Motto unten: misst «events» und «gönnerin werden» */
+(function(){function m(){var a=document.querySelector('nav .corner.bl'),b=document.querySelector('nav .corner.br');if(!a||!b)return;var w=Math.max(a.getBoundingClientRect().right,innerWidth-b.getBoundingClientRect().left);document.documentElement.style.setProperty('--eck-b',Math.ceil(w)+'px');}
+m();addEventListener('resize',m);addEventListener('load',m);if(document.fonts)document.fonts.ready.then(m);})();
 </script>
 </body>
 </html>
