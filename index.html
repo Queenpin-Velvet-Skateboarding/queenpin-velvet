@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;family=Fragment+Mono&amp;family=IBM+Plex+Mono:wght@100;200;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/queenpin-logo-schwarz.svg">
 <link rel="stylesheet" href="https://use.typekit.net/qkn7udf.css">
-<link rel="stylesheet" href="style.css?v=1320">
+<link rel="stylesheet" href="style.css?v=1245">
 <script src="schrift.js?v=2300"></script>
 <script>/* TEST Raster: ?raster=0 schaltet aus */if(!/raster=0/.test(location.search))document.documentElement.classList.add('raster');</script>
 </head>
@@ -44,9 +44,14 @@
 m();addEventListener('resize',m);addEventListener('load',m);if(document.fonts)document.fonts.ready.then(m);})();
 </script>
 <script>
-/* Seite höher als Fenster? Dann Menü fix auf Papierstreifen (niedrige Laptops) */
-(function(){var h=document.documentElement;function c(){h.classList.remove('scrollt');var s=document.scrollingElement.scrollHeight>innerHeight+2;h.classList.toggle('scrollt',s);}
-c();addEventListener('resize',c);addEventListener('load',c);addEventListener('hashchange',function(){setTimeout(c,50)});addEventListener('popstate',function(){setTimeout(c,50)});document.addEventListener('click',function(){setTimeout(c,80)});if(document.fonts)document.fonts.ready.then(c);})();
+/* Seite höher als Fenster oder Text unter dem Menü? Dann Menü fix auf Papierstreifen und Seite scrollt */
+(function(){var h=document.documentElement;
+function c(){if(innerWidth<1101){h.classList.remove('scrollt');return;}h.classList.remove('scrollt');
+var m=document.querySelector('nav .k-motto'),grenze=(m?m.getBoundingClientRect().top:innerHeight-90)-10,unten=0;
+document.querySelectorAll('main p, main a, main h1, main h2, main h3, main select, main .k-zeichnung').forEach(function(e){if(!e.getClientRects().length||e.closest('nav'))return;var r=e.getBoundingClientRect();if(r.height&&r.bottom>unten)unten=r.bottom;});
+h.classList.toggle('scrollt',document.scrollingElement.scrollHeight>innerHeight+2||unten>grenze);}
+c();addEventListener('resize',c);addEventListener('load',c);addEventListener('hashchange',function(){setTimeout(c,50)});addEventListener('popstate',function(){setTimeout(c,50)});
+document.addEventListener('click',function(){setTimeout(c,80)});document.addEventListener('change',function(){setTimeout(c,80)});if(document.fonts)document.fonts.ready.then(c);setTimeout(c,1600);})();
 </script>
 </body>
 </html>
