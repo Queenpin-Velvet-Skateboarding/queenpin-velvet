@@ -907,3 +907,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,[role=button]:focus-vi
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 html .k-tabs a,html.f-geo .k-tabs a{opacity:1!important;color:rgba(20,20,20,.64)!important}
 html .k-tabs a.aktiv,html .k-tabs a:hover{color:#B04F5B!important}
+/* Startseite mit Blumen: Schrift mit Papier-Halo lesbar */
+.home:has(.bloom-video) .hero-title,.home:has(.bloom-video) .hero-title a,.home:has(.bloom-video) nav a{text-shadow:0 0 3px #FBF1EC,0 0 6px #FBF1EC,0 0 12px #FBF1EC,0 0 20px #FBF1EC}
+.home:has(.bloom-video) .hero-title::before{content:'';position:absolute;left:50%;top:50%;width:min(560px,96vw);height:190px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(251,241,236,.92) 45%,rgba(251,241,236,0));z-index:-1;pointer-events:none}
+.home:has(.bloom-video) .hero-title{isolation:isolate}

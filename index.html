@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;family=Fragment+Mono&amp;family=IBM+Plex+Mono:wght@100;200;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/queenpin-logo-schwarz.svg">
 <link rel="stylesheet" href="https://use.typekit.net/qkn7udf.css">
-<link rel="stylesheet" href="style.css?v=2315">
+<link rel="stylesheet" href="style.css?v=1130">
 <script src="schrift.js?v=2300"></script>
 </head>
 <body>
 <main class="home">
-<video class="hero-video" src="assets/tropfen.mp4" poster="" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
+<video class="hero-video bloom-video" src="assets/bloom.mp4" poster="" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
 <h1 class="hero-title"><a href="sessions.html"><b>queenpin velvet</b><br><span>skateboarding</span></a></h1>
 <nav aria-label="Hauptmenü">
 <a class="corner tl" href="sessions.html">sessions</a>
@@ -31,10 +31,10 @@
 (function(){
   var v=document.querySelector('.hero-video'),t=document.querySelector('.hero-title');
   function done(){t.classList.add('show');}
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.poster='assets/tropfen-ende.jpg';done();return;}
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');done();return;}
   v.addEventListener('ended',done);
-  v.addEventListener('error',function(){v.poster='assets/tropfen-ende.jpg';done();});
-  setTimeout(done,6500);
+  v.addEventListener('error',done);
+  setTimeout(done,1800);
 })();
 </script>
 <script>
