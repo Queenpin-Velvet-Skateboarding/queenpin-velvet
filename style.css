@@ -911,3 +911,14 @@ html .k-tabs a.aktiv,html .k-tabs a:hover{color:#B04F5B!important}
 .home:has(.bloom-video) .hero-title,.home:has(.bloom-video) .hero-title a,.home:has(.bloom-video) nav a{text-shadow:0 0 3px #FBF1EC,0 0 6px #FBF1EC,0 0 12px #FBF1EC,0 0 20px #FBF1EC}
 .home:has(.bloom-video) .hero-title::before{content:'';position:absolute;left:50%;top:50%;width:min(560px,96vw);height:190px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(251,241,236,.92) 45%,rgba(251,241,236,0));z-index:-1;pointer-events:none}
 .home:has(.bloom-video) .hero-title{isolation:isolate}
+/* Sessions: Adresse bei anderem Ort, Hinweis (z. B. Mitfahren) */
+.s-info .s-adresse{font-size:9.5px!important;letter-spacing:.2em!important;opacity:.8;margin-top:.1em!important}
+.s-info .s-special{white-space:pre-line;font-family:var(--t,'Helvetica Neue',sans-serif)!important;text-transform:none!important;letter-spacing:.02em!important;font-size:11.5px!important;line-height:1.5!important;font-weight:300!important;max-width:30em;margin:1em auto 0!important}
+.s-info .s-special::before{display:none}
+html .session .s-info p.s-adresse{font-family:var(--g,'futura-pt','Jost',sans-serif)!important;text-transform:uppercase!important;font-size:9px!important;letter-spacing:.18em!important;line-height:1.5!important;white-space:normal!important;opacity:.85!important;font-weight:400!important;margin:.15em auto 0!important;max-width:24em}
+html .session .s-info p.s-special{font-size:10.5px!important;line-height:1.45!important;margin-top:.8em!important;max-width:26em}
+@media (max-width:600px){html .session .s-info p.s-special{font-size:10px!important;max-width:24em}}
+html .session .s-info p.s-adresse{white-space:pre-line!important}
+/* Mehr Infos im Tropfen: Block weiter unten verankern, damit er nicht in den Text darüber wächst */
+.s-info:has(.s-special:not([hidden])){transform:translate(-50%,-28%)!important}
+@media (max-width:600px){.s-info:has(.s-special:not([hidden])){transform:translate(-50%,-14%)!important}}

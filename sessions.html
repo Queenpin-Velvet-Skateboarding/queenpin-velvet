@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Courier+Prime:wght@400;700&amp;family=Fragment+Mono&amp;family=IBM+Plex+Mono:wght@100;200;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/queenpin-logo-schwarz.svg">
 <link rel="stylesheet" href="https://use.typekit.net/qkn7udf.css">
-<link rel="stylesheet" href="style.css?v=1130">
+<link rel="stylesheet" href="style.css?v=1210">
 <script src="schrift.js?v=2300"></script>
 </head>
 <body>
@@ -22,6 +22,7 @@
 <p data-f="datum">Dienstag 17.11.2026</p>
 <p data-f="zeit">18.30 – 20.00</p>
 <p data-f="ort">Freestyle Halle Zürich</p>
+<p class="s-adresse" data-f="adresse" hidden></p>
 <p class="s-special" data-f="special" hidden></p>
 </div>
 <div class="s-fragen">
@@ -63,7 +64,9 @@ var STANDARD={ort:'Freestyle Halle Zürich',zeit:'18.30–20.00',strasse:'Bändl
       var k=el.getAttribute('data-f'),v=o[k]||'';
       if(k==='datum'&&v)v='Dienstag '+v;
       if(k==='zeit'&&v)v=v.replace(/\s*[–-]\s*/,' – ');
-      el.textContent=v; if(k==='special')el.hidden=!v;
+      if(k==='adresse')v=(o.ort&&o.ort!==STANDARD.ort&&o.strasse)?o.strasse+'\n'+(o.plz||''):'';
+      if(k==='special'&&v)v=v.split(/\s*·\s*/).join('\n');
+      el.textContent=v; if(k==='special'||k==='adresse')el.hidden=!v;
     });
   }
   var day=nextTuesday(),info=Object.assign({datum:fmt(day)},STANDARD);
